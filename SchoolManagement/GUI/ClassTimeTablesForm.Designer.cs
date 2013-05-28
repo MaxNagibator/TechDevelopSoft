@@ -34,13 +34,11 @@
             this.uiDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiDeleteButton = new System.Windows.Forms.Button();
-            this.uiClassTimesDataGridView = new System.Windows.Forms.DataGridView();
             this.uiDateViewDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.uiGroupComboBox = new System.Windows.Forms.ComboBox();
             this.uiDatePeriodLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).BeginInit();
             this.uiMenuContextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiClassTimesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // uiMainDataGridView
@@ -49,14 +47,15 @@
             this.uiMainDataGridView.AllowUserToDeleteRows = false;
             this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiMainDataGridView.ContextMenuStrip = this.uiMenuContextMenuStrip;
-            this.uiMainDataGridView.Location = new System.Drawing.Point(136, 51);
+            this.uiMainDataGridView.Location = new System.Drawing.Point(12, 51);
             this.uiMainDataGridView.MultiSelect = false;
             this.uiMainDataGridView.Name = "uiMainDataGridView";
             this.uiMainDataGridView.ReadOnly = true;
             this.uiMainDataGridView.RowHeadersVisible = false;
             this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.uiMainDataGridView.Size = new System.Drawing.Size(847, 199);
+            this.uiMainDataGridView.Size = new System.Drawing.Size(954, 199);
             this.uiMainDataGridView.TabIndex = 1;
+            this.uiMainDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uiMainDataGridView_CellMouseClick);
             // 
             // uiMenuContextMenuStrip
             // 
@@ -65,6 +64,7 @@
             this.uiAddToolStripMenuItem});
             this.uiMenuContextMenuStrip.Name = "contextMenuStrip1";
             this.uiMenuContextMenuStrip.Size = new System.Drawing.Size(125, 48);
+            this.uiMenuContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.uiMenuContextMenuStrip_Opening);
             // 
             // uiDeleteToolStripMenuItem
             // 
@@ -89,20 +89,6 @@
             this.uiDeleteButton.Text = "Удалить";
             this.uiDeleteButton.UseVisualStyleBackColor = true;
             this.uiDeleteButton.Click += new System.EventHandler(this.uiDeleteButton_Click);
-            // 
-            // uiClassTimesDataGridView
-            // 
-            this.uiClassTimesDataGridView.AllowUserToAddRows = false;
-            this.uiClassTimesDataGridView.AllowUserToDeleteRows = false;
-            this.uiClassTimesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiClassTimesDataGridView.Location = new System.Drawing.Point(12, 51);
-            this.uiClassTimesDataGridView.MultiSelect = false;
-            this.uiClassTimesDataGridView.Name = "uiClassTimesDataGridView";
-            this.uiClassTimesDataGridView.ReadOnly = true;
-            this.uiClassTimesDataGridView.RowHeadersVisible = false;
-            this.uiClassTimesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiClassTimesDataGridView.Size = new System.Drawing.Size(94, 199);
-            this.uiClassTimesDataGridView.TabIndex = 4;
             // 
             // uiDateViewDateTimePicker
             // 
@@ -139,14 +125,12 @@
             this.Controls.Add(this.uiDatePeriodLabel);
             this.Controls.Add(this.uiGroupComboBox);
             this.Controls.Add(this.uiDateViewDateTimePicker);
-            this.Controls.Add(this.uiClassTimesDataGridView);
             this.Controls.Add(this.uiDeleteButton);
             this.Controls.Add(this.uiMainDataGridView);
             this.Name = "ClassTimeTablesForm";
             this.Text = "Расписание уроков";
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.uiMenuContextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiClassTimesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +140,6 @@
 
         private System.Windows.Forms.DataGridView uiMainDataGridView;
         private System.Windows.Forms.Button uiDeleteButton;
-        private System.Windows.Forms.DataGridView uiClassTimesDataGridView;
         private System.Windows.Forms.DateTimePicker uiDateViewDateTimePicker;
         private System.Windows.Forms.ComboBox uiGroupComboBox;
         private System.Windows.Forms.Label uiDatePeriodLabel;

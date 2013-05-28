@@ -7,12 +7,6 @@ namespace SchoolManagement.GUI
     public partial class ClassTimeTableAddForm : Form
     {
         private ClassTimeTable _classTimeTable;
-        private DateTime _selectedDate;
-        private Group _selectedGroup;
-        private ClassRoom _selectedClassRoom;
-        private Teacher _selectedTeacher;
-        private EducationalDiscipline _selectedEducationalDiscipline;
-        private ClassTime _classTime;
 
         public ClassTimeTableAddForm()
         {
@@ -34,9 +28,8 @@ namespace SchoolManagement.GUI
 
         private void uiCommintButton_Click(object sender, EventArgs e)
         {
-           // var group = new ClassTime(uiNameTextBox.Text, Convert.ToInt32(uiClassTimeTextBox.Text), uiDisciplineTextBox.Text,
-            //                          uiEndTimeTextBox.Text);
-          //  group.AddToDatabase();
+            var classTimeTable = _classTimeTable;
+            classTimeTable.AddToDatabase();
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -54,8 +47,8 @@ namespace SchoolManagement.GUI
 
         private void SetClassTime(ClassTime selectedClassTime)
         {
-            _classTime = selectedClassTime;
-            uiClassTimeTextBox.Text = _classTime.ToString();
+            _classTimeTable.ClassTime = selectedClassTime;
+            uiClassTimeTextBox.Text = _classTimeTable.ClassTime.ToString();
         }
 
         private void uiSelectEducationalDisciplineButton_Click(object sender, EventArgs e)
@@ -71,8 +64,8 @@ namespace SchoolManagement.GUI
 
         private void SetEducationalDiscipline(EducationalDiscipline selectedEducationalDiscipline)
         {
-            _selectedEducationalDiscipline = selectedEducationalDiscipline;
-            uiEducationalDisciplineTextBox.Text = _selectedEducationalDiscipline.ToString();
+            _classTimeTable.EducationalDiscipline = selectedEducationalDiscipline;
+            uiEducationalDisciplineTextBox.Text = _classTimeTable.EducationalDiscipline.ToString();
         }
 
         private void uiSelectTeacherButton_Click(object sender, EventArgs e)
@@ -88,8 +81,8 @@ namespace SchoolManagement.GUI
 
         private void SetTeacher(Teacher selectedTeacher)
         {
-            _selectedTeacher = selectedTeacher;
-            uiTeacherTextBox.Text = _selectedTeacher.ToString();
+            _classTimeTable.Teacher = selectedTeacher;
+            uiTeacherTextBox.Text = _classTimeTable.Teacher.ToString();
         }
 
         private void uiSelectClassRoomButton_Click(object sender, EventArgs e)
@@ -105,8 +98,8 @@ namespace SchoolManagement.GUI
 
         private void SetClassRoom(ClassRoom selectedClassRoom)
         {
-            _selectedClassRoom = selectedClassRoom;
-            uiTeacherTextBox.Text = _selectedClassRoom.ToString();
+            _classTimeTable.ClassRoom = selectedClassRoom;
+            uiClassRoomTextBox.Text = _classTimeTable.ClassRoom.ToString();
         }
 
         private void uiSelectGroupButton_Click(object sender, EventArgs e)
@@ -122,19 +115,19 @@ namespace SchoolManagement.GUI
 
         private void SetGroup(Group selectedGroup)
         {
-            _selectedGroup = selectedGroup;
-            uiTeacherTextBox.Text = _selectedGroup.ToString();
+            _classTimeTable.Group = selectedGroup;
+            uiGroupTextBox.Text = _classTimeTable.Group.ToString();
         }
 
         private void uiDateDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            _selectedDate = uiDateDateTimePicker.Value;
+            _classTimeTable.Date = uiDateDateTimePicker.Value;
         }
 
         private void SetDate(DateTime date)
         {
-            _selectedDate = date;
-            uiTeacherTextBox.Text = _selectedDate.ToString();
+            _classTimeTable.Date = date;
+            uiDateDateTimePicker.Value = _classTimeTable.Date;
         }
     }
 }

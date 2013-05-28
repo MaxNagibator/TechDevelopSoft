@@ -1,11 +1,7 @@
-﻿using System.Net.Mime;
-
-namespace SchoolManagement.School
+﻿namespace SchoolManagement.School
 {
     public class ClassTimeTableWeekElem
     {
-        public int ClassTimeNumber { get; set; }
-
         [System.ComponentModel.DisplayName("Понедельник")]
         public ClassTimeTableDayElem Day1 { get; set; }
 
@@ -26,5 +22,8 @@ namespace SchoolManagement.School
 
         [System.ComponentModel.DisplayName("Воскресение")]
         public ClassTimeTableDayElem Day7 { get; set; }
+
+        [System.ComponentModel.DisplayName("Время урока")]
+        public ClassTime ClassTime { get; set; }
     }
 }

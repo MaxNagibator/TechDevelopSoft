@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
@@ -13,15 +12,12 @@ namespace SchoolManagement.GUI
         {
             InitializeComponent();
             uiGroupComboBox.DataSource = DatabaseManager.GetGroups();
-            uiGroupComboBox.DisplayMember = "Name";
             RefreshInfo();
         }
 
         private void RefreshInfo()
         {
             var classTimes = DatabaseManager.GetClassTimes();
-            RefreshClassTimeInfo(classTimes);
-
             var date = uiDateViewDateTimePicker.Value;
             var dayOfWeek = (int) date.DayOfWeek;
             uiDatePeriodLabel.Text = date.Date.AddDays(1 - dayOfWeek).ToShortDateString() + " - " +
@@ -38,6 +34,7 @@ namespace SchoolManagement.GUI
             {
                 elements.Add(new ClassTimeTableWeekElem
                                  {
+                                     ClassTime = classTimes[i],
                                      Day1 = day1[i],
                                      Day2 = day2[i],
                                      Day3 = day3[i],
@@ -47,52 +44,40 @@ namespace SchoolManagement.GUI
                                      Day7 = day7[i],
                                  });
             }
-            RefreshClassTimeTableElemInfo(uiMainDataGridView, elements);
-        }
-
-        private void RefreshClassTimeInfo(IEnumerable<ClassTime> classTimes)
-        {
-            var source = (from c in classTimes
-                          select new {Time = c.Number + ": " + c.StartTime + "-" + c.EndTime}).ToArray();
-            uiClassTimesDataGridView.DataSource = source;
+            RefreshClassTimeTableElemInfo(elements);
         }
 
         private List<ClassTimeTableDayElem> GetElementsByDateAndGroup(DateTime date, IEnumerable<ClassTime> classTimes)
         {
             var classTimeTables = DatabaseManager.GetClassTimeTables();
-            var group = ((Group) uiGroupComboBox.SelectedItem).Id;
-            var classTimeTablesForDateAndGroup = classTimeTables.Where(c => c.Date.Date == date && c.Group.Id == group);
+            var group = (Group) uiGroupComboBox.SelectedItem;
+            var classTimeTablesForDateAndGroup = classTimeTables.Where(c => c.Date.Date == date && c.Group.Id == group.Id);
             var elementsByDateAndGroup = (from c in classTimeTablesForDateAndGroup
                                           select new ClassTimeTableDayElem(
                                               "d: " + c.EducationalDiscipline.Name + " k: " + c.ClassRoom.Number +
                                               " p: " + c.Teacher.Name,
-                                              c.ClassTime.Id, c)).ToList();
-            return GetVoidClassTimeTables(elementsByDateAndGroup, classTimes);
+                                              c.ClassTime, c)).ToList();
+            return GetVoidClassTimeTables(elementsByDateAndGroup, classTimes, date, group);
         }
 
-        private List<ClassTimeTableDayElem> GetVoidClassTimeTables(List<ClassTimeTableDayElem> classTimeTables,
-                                                                   IEnumerable<ClassTime> classTimes)
+        private List<ClassTimeTableDayElem> GetVoidClassTimeTables(List<ClassTimeTableDayElem> classTimeTableDayElems,
+                                                                   IEnumerable<ClassTime> classTimes, DateTime date, Group group)
         {
-            var classTimeTableDayElem = classTimeTables.FirstOrDefault();
+            foreach (
+                var classTime in classTimes.Where(r => classTimeTableDayElems.All(s => s.ClassTime.Id != r.Id)))
+            {
+                classTimeTableDayElems.Add(new ClassTimeTableDayElem("-", classTime, new ClassTimeTable(group, date)));
+            }
 
-                var date = classTimeTableDayElem.ClassTimeTable.Date;
-                foreach (
-                    var classTime in classTimes.Where(r => classTimeTables.All(s => s.ClassTimeNumber != r.Id)))
-                {
-                    classTimeTables.Add(new ClassTimeTableDayElem("-", classTime.Id,
-                                                                         new ClassTimeTable() {Date = date}));
-                }
-            
-            return classTimeTables;
+            return classTimeTableDayElems;
         }
 
-        private void RefreshClassTimeTableElemInfo(DataGridView dataGridView,
-                                                   List<ClassTimeTableWeekElem> elementsByDateAndGroup)
+        private void RefreshClassTimeTableElemInfo(List<ClassTimeTableWeekElem> elementsByDateAndGroup)
         {
-            dataGridView.DataSource = elementsByDateAndGroup;
-            var dataGridViewColumn = dataGridView.Columns["ClassTimeNumber"];
-            if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            uiMainDataGridView.DataSource = elementsByDateAndGroup;
+            var dataGridViewColumn2 = uiMainDataGridView.Columns["ClassTime"];
+            if (dataGridViewColumn2 != null) dataGridViewColumn2.DisplayIndex = 0;
+            uiMainDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private void uiDeleteButton_Click(object sender, EventArgs e)
@@ -113,22 +98,21 @@ namespace SchoolManagement.GUI
 
         private void uiGroupComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             RefreshInfo();
         }
 
         private void uiDeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
-            var classTimeTable = classTimeTableDayElem.ClassTimeTable;
-            RefreshInfo();
+            //var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
+            //var classTimeTable = classTimeTableDayElem.ClassTimeTable;
+            //RefreshInfo();
         }
 
         private void uiAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
-            var classTimeTable = new ClassTimeTable(
-                new Group(((Group) uiGroupComboBox.SelectedItem).Id),
-                classTimeTableDayElem.ClassTimeTable.Date);
+            var classTimeTable = classTimeTableDayElem.ClassTimeTable;
 
             using (var f = new ClassTimeTableAddForm(classTimeTable))
             {
@@ -137,6 +121,16 @@ namespace SchoolManagement.GUI
                     RefreshInfo();
                 }
             }
+        }
+
+        private void uiMenuContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void uiMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            uiMenuContextMenuStrip.Show(e.X,e.Y);
         }
     }
 }

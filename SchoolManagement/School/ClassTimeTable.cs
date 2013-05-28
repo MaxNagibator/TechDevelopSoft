@@ -10,10 +10,6 @@ namespace SchoolManagement.School
         public Teacher Teacher { get; set; }
         public ClassRoom ClassRoom { get; set; }
         public Group Group { get; set; }
-        public ClassTimeTable()
-        {
-            
-        }
 
         public ClassTimeTable(string name, DateTime date, ClassTime classTime, EducationalDiscipline educationalDiscipline, Teacher teacher, ClassRoom classRoom, Group group)
         {
@@ -34,7 +30,7 @@ namespace SchoolManagement.School
 
         public override void AddToDatabase()
         {
-           //DatabaseManager.AddClassTimeTable();
+           DatabaseManager.AddClassTimeTable(Name, ClassTime.Id,EducationalDiscipline.Id,Date,Teacher.Id,ClassRoom.Id,Group.Id);
         }
     }
 }

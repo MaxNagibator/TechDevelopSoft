@@ -204,7 +204,7 @@ namespace SchoolManagement
                         ,[ClassTime].[StartTime] AS ClassTimeStartTime
                         ,[ClassTime].[EndTime] AS ClassTimeEndTime
                         ,[ClassTime].[Name] AS ClassTimeName
-                        ,[ClassTime].[Number] AS ClassTimeNumber
+                        ,[ClassTime].[Number] AS ClassTime
                         ,[EducationalDiscipline].[Id] AS EducationalDisciplineId
                         ,[EducationalDiscipline].[Name] AS EducationalDisciplineName
                         ,[EducationalDiscipline].[Description] AS EducationalDisciplineDescription
@@ -231,7 +231,7 @@ namespace SchoolManagement
                         row.Field<DateTime>("Date"),
                         new ClassTime(
                             row.Field<string>("ClassTimeName"),
-                            row.Field<int>("ClassTimeNumber"),
+                            row.Field<int>("ClassTime"),
                             row.Field<string>("ClassTimeStartTime"),
                             row.Field<string>("ClassTimeEndTime"))
                             {
@@ -270,17 +270,22 @@ namespace SchoolManagement
             return classTimes;
         }
 
-        public static void AddClassTimeTable(string name, int number, string startTime, string endTime)
+        public static void AddClassTimeTable(string name, int classTimeId, int educationalDisciplineId, DateTime date, int teacherId, int classRoomId, int groupId)
         {
             using (var sqlProvider = Globals.GetSqlProvider())
             {
                 sqlProvider.SetParameter("@Name", name);
-                sqlProvider.SetParameter("@StartTime", startTime);
-                sqlProvider.SetParameter("@EndTIme", endTime);
-                sqlProvider.SetParameter("@Number", number);
-                sqlProvider.ExecuteQuery(@"INSERT INTO [ClassTime] 
-                    (Name, Number, StartTime, EndTime)
-                    VALUES(@Name, @Number, @StartTime, @EndTime)");
+                sqlProvider.SetParameter("@ClassTimeId", classTimeId);
+                sqlProvider.SetParameter("@EducationalDisciplineId", educationalDisciplineId);
+                sqlProvider.SetParameter("@Date", date);
+                sqlProvider.SetParameter("@TeacherId", teacherId);
+                sqlProvider.SetParameter("@ClassRoomId", classRoomId);
+                sqlProvider.SetParameter("@GroupId", groupId);
+                sqlProvider.ExecuteQuery(
+                    @"INSERT INTO [ClassTimeTable] 
+                        (Name,Date, ClassTimeId,EducationalDisciplineId,TeacherId,ClassRoomId,GroupId)
+                        VALUES(@Name,@Date, @ClassTimeId,@EducationalDisciplineId,@TeacherId,@ClassRoomId,@GroupId)");
+
             }
         }
 

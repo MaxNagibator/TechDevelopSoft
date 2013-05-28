@@ -64,7 +64,7 @@ namespace SchoolManagement.GUI
 
         private void uiMainDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            SelectClassRoom();
         }
     }
 }

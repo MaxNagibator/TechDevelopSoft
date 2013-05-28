@@ -56,6 +56,7 @@
             this.uiNameTextBox.Name = "uiNameTextBox";
             this.uiNameTextBox.Size = new System.Drawing.Size(186, 20);
             this.uiNameTextBox.TabIndex = 0;
+            this.uiNameTextBox.Text = "Обычный урок";
             // 
             // uiNameLabel
             // 
