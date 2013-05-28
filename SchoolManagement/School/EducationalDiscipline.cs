@@ -14,5 +14,10 @@
         {
             DatabaseManager.AddEducationalDiscipline(Name,Description);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

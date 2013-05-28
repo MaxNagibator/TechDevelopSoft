@@ -70,14 +70,20 @@ namespace SchoolManagement.GUI
             return GetVoidClassTimeTables(elementsByDateAndGroup, classTimes);
         }
 
-        private List<ClassTimeTableDayElem> GetVoidClassTimeTables(List<ClassTimeTableDayElem> elementsByDateAndGroup,
+        private List<ClassTimeTableDayElem> GetVoidClassTimeTables(List<ClassTimeTableDayElem> classTimeTables,
                                                                    IEnumerable<ClassTime> classTimes)
         {
-            foreach (var classTime in classTimes.Where(r => elementsByDateAndGroup.All(s => s.ClassTimeNumber != r.Id)))
-            {
-                elementsByDateAndGroup.Add(new ClassTimeTableDayElem("-", classTime.Id, null));
-            }
-            return elementsByDateAndGroup;
+            var classTimeTableDayElem = classTimeTables.FirstOrDefault();
+
+                var date = classTimeTableDayElem.ClassTimeTable.Date;
+                foreach (
+                    var classTime in classTimes.Where(r => classTimeTables.All(s => s.ClassTimeNumber != r.Id)))
+                {
+                    classTimeTables.Add(new ClassTimeTableDayElem("-", classTime.Id,
+                                                                         new ClassTimeTable() {Date = date}));
+                }
+            
+            return classTimeTables;
         }
 
         private void RefreshClassTimeTableElemInfo(DataGridView dataGridView,
@@ -119,8 +125,11 @@ namespace SchoolManagement.GUI
 
         private void uiAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
-            var classTimeTable = classTimeTableDayElem.ClassTimeTable;
+            var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
+            var classTimeTable = new ClassTimeTable(
+                new Group(((Group) uiGroupComboBox.SelectedItem).Id),
+                classTimeTableDayElem.ClassTimeTable.Date);
+
             using (var f = new ClassTimeTableAddForm(classTimeTable))
             {
                 if (f.ShowDialog() == DialogResult.OK)
@@ -128,7 +137,6 @@ namespace SchoolManagement.GUI
                     RefreshInfo();
                 }
             }
-            RefreshInfo();
         }
     }
 }

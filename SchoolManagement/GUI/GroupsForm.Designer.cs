@@ -68,7 +68,7 @@
             this.uiSelectGroupButton.TabIndex = 2;
             this.uiSelectGroupButton.Text = "Выбрать";
             this.uiSelectGroupButton.UseVisualStyleBackColor = true;
-            this.uiSelectGroupButton.Click += new System.EventHandler(this.uiSelectGroupButton_Click);
+            this.uiSelectGroupButton.Click += new System.EventHandler(this.uiSelectButton_Click);
             // 
             // uiDeleteButton
             // 

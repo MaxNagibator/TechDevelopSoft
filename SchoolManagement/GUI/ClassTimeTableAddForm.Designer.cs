@@ -143,6 +143,7 @@
             this.uiDateDateTimePicker.Name = "uiDateDateTimePicker";
             this.uiDateDateTimePicker.Size = new System.Drawing.Size(186, 20);
             this.uiDateDateTimePicker.TabIndex = 17;
+            this.uiDateDateTimePicker.ValueChanged += new System.EventHandler(this.uiDateDateTimePicker_ValueChanged);
             // 
             // uiTeacherTextBox
             // 

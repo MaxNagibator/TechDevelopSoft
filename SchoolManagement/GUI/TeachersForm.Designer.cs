@@ -31,6 +31,7 @@
             this.uiAddButton = new System.Windows.Forms.Button();
             this.uiMainDataGridView = new System.Windows.Forms.DataGridView();
             this.uiDeleteButton = new System.Windows.Forms.Button();
+            this.uiSelectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,10 +58,11 @@
             this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiMainDataGridView.Size = new System.Drawing.Size(626, 209);
             this.uiMainDataGridView.TabIndex = 1;
+            this.uiMainDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uiMainDataGridView_CellMouseDoubleClick);
             // 
             // uiDeleteButton
             // 
-            this.uiDeleteButton.Location = new System.Drawing.Point(93, 12);
+            this.uiDeleteButton.Location = new System.Drawing.Point(563, 12);
             this.uiDeleteButton.Name = "uiDeleteButton";
             this.uiDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.uiDeleteButton.TabIndex = 2;
@@ -68,11 +70,22 @@
             this.uiDeleteButton.UseVisualStyleBackColor = true;
             this.uiDeleteButton.Click += new System.EventHandler(this.uiDeleteButton_Click);
             // 
+            // uiSelectButton
+            // 
+            this.uiSelectButton.Location = new System.Drawing.Point(93, 12);
+            this.uiSelectButton.Name = "uiSelectButton";
+            this.uiSelectButton.Size = new System.Drawing.Size(111, 23);
+            this.uiSelectButton.TabIndex = 5;
+            this.uiSelectButton.Text = "Выбрать";
+            this.uiSelectButton.UseVisualStyleBackColor = true;
+            this.uiSelectButton.Click += new System.EventHandler(this.uiSelectButton_Click);
+            // 
             // TeachersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 262);
+            this.Controls.Add(this.uiSelectButton);
             this.Controls.Add(this.uiDeleteButton);
             this.Controls.Add(this.uiMainDataGridView);
             this.Controls.Add(this.uiAddButton);
@@ -88,5 +101,6 @@
         private System.Windows.Forms.Button uiAddButton;
         private System.Windows.Forms.DataGridView uiMainDataGridView;
         private System.Windows.Forms.Button uiDeleteButton;
+        private System.Windows.Forms.Button uiSelectButton;
     }
 }

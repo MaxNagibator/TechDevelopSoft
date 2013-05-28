@@ -20,5 +20,10 @@ namespace SchoolManagement.School
         {
             DatabaseManager.AddTeacher(Name,BirthDay,StartWorkDate);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

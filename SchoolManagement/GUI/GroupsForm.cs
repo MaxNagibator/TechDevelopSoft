@@ -36,12 +36,12 @@ namespace SchoolManagement.GUI
             }
         }
 
-        private void uiSelectGroupButton_Click(object sender, EventArgs e)
+        private void uiSelectButton_Click(object sender, EventArgs e)
         {
-            SelectGroup();
+            SelectItem();
         }
 
-        private void SelectGroup()
+        private void SelectItem()
         {
             if (uiMainDataGridView.SelectedRows.Count <= 0) return;
             if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
@@ -53,7 +53,7 @@ namespace SchoolManagement.GUI
 
         private void uiGroupsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            SelectGroup();
+            SelectItem();
         }
 
         private void uiDeleteButton_Click(object sender, EventArgs e)

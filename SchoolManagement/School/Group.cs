@@ -10,6 +10,12 @@
             Name = name;
             Comment = comment;
         }
+
+        public Group(int id)
+        {
+            Id = id;
+        }
+
         public override void AddToDatabase()
         {
             DatabaseManager.AddGroup(Name, Comment);

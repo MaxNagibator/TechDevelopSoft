@@ -8,7 +8,7 @@ namespace SchoolManagement.GUI
 {
     public partial class ClassTimesForm : Form
     {
-        public ClassTime SelectedGroup { get; set; }
+        public ClassTime SelectedClassTime { get; set; }
 
         private List<ClassTime> _classTimes;
 
@@ -17,8 +17,6 @@ namespace SchoolManagement.GUI
             InitializeComponent();
             RefreshInfo();
         }
-
-        public ClassTime SelectedClassTime { get; set; }
 
         private void RefreshInfo()
         {
@@ -50,24 +48,24 @@ namespace SchoolManagement.GUI
             }
         }
 
-        private void uiSelectGroupButton_Click(object sender, EventArgs e)
+        private void uiSelectButton_Click(object sender, EventArgs e)
         {
-            SelectGroup();
+            SelectItem();
         }
 
-        private void SelectGroup()
+        private void SelectItem()
         {
             if (uiMainDataGridView.SelectedRows.Count <= 0) return;
             if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
             {
                 DialogResult = DialogResult.OK;
-                SelectedGroup = _classTimes.FirstOrDefault(g => g.Id == (int)(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value));
+                SelectedClassTime = _classTimes.FirstOrDefault(g => g.Id == (int)(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value));
             }
         }
 
         private void uiMainDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            SelectGroup();
+            SelectItem();
         }
     }
 }
