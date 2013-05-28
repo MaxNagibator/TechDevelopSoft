@@ -14,10 +14,12 @@ namespace SchoolManagement.GUI
         private void RefreshTeachers()
         {
             var teachers = DatabaseManager.GetTeachers();
-            uiTeachersDataGridView.DataSource = teachers;
+            uiMainDataGridView.DataSource = teachers;
+            var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
+            if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
 
-        private void uiAddTeacherButton_Click(object sender, EventArgs e)
+        private void uiAddButton_Click(object sender, EventArgs e)
         {
             using (var f = new TeacherAddForm())
             {
@@ -25,6 +27,17 @@ namespace SchoolManagement.GUI
                 {
                     RefreshTeachers();
                 }
+            }
+        }
+
+        private void uiDeleteButton_Click(object sender, EventArgs e)
+        {
+            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
+            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
+                DatabaseManager.DeleteTeacherById(selectedId);
+                RefreshTeachers();
             }
         }
     }

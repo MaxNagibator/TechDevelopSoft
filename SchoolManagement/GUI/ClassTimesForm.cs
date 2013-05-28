@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SchoolManagement
+namespace SchoolManagement.GUI
 {
-    public partial class StudentsForm : Form
+    public partial class ClassTimesForm : Form
     {
-        public StudentsForm()
+        public ClassTimesForm()
         {
             InitializeComponent();
             RefreshInfo();
@@ -13,15 +13,15 @@ namespace SchoolManagement
 
         private void RefreshInfo()
         {
-            var students = DatabaseManager.GetStudents();
-            uiMainDataGridView.DataSource = students;
+            var classRooms = DatabaseManager.GetClassTimes();
+            uiMainDataGridView.DataSource = classRooms;
             var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
             if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
 
         private void uiAddButton_Click(object sender, EventArgs e)
         {
-            using (var f = new StudentAddForm())
+            using (var f = new ClassTimeAddForm())
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -35,9 +35,8 @@ namespace SchoolManagement
             if (uiMainDataGridView.SelectedRows.Count <= 0) return;
             if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
             {
-                DialogResult = DialogResult.OK;
                 var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
-                DatabaseManager.DeleteStudentById(selectedId);
+                DatabaseManager.DeleteClassTimeById(selectedId);
                 RefreshInfo();
             }
         }

@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uiAddGroupButton = new System.Windows.Forms.Button();
-            this.uiGroupsDataGridView = new System.Windows.Forms.DataGridView();
+            this.uiAddButton = new System.Windows.Forms.Button();
+            this.uiMainDataGridView = new System.Windows.Forms.DataGridView();
             this.uiSelectGroupButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.uiGroupsDataGridView)).BeginInit();
+            this.uiDeleteButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // uiAddGroupButton
+            // uiAddButton
             // 
-            this.uiAddGroupButton.Location = new System.Drawing.Point(12, 12);
-            this.uiAddGroupButton.Name = "uiAddGroupButton";
-            this.uiAddGroupButton.Size = new System.Drawing.Size(87, 23);
-            this.uiAddGroupButton.TabIndex = 0;
-            this.uiAddGroupButton.Text = "Добавить";
-            this.uiAddGroupButton.UseVisualStyleBackColor = true;
-            this.uiAddGroupButton.Click += new System.EventHandler(this.uiAddStudentButton_Click);
+            this.uiAddButton.Location = new System.Drawing.Point(12, 12);
+            this.uiAddButton.Name = "uiAddButton";
+            this.uiAddButton.Size = new System.Drawing.Size(87, 23);
+            this.uiAddButton.TabIndex = 0;
+            this.uiAddButton.Text = "Добавить";
+            this.uiAddButton.UseVisualStyleBackColor = true;
+            this.uiAddButton.Click += new System.EventHandler(this.uiAddButton_Click);
             // 
-            // uiGroupsDataGridView
+            // uiMainDataGridView
             // 
-            this.uiGroupsDataGridView.AllowUserToAddRows = false;
-            this.uiGroupsDataGridView.AllowUserToDeleteRows = false;
-            this.uiGroupsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiGroupsDataGridView.Location = new System.Drawing.Point(12, 41);
-            this.uiGroupsDataGridView.MultiSelect = false;
-            this.uiGroupsDataGridView.Name = "uiGroupsDataGridView";
-            this.uiGroupsDataGridView.ReadOnly = true;
-            this.uiGroupsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiGroupsDataGridView.Size = new System.Drawing.Size(626, 209);
-            this.uiGroupsDataGridView.TabIndex = 1;
-            this.uiGroupsDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiGroupsDataGridView_CellDoubleClick);
+            this.uiMainDataGridView.AllowUserToAddRows = false;
+            this.uiMainDataGridView.AllowUserToDeleteRows = false;
+            this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiMainDataGridView.Location = new System.Drawing.Point(12, 41);
+            this.uiMainDataGridView.MultiSelect = false;
+            this.uiMainDataGridView.Name = "uiMainDataGridView";
+            this.uiMainDataGridView.ReadOnly = true;
+            this.uiMainDataGridView.RowHeadersVisible = false;
+            this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiMainDataGridView.Size = new System.Drawing.Size(626, 209);
+            this.uiMainDataGridView.TabIndex = 1;
+            this.uiMainDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiGroupsDataGridView_CellDoubleClick);
             // 
             // uiSelectGroupButton
             // 
@@ -68,25 +70,37 @@
             this.uiSelectGroupButton.UseVisualStyleBackColor = true;
             this.uiSelectGroupButton.Click += new System.EventHandler(this.uiSelectGroupButton_Click);
             // 
+            // uiDeleteButton
+            // 
+            this.uiDeleteButton.Location = new System.Drawing.Point(222, 12);
+            this.uiDeleteButton.Name = "uiDeleteButton";
+            this.uiDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.uiDeleteButton.TabIndex = 3;
+            this.uiDeleteButton.Text = "Удалить";
+            this.uiDeleteButton.UseVisualStyleBackColor = true;
+            this.uiDeleteButton.Click += new System.EventHandler(this.uiDeleteButton_Click);
+            // 
             // GroupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 262);
+            this.Controls.Add(this.uiDeleteButton);
             this.Controls.Add(this.uiSelectGroupButton);
-            this.Controls.Add(this.uiGroupsDataGridView);
-            this.Controls.Add(this.uiAddGroupButton);
+            this.Controls.Add(this.uiMainDataGridView);
+            this.Controls.Add(this.uiAddButton);
             this.Name = "GroupsForm";
-            this.Text = "GroupsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.uiGroupsDataGridView)).EndInit();
+            this.Text = "Группы";
+            ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button uiAddGroupButton;
-        private System.Windows.Forms.DataGridView uiGroupsDataGridView;
+        private System.Windows.Forms.Button uiAddButton;
+        private System.Windows.Forms.DataGridView uiMainDataGridView;
         private System.Windows.Forms.Button uiSelectGroupButton;
+        private System.Windows.Forms.Button uiDeleteButton;
     }
 }

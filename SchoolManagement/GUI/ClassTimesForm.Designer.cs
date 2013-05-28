@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagement.GUI
 {
-    partial class EducationalDisciplinesForm
+    partial class ClassTimesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@
             this.uiDeleteButton.UseVisualStyleBackColor = true;
             this.uiDeleteButton.Click += new System.EventHandler(this.uiDeleteButton_Click);
             // 
-            // EducationalDisciplinesForm
+            // ClassTimesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,8 +76,8 @@
             this.Controls.Add(this.uiDeleteButton);
             this.Controls.Add(this.uiMainDataGridView);
             this.Controls.Add(this.uiAddButton);
-            this.Name = "EducationalDisciplinesForm";
-            this.Text = "Предметы";
+            this.Name = "ClassTimesForm";
+            this.Text = "Время уроков";
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.ResumeLayout(false);
 

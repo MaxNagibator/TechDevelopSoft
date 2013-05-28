@@ -33,8 +33,10 @@
             this.uiClassRoomToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiStudentsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiGroupToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.uiTeacherToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiEducationalDisciplineToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.uiTeacherToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.uiClassTimeToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.uiClassTimeTableToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,9 @@
             this.uiStudentsToolStripButton,
             this.uiGroupToolStripButton,
             this.uiEducationalDisciplineToolStripButton,
-            this.uiTeacherToolStripButton});
+            this.uiTeacherToolStripButton,
+            this.uiClassTimeToolStripButton,
+            this.uiClassTimeTableToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(458, 25);
@@ -84,16 +88,6 @@
             this.uiGroupToolStripButton.Text = "группы";
             this.uiGroupToolStripButton.Click += new System.EventHandler(this.uiGroupToolStripButton_Click);
             // 
-            // uiTeacherToolStripButton
-            // 
-            this.uiTeacherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.uiTeacherToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiTeacherToolStripButton.Image")));
-            this.uiTeacherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.uiTeacherToolStripButton.Name = "uiTeacherToolStripButton";
-            this.uiTeacherToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.uiTeacherToolStripButton.Text = "учителя";
-            this.uiTeacherToolStripButton.Click += new System.EventHandler(this.uTeacherToolStripButton_Click);
-            // 
             // uiEducationalDisciplineToolStripButton
             // 
             this.uiEducationalDisciplineToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -104,6 +98,36 @@
             this.uiEducationalDisciplineToolStripButton.Text = "предметы";
             this.uiEducationalDisciplineToolStripButton.ToolTipText = "предметы";
             this.uiEducationalDisciplineToolStripButton.Click += new System.EventHandler(this.uiEducationalDisciplineToolStripButton_Click);
+            // 
+            // uiTeacherToolStripButton
+            // 
+            this.uiTeacherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiTeacherToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiTeacherToolStripButton.Image")));
+            this.uiTeacherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiTeacherToolStripButton.Name = "uiTeacherToolStripButton";
+            this.uiTeacherToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.uiTeacherToolStripButton.Text = "учителя";
+            this.uiTeacherToolStripButton.Click += new System.EventHandler(this.uTeacherToolStripButton_Click);
+            // 
+            // uiClassTimeToolStripButton
+            // 
+            this.uiClassTimeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiClassTimeToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiClassTimeToolStripButton.Image")));
+            this.uiClassTimeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiClassTimeToolStripButton.Name = "uiClassTimeToolStripButton";
+            this.uiClassTimeToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.uiClassTimeToolStripButton.Text = "Время уроков";
+            this.uiClassTimeToolStripButton.Click += new System.EventHandler(this.uiClassTimeToolStripButton_Click);
+            // 
+            // uiClassTimeTableToolStripButton
+            // 
+            this.uiClassTimeTableToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiClassTimeTableToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiClassTimeTableToolStripButton.Image")));
+            this.uiClassTimeTableToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiClassTimeTableToolStripButton.Name = "uiClassTimeTableToolStripButton";
+            this.uiClassTimeTableToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.uiClassTimeTableToolStripButton.Text = "Расписание уроков";
+            this.uiClassTimeTableToolStripButton.Click += new System.EventHandler(this.uiClassTimeTableToolStripButton_Click);
             // 
             // MainForm
             // 
@@ -131,6 +155,8 @@
         private System.Windows.Forms.ToolStripButton uiTeacherToolStripButton;
         private System.Windows.Forms.ToolStripButton uiGroupToolStripButton;
         private System.Windows.Forms.ToolStripButton uiEducationalDisciplineToolStripButton;
+        private System.Windows.Forms.ToolStripButton uiClassTimeToolStripButton;
+        private System.Windows.Forms.ToolStripButton uiClassTimeTableToolStripButton;
 
 
     }

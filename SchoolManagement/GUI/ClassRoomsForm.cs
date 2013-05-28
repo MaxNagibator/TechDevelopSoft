@@ -8,23 +8,36 @@ namespace SchoolManagement.GUI
         public ClassRoomsForm()
         {
             InitializeComponent();
-            RefreshClassRoom();
+            RefreshInfo();
         }
 
-        private void RefreshClassRoom()
+        private void RefreshInfo()
         {
             var classRooms = DatabaseManager.GetClassRooms();
-            uiStudentsDataGridView.DataSource = classRooms;
+            uiMainDataGridView.DataSource = classRooms;
+            var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
+            if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
 
-        private void uiAddStudentButton_Click(object sender, EventArgs e)
+        private void uiAddButton_Click(object sender, EventArgs e)
         {
             using (var f = new ClassRoomAddForm())
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    RefreshClassRoom();
+                    RefreshInfo();
                 }
+            }
+        }
+
+        private void uiDeleteButton_Click(object sender, EventArgs e)
+        {
+            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
+            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
+                DatabaseManager.DeleteClassRoomById(selectedId);
+                RefreshInfo();
             }
         }
     }

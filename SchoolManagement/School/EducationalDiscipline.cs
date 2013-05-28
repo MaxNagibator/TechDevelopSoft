@@ -4,10 +4,15 @@
     {
         public string Description { get; set; }
 
+        public EducationalDiscipline(string name, string description)
+        {
+            Name = name;
+            Description = description;
+        }
 
         public override void AddToDatabase()
         {
-            throw new System.NotImplementedException();
+            DatabaseManager.AddEducationalDiscipline(Name,Description);
         }
     }
 }

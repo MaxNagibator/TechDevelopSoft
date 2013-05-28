@@ -10,22 +10,24 @@ namespace SchoolManagement
         public GroupsForm()
         {
             InitializeComponent();
-            RefreshGroups();
+            RefreshInfo();
         }
 
-        private void RefreshGroups()
+        private void RefreshInfo()
         {
             var groups = DatabaseManager.GetGroups();
-            uiGroupsDataGridView.DataSource = groups;
+            uiMainDataGridView.DataSource = groups;
+            var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
+            if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
 
-        private void uiAddStudentButton_Click(object sender, EventArgs e)
+        private void uiAddButton_Click(object sender, EventArgs e)
         {
             using (var f = new GroupAddForm())
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    RefreshGroups();
+                    RefreshInfo();
                 }
             }
         }
@@ -37,17 +39,28 @@ namespace SchoolManagement
 
         private void SelectGroup()
         {
-            if (uiGroupsDataGridView.SelectedRows.Count <= 0) return;
-            if (uiGroupsDataGridView.SelectedRows[0].Cells["Id"].Value != null)
+            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
+            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
             {
                 DialogResult = DialogResult.OK;
-                SelectedId = Convert.ToInt32(uiGroupsDataGridView.SelectedRows[0].Cells["Id"].Value);
+                SelectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
             }
         }
 
         private void uiGroupsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectGroup();
+        }
+
+        private void uiDeleteButton_Click(object sender, EventArgs e)
+        {
+            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
+            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
+                DatabaseManager.DeleteGroupById(selectedId);
+                RefreshInfo();
+            }
         }
     }
 }

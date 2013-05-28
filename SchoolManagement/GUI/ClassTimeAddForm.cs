@@ -4,17 +4,18 @@ using SchoolManagement.School;
 
 namespace SchoolManagement.GUI
 {
-    public partial class EducationalDisciplineAddForm : Form
+    public partial class ClassTimeAddForm : Form
     {
-        public EducationalDisciplineAddForm()
+        public ClassTimeAddForm()
         {
             InitializeComponent();
         }
 
         private void uiCommintButton_Click(object sender, EventArgs e)
         {
-            var educationalDiscipline = new EducationalDiscipline(uiNameTextBox.Text, uiDescriptionTextBox.Text);
-            educationalDiscipline.AddToDatabase();
+            var group = new ClassTime(uiNameTextBox.Text, Convert.ToInt32(uiNumberTextBox.Text), uiStartTimeTextBox.Text,
+                                      uiEndTimeTextBox.Text);
+            group.AddToDatabase();
             DialogResult = DialogResult.OK;
             Close();
         }

@@ -11,10 +11,20 @@ namespace SchoolManagement.School
         public ClassRoom ClassRoom { get; set; }
         public Group Group { get; set; }
 
+        public ClassTimeTable(string name, DateTime date, ClassTime classTime, EducationalDiscipline educationalDiscipline, Teacher teacher, ClassRoom classRoom, Group group)
+        {
+            Name = name;
+            Date = date;
+            ClassTime = classTime;
+            EducationalDiscipline = educationalDiscipline;
+            Teacher = teacher;
+            ClassRoom = classRoom;
+            Group = group;
+        }
 
         public override void AddToDatabase()
         {
-            throw new System.NotImplementedException();
+           //DatabaseManager.AddClassTimeTable();
         }
     }
 }

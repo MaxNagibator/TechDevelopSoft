@@ -88,7 +88,7 @@
             this.Controls.Add(this.uiNumberTextBox);
             this.Controls.Add(this.uiNameTextBox);
             this.Name = "ClassRoomAddForm";
-            this.Text = "добавление группы";
+            this.Text = "добавление кабинетика";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,23 +8,36 @@ namespace SchoolManagement.GUI
         public EducationalDisciplinesForm()
         {
             InitializeComponent();
-            RefreshTeachers();
+            RefreshInfo();
         }
 
-        private void RefreshTeachers()
+        private void RefreshInfo()
         {
-            var teachers = DatabaseManager.GetTeachers();
-            uiTeachersDataGridView.DataSource = teachers;
+            var teachers = DatabaseManager.GetEducationalDisciplines();
+            uiMainDataGridView.DataSource = teachers;
+            var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
+            if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
 
-        private void uiAddTeacherButton_Click(object sender, EventArgs e)
+        private void uiAddButton_Click(object sender, EventArgs e)
         {
-            using (var f = new TeacherAddForm())
+            using (var f = new EducationalDisciplineAddForm())
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    RefreshTeachers();
+                    RefreshInfo();
                 }
+            }
+        }
+
+        private void uiDeleteButton_Click(object sender, EventArgs e)
+        {
+            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
+            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
+                DatabaseManager.DeleteEducationalDisciplineById(selectedId);
+                RefreshInfo();
             }
         }
     }

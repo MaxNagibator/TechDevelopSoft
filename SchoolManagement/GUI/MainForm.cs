@@ -48,7 +48,26 @@ namespace SchoolManagement.GUI
 
         private void uiEducationalDisciplineToolStripButton_Click(object sender, EventArgs e)
         {
+            using (var f = new EducationalDisciplinesForm())
+            {
+                f.ShowDialog();
+            }
+        }
 
+        private void uiClassTimeToolStripButton_Click(object sender, EventArgs e)
+        {
+            using (var f = new ClassTimesForm())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void uiClassTimeTableToolStripButton_Click(object sender, EventArgs e)
+        {
+            using (var f = new ClassTimeTablesForm())
+            {
+                f.ShowDialog();
+            }
         }
     }
 }

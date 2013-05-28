@@ -4,10 +4,19 @@
     {
         public string StartTime { get; set; }
         public string EndTime { get; set; }
+        public int Number { get; set; }
+
+        public ClassTime(string name, int number   , string startTime, string endTime)
+        {
+            StartTime = startTime;
+            EndTime = endTime;
+            Name = name;
+            Number = number;
+        }
 
         public override void AddToDatabase()
         {
-            throw new System.NotImplementedException();
+            DatabaseManager.AddClassTime(Name,Number,StartTime,EndTime);
         }
     }
 }
