@@ -18,5 +18,10 @@
         {
             DatabaseManager.AddClassTime(Name,Number,StartTime,EndTime);
         }
+
+        public override string ToString()
+        {
+            return Number + ": " + StartTime + "-" + EndTime;
+        }
     }
 }

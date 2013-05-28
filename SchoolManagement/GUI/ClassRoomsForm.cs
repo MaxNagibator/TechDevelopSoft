@@ -1,10 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
+using SchoolManagement.School;
 
 namespace SchoolManagement.GUI
 {
     public partial class ClassRoomsForm : Form
     {
+        public ClassRoom SelectedClassRoom { get; set; }
+        private List<ClassRoom> _classRooms;
+
         public ClassRoomsForm()
         {
             InitializeComponent();
@@ -13,8 +19,8 @@ namespace SchoolManagement.GUI
 
         private void RefreshInfo()
         {
-            var classRooms = DatabaseManager.GetClassRooms();
-            uiMainDataGridView.DataSource = classRooms;
+            _classRooms = DatabaseManager.GetClassRooms();
+            uiMainDataGridView.DataSource = _classRooms;
             var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
             if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
@@ -39,6 +45,26 @@ namespace SchoolManagement.GUI
                 DatabaseManager.DeleteClassRoomById(selectedId);
                 RefreshInfo();
             }
+        }
+
+        private void SelectClassRoom()
+        {
+            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
+            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
+            {
+                DialogResult = DialogResult.OK;
+                SelectedClassRoom = _classRooms.FirstOrDefault(g => g.Id == (int)(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value));
+            }
+        }
+
+        private void uiSelectClassRoomButton_Click(object sender, EventArgs e)
+        {
+            SelectClassRoom();
+        }
+
+        private void uiMainDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

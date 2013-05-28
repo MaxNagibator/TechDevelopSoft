@@ -14,5 +14,10 @@
         {
             DatabaseManager.AddClassRoom(Name,Number);
         }
+
+        public override string ToString()
+        {
+            return Number;
+        }
     }
 }

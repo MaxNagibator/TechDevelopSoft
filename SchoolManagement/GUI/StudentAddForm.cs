@@ -6,7 +6,7 @@ namespace SchoolManagement.GUI
 {
     public partial class StudentAddForm : Form
     {
-        private Group _group;
+        private Group _selectedGroup;
         public StudentAddForm()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace SchoolManagement.GUI
         private void uiCommintButton_Click(object sender, EventArgs e)
         {
             var student = new Student(uiNameTextBox.Text, uiBirthDayDateTimePicker.Value, uiCommentTextBox.Text,
-                                       _group);
+                                       _selectedGroup);
             student.AddToDatabase();
             DialogResult = DialogResult.OK;
             Close();
@@ -27,8 +27,8 @@ namespace SchoolManagement.GUI
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    _group = f.SelectedGroup;
-                    uiGroupTextBox.Text = _group.ToString();
+                    _selectedGroup = f.SelectedGroup;
+                    uiGroupTextBox.Text = _selectedGroup.ToString();
                 }
             }
         }

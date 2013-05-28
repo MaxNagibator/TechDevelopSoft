@@ -31,13 +31,13 @@
             this.uiNameTextBox = new System.Windows.Forms.TextBox();
             this.uiNameLabel = new System.Windows.Forms.Label();
             this.uiCommitButton = new System.Windows.Forms.Button();
-            this.uiDisciplineLabel = new System.Windows.Forms.Label();
-            this.uiDisciplineTextBox = new System.Windows.Forms.TextBox();
+            this.uiEducationalDisciplineLabel = new System.Windows.Forms.Label();
+            this.uiEducationalDisciplineTextBox = new System.Windows.Forms.TextBox();
             this.uiDateLabel = new System.Windows.Forms.Label();
             this.uiClassTimeLabel = new System.Windows.Forms.Label();
             this.uiClassTimeTextBox = new System.Windows.Forms.TextBox();
             this.uiSelectClassTimeButton = new System.Windows.Forms.Button();
-            this.uiSelectDisciplineButton = new System.Windows.Forms.Button();
+            this.uiEducationalDisciplineButton = new System.Windows.Forms.Button();
             this.uiDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.uiTeacherTextBox = new System.Windows.Forms.TextBox();
             this.uiTeacherLabel = new System.Windows.Forms.Label();
@@ -76,21 +76,21 @@
             this.uiCommitButton.UseVisualStyleBackColor = true;
             this.uiCommitButton.Click += new System.EventHandler(this.uiCommintButton_Click);
             // 
-            // uiDisciplineLabel
+            // uiEducationalDisciplineLabel
             // 
-            this.uiDisciplineLabel.AutoSize = true;
-            this.uiDisciplineLabel.Location = new System.Drawing.Point(12, 61);
-            this.uiDisciplineLabel.Name = "uiDisciplineLabel";
-            this.uiDisciplineLabel.Size = new System.Drawing.Size(70, 13);
-            this.uiDisciplineLabel.TabIndex = 10;
-            this.uiDisciplineLabel.Text = "Дисциплина";
+            this.uiEducationalDisciplineLabel.AutoSize = true;
+            this.uiEducationalDisciplineLabel.Location = new System.Drawing.Point(12, 61);
+            this.uiEducationalDisciplineLabel.Name = "uiEducationalDisciplineLabel";
+            this.uiEducationalDisciplineLabel.Size = new System.Drawing.Size(70, 13);
+            this.uiEducationalDisciplineLabel.TabIndex = 10;
+            this.uiEducationalDisciplineLabel.Text = "Дисциплина";
             // 
-            // uiDisciplineTextBox
+            // uiEducationalDisciplineTextBox
             // 
-            this.uiDisciplineTextBox.Location = new System.Drawing.Point(86, 58);
-            this.uiDisciplineTextBox.Name = "uiDisciplineTextBox";
-            this.uiDisciplineTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiDisciplineTextBox.TabIndex = 9;
+            this.uiEducationalDisciplineTextBox.Location = new System.Drawing.Point(86, 58);
+            this.uiEducationalDisciplineTextBox.Name = "uiEducationalDisciplineTextBox";
+            this.uiEducationalDisciplineTextBox.Size = new System.Drawing.Size(135, 20);
+            this.uiEducationalDisciplineTextBox.TabIndex = 9;
             // 
             // uiDateLabel
             // 
@@ -127,15 +127,15 @@
             this.uiSelectClassTimeButton.UseVisualStyleBackColor = true;
             this.uiSelectClassTimeButton.Click += new System.EventHandler(this.uiSelectClassTimeButton_Click);
             // 
-            // uiSelectDisciplineButton
+            // uiEducationalDisciplineButton
             // 
-            this.uiSelectDisciplineButton.Location = new System.Drawing.Point(227, 56);
-            this.uiSelectDisciplineButton.Name = "uiSelectDisciplineButton";
-            this.uiSelectDisciplineButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectDisciplineButton.TabIndex = 16;
-            this.uiSelectDisciplineButton.Text = "♥";
-            this.uiSelectDisciplineButton.UseVisualStyleBackColor = true;
-            this.uiSelectDisciplineButton.Click += new System.EventHandler(this.uiSelectDisciplineButton_Click);
+            this.uiEducationalDisciplineButton.Location = new System.Drawing.Point(227, 56);
+            this.uiEducationalDisciplineButton.Name = "uiEducationalDisciplineButton";
+            this.uiEducationalDisciplineButton.Size = new System.Drawing.Size(45, 23);
+            this.uiEducationalDisciplineButton.TabIndex = 16;
+            this.uiEducationalDisciplineButton.Text = "♥";
+            this.uiEducationalDisciplineButton.UseVisualStyleBackColor = true;
+            this.uiEducationalDisciplineButton.Click += new System.EventHandler(this.uiSelectEducationalDisciplineButton_Click);
             // 
             // uiDateDateTimePicker
             // 
@@ -231,7 +231,7 @@
             this.Controls.Add(this.uiSelectGroupButton);
             this.Controls.Add(this.uiSelectClassRoomButton);
             this.Controls.Add(this.uiSelectTeacherButton);
-            this.Controls.Add(this.uiSelectDisciplineButton);
+            this.Controls.Add(this.uiEducationalDisciplineButton);
             this.Controls.Add(this.uiSelectClassTimeButton);
             this.Controls.Add(this.uiClassTimeLabel);
             this.Controls.Add(this.uiClassTimeTextBox);
@@ -239,11 +239,11 @@
             this.Controls.Add(this.uiGroupLabel);
             this.Controls.Add(this.uiClassRoomLabel);
             this.Controls.Add(this.uiTeacherLabel);
-            this.Controls.Add(this.uiDisciplineLabel);
+            this.Controls.Add(this.uiEducationalDisciplineLabel);
             this.Controls.Add(this.uiGroupTextBox);
             this.Controls.Add(this.uiClassRoomTextBox);
             this.Controls.Add(this.uiTeacherTextBox);
-            this.Controls.Add(this.uiDisciplineTextBox);
+            this.Controls.Add(this.uiEducationalDisciplineTextBox);
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNameTextBox);
@@ -259,13 +259,13 @@
         private System.Windows.Forms.TextBox uiNameTextBox;
         private System.Windows.Forms.Label uiNameLabel;
         private System.Windows.Forms.Button uiCommitButton;
-        private System.Windows.Forms.Label uiDisciplineLabel;
-        private System.Windows.Forms.TextBox uiDisciplineTextBox;
+        private System.Windows.Forms.Label uiEducationalDisciplineLabel;
+        private System.Windows.Forms.TextBox uiEducationalDisciplineTextBox;
         private System.Windows.Forms.Label uiDateLabel;
         private System.Windows.Forms.Label uiClassTimeLabel;
         private System.Windows.Forms.TextBox uiClassTimeTextBox;
         private System.Windows.Forms.Button uiSelectClassTimeButton;
-        private System.Windows.Forms.Button uiSelectDisciplineButton;
+        private System.Windows.Forms.Button uiEducationalDisciplineButton;
         private System.Windows.Forms.DateTimePicker uiDateDateTimePicker;
         private System.Windows.Forms.TextBox uiTeacherTextBox;
         private System.Windows.Forms.Label uiTeacherLabel;
