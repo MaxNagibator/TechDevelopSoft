@@ -285,13 +285,12 @@ namespace SchoolManagement
                     @"INSERT INTO [ClassTimeTable] 
                         (Name,Date, ClassTimeId,EducationalDisciplineId,TeacherId,ClassRoomId,GroupId)
                         VALUES(@Name,@Date, @ClassTimeId,@EducationalDisciplineId,@TeacherId,@ClassRoomId,@GroupId)");
-
             }
         }
 
         public static void DeleteClassTimeTableById(int id)
         {
-            DeleteFromTableById(id, "ClassTime");
+            DeleteFromTableById(id, "ClassTimeTable");
         }
 
         public static List<EducationalDiscipline> GetEducationalDisciplines()

@@ -4,13 +4,11 @@
     {
 
         public string Text { get; set; }
-        public ClassTime ClassTime { get; set; }
         public ClassTimeTable ClassTimeTable { get; set; }
 
-        public ClassTimeTableDayElem(string text, ClassTime classTime, ClassTimeTable classTimeTable)
+        public ClassTimeTableDayElem(string text, ClassTimeTable classTimeTable)
         {
             Text = text;
-            ClassTime = classTime;
             ClassTimeTable = classTimeTable;
         }
 

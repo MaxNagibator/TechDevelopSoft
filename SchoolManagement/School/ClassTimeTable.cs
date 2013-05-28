@@ -22,10 +22,11 @@ namespace SchoolManagement.School
             Group = group;
         }
 
-        public ClassTimeTable(Group group, DateTime date)
+        public ClassTimeTable(Group group, DateTime date, ClassTime classTime)
         {
             Group = group;
             Date = date;
+            ClassTime = classTime;
         }
 
         public override void AddToDatabase()

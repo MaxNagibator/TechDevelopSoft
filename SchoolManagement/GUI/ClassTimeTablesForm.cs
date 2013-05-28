@@ -55,8 +55,7 @@ namespace SchoolManagement.GUI
             var elementsByDateAndGroup = (from c in classTimeTablesForDateAndGroup
                                           select new ClassTimeTableDayElem(
                                               "d: " + c.EducationalDiscipline.Name + " k: " + c.ClassRoom.Number +
-                                              " p: " + c.Teacher.Name,
-                                              c.ClassTime, c)).ToList();
+                                              " p: " + c.Teacher.Name, c)).ToList();
             return GetVoidClassTimeTables(elementsByDateAndGroup, classTimes, date, group);
         }
 
@@ -64,9 +63,9 @@ namespace SchoolManagement.GUI
                                                                    IEnumerable<ClassTime> classTimes, DateTime date, Group group)
         {
             foreach (
-                var classTime in classTimes.Where(r => classTimeTableDayElems.All(s => s.ClassTime.Id != r.Id)))
+                var classTime in classTimes.Where(r => classTimeTableDayElems.All(s => s.ClassTimeTable.ClassTime.Id != r.Id)))
             {
-                classTimeTableDayElems.Add(new ClassTimeTableDayElem("-", classTime, new ClassTimeTable(group, date)));
+                classTimeTableDayElems.Add(new ClassTimeTableDayElem("-",new ClassTimeTable(group, date, classTime)));
             }
 
             return classTimeTableDayElems;
@@ -80,17 +79,6 @@ namespace SchoolManagement.GUI
             uiMainDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
-        private void uiDeleteButton_Click(object sender, EventArgs e)
-        {
-            if (uiMainDataGridView.SelectedRows.Count <= 0) return;
-            if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
-            {
-                var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
-                DatabaseManager.DeleteClassTimeById(selectedId);
-                RefreshInfo();
-            }
-        }
-
         private void uiDateViewDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             RefreshInfo();
@@ -98,15 +86,16 @@ namespace SchoolManagement.GUI
 
         private void uiGroupComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             RefreshInfo();
         }
 
         private void uiDeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
-            //var classTimeTable = classTimeTableDayElem.ClassTimeTable;
-            //RefreshInfo();
+            var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
+            var classTimeTable = classTimeTableDayElem.ClassTimeTable;
+            var selectedId = classTimeTable.Id;
+            DatabaseManager.DeleteClassTimeTableById(selectedId);
+            RefreshInfo();
         }
 
         private void uiAddToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,14 +112,14 @@ namespace SchoolManagement.GUI
             }
         }
 
-        private void uiMenuContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
         private void uiMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            uiMenuContextMenuStrip.Show(e.X,e.Y);
+            if (e.Button == MouseButtons.Right && e.RowIndex > -1 && uiMainDataGridView.Columns[e.ColumnIndex].DisplayIndex > 0)
+            {
+                uiMainDataGridView[e.ColumnIndex, e.RowIndex].Selected = true;
+                var a = uiMainDataGridView.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true).Location;
+                uiMenuContextMenuStrip.Show(uiMainDataGridView, a.X + e.X, a.Y + e.Y);
+            }
         }
     }
 }

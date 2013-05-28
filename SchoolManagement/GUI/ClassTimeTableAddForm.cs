@@ -24,6 +24,7 @@ namespace SchoolManagement.GUI
         {
             SetGroup(_classTimeTable.Group);
             SetDate(_classTimeTable.Date);
+            SetClassTime(_classTimeTable.ClassTime);
         }
 
         private void uiCommintButton_Click(object sender, EventArgs e)

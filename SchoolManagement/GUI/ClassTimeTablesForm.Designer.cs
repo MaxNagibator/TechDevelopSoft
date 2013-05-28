@@ -33,7 +33,6 @@
             this.uiMenuContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uiDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uiDeleteButton = new System.Windows.Forms.Button();
             this.uiDateViewDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.uiGroupComboBox = new System.Windows.Forms.ComboBox();
             this.uiDatePeriodLabel = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             this.uiMainDataGridView.AllowUserToAddRows = false;
             this.uiMainDataGridView.AllowUserToDeleteRows = false;
             this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiMainDataGridView.ContextMenuStrip = this.uiMenuContextMenuStrip;
             this.uiMainDataGridView.Location = new System.Drawing.Point(12, 51);
             this.uiMainDataGridView.MultiSelect = false;
             this.uiMainDataGridView.Name = "uiMainDataGridView";
@@ -64,7 +62,6 @@
             this.uiAddToolStripMenuItem});
             this.uiMenuContextMenuStrip.Name = "contextMenuStrip1";
             this.uiMenuContextMenuStrip.Size = new System.Drawing.Size(125, 48);
-            this.uiMenuContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.uiMenuContextMenuStrip_Opening);
             // 
             // uiDeleteToolStripMenuItem
             // 
@@ -79,16 +76,6 @@
             this.uiAddToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.uiAddToolStripMenuItem.Text = "добавить";
             this.uiAddToolStripMenuItem.Click += new System.EventHandler(this.uiAddToolStripMenuItem_Click);
-            // 
-            // uiDeleteButton
-            // 
-            this.uiDeleteButton.Location = new System.Drawing.Point(93, 12);
-            this.uiDeleteButton.Name = "uiDeleteButton";
-            this.uiDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.uiDeleteButton.TabIndex = 3;
-            this.uiDeleteButton.Text = "Удалить";
-            this.uiDeleteButton.UseVisualStyleBackColor = true;
-            this.uiDeleteButton.Click += new System.EventHandler(this.uiDeleteButton_Click);
             // 
             // uiDateViewDateTimePicker
             // 
@@ -125,7 +112,6 @@
             this.Controls.Add(this.uiDatePeriodLabel);
             this.Controls.Add(this.uiGroupComboBox);
             this.Controls.Add(this.uiDateViewDateTimePicker);
-            this.Controls.Add(this.uiDeleteButton);
             this.Controls.Add(this.uiMainDataGridView);
             this.Name = "ClassTimeTablesForm";
             this.Text = "Расписание уроков";
@@ -139,7 +125,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView uiMainDataGridView;
-        private System.Windows.Forms.Button uiDeleteButton;
         private System.Windows.Forms.DateTimePicker uiDateViewDateTimePicker;
         private System.Windows.Forms.ComboBox uiGroupComboBox;
         private System.Windows.Forms.Label uiDatePeriodLabel;
