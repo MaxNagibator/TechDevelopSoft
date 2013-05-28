@@ -52,7 +52,7 @@
             this.uiClassTimeTableToolStripButton});
             this.uiMainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.uiMainToolStrip.Name = "uiMainToolStrip";
-            this.uiMainToolStrip.Size = new System.Drawing.Size(499, 71);
+            this.uiMainToolStrip.Size = new System.Drawing.Size(506, 71);
             this.uiMainToolStrip.TabIndex = 0;
             this.uiMainToolStrip.Text = "Менюшка";
             // 
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 76);
+            this.ClientSize = new System.Drawing.Size(506, 76);
             this.Controls.Add(this.uiMainToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

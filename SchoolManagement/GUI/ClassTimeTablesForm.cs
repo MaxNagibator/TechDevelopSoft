@@ -29,21 +29,17 @@ namespace SchoolManagement.GUI
             var day5 = GetElementsByDateAndGroup(date.Date.AddDays(5 - dayOfWeek), classTimes);
             var day6 = GetElementsByDateAndGroup(date.Date.AddDays(6 - dayOfWeek), classTimes);
             var day7 = GetElementsByDateAndGroup(date.Date.AddDays(7 - dayOfWeek), classTimes);
-            var elements = new List<ClassTimeTableWeekElem>();
-            for (var i = 0; i < classTimes.Count; i++)
-            {
-                elements.Add(new ClassTimeTableWeekElem
-                                 {
-                                     ClassTime = classTimes[i],
-                                     Day1 = day1[i],
-                                     Day2 = day2[i],
-                                     Day3 = day3[i],
-                                     Day4 = day4[i],
-                                     Day5 = day5[i],
-                                     Day6 = day6[i],
-                                     Day7 = day7[i],
-                                 });
-            }
+            var elements = classTimes.Select((c, i) => new ClassTimeTableWeekElem
+                                                           {
+                                                               ClassTime = c,
+                                                               Day1 = day1[i],
+                                                               Day2 = day2[i],
+                                                               Day3 = day3[i],
+                                                               Day4 = day4[i],
+                                                               Day5 = day5[i],
+                                                               Day6 = day6[i],
+                                                               Day7 = day7[i],
+                                                           }).ToList();
             RefreshClassTimeTableElemInfo(elements);
         }
 
@@ -62,13 +58,13 @@ namespace SchoolManagement.GUI
         private List<ClassTimeTableDayElem> GetVoidClassTimeTables(List<ClassTimeTableDayElem> classTimeTableDayElems,
                                                                    IEnumerable<ClassTime> classTimes, DateTime date, Group group)
         {
-            foreach (
-                var classTime in classTimes.Where(r => classTimeTableDayElems.All(s => s.ClassTimeTable.ClassTime.Id != r.Id)))
-            {
-                classTimeTableDayElems.Add(new ClassTimeTableDayElem("-",new ClassTimeTable(group, date, classTime)));
-            }
-
-            return classTimeTableDayElems;
+            return
+                classTimes.Select(classTime =>
+                                  (classTimeTableDayElems.Any(
+                                      c => c.ClassTimeTable.ClassTime.Id == classTime.Id)
+                                       ? classTimeTableDayElems.First(c => c.ClassTimeTable.ClassTime.Id == classTime.Id)
+                                       : new ClassTimeTableDayElem("-", new ClassTimeTable(group, date, classTime))
+                                  )).ToList();
         }
 
         private void RefreshClassTimeTableElemInfo(List<ClassTimeTableWeekElem> elementsByDateAndGroup)

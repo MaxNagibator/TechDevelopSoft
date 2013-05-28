@@ -12,6 +12,7 @@ namespace SchoolManagement.GUI
 
         private void UIQuestionnaireServerMainForm_Load(object sender, EventArgs e)
         {
+
         }
 
         private void uiStudentsToolStripButton_Click(object sender, EventArgs e)
