@@ -27,10 +27,11 @@ namespace SchoolManagement
                                               new Student(row.Field<string>("Name"),
                                                           row.Field<DateTime>("BirthDay"),
                                                           row.Field<string>("Comment"),
-                                                          new Group(row.Field<int>("GroupId"))
+                                                          new Group(row.Field<string>("GroupName"),
+                                                                    row.Field<string>("GroupComment")
+                                                              )
                                                               {
-                                                                  Name = row.Field<string>("GroupName"),
-                                                                  Comment = row.Field<string>("GroupComment")
+                                                                  Id = row.Field<int>("GroupId")
                                                               })
                                                   {
                                                       Id = row.Field<int>("Id"),
@@ -80,11 +81,11 @@ namespace SchoolManagement
                                         FROM [Group]
                                         ORDER BY [Name]");
                 groups.AddRange(sqlProvider.Rows.Select(row =>
-                                                        new Group
+                                                        new Group(
+                                                            row.Field<string>("Name"),
+                                                            row.Field<string>("Comment"))
                                                             {
-                                                                Id = row.Field<int>("Id"),
-                                                                Name = row.Field<string>("Name"),
-                                                                Comment = row.Field<string>("Comment")
+                                                                Id = row.Field<int>("Id")
                                                             }));
             }
             return groups;

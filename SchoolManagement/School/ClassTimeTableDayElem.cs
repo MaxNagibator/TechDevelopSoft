@@ -12,5 +12,10 @@
             ClassTimeNumber = classTimeNumber;
             ClassTimeTable = classTimeTable;
         }
+
+        public override string ToString()
+        {
+            return Text;
+        }
     }
 }

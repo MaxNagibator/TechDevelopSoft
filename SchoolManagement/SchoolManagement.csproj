@@ -53,6 +53,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,11 +87,11 @@
     <Compile Include="GUI\EducationalDisciplinesForm.Designer.cs">
       <DependentUpon>EducationalDisciplinesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ClassTimeAddForm.cs">
+    <Compile Include="GUI\ClassTimeTableAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ClassTimeAddForm.Designer.cs">
-      <DependentUpon>ClassTimeAddForm.cs</DependentUpon>
+    <Compile Include="GUI\ClassTimeTableAddForm.Designer.cs">
+      <DependentUpon>ClassTimeTableAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ClassTimesForm.cs">
       <SubType>Form</SubType>
@@ -98,11 +99,11 @@
     <Compile Include="GUI\ClassTimesForm.Designer.cs">
       <DependentUpon>ClassTimesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ClassTimeTableAddForm.cs">
+    <Compile Include="GUI\ClassTimeAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ClassTimeTableAddForm.Designer.cs">
-      <DependentUpon>ClassTimeTableAddForm.cs</DependentUpon>
+    <Compile Include="GUI\ClassTimeAddForm.Designer.cs">
+      <DependentUpon>ClassTimeAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ClassTimeTablesForm.cs">
       <SubType>Form</SubType>
@@ -192,14 +193,14 @@
     <EmbeddedResource Include="GUI\EducationalDisciplinesForm.resx">
       <DependentUpon>EducationalDisciplinesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ClassTimeAddForm.resx">
-      <DependentUpon>ClassTimeAddForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ClassTimeTableAddForm.resx">
+      <DependentUpon>ClassTimeTableAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ClassTimesForm.resx">
       <DependentUpon>ClassTimesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ClassTimeTableAddForm.resx">
-      <DependentUpon>ClassTimeTableAddForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ClassTimeAddForm.resx">
+      <DependentUpon>ClassTimeAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ClassTimeTablesForm.resx">
       <DependentUpon>ClassTimeTablesForm.cs</DependentUpon>

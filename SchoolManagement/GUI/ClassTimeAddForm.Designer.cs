@@ -113,7 +113,7 @@
             this.uiNumberTextBox.Size = new System.Drawing.Size(177, 20);
             this.uiNumberTextBox.TabIndex = 13;
             // 
-            // ClassTimeAddForm
+            // ClassTimeTableAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,8 +127,8 @@
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNameTextBox);
-            this.Name = "ClassTimeAddForm";
-            this.Text = "добавление времени урока";
+            this.Name = "ClassTimeTableAddForm";
+            this.Text = "добавление елемента расписания";
             this.ResumeLayout(false);
             this.PerformLayout();
 

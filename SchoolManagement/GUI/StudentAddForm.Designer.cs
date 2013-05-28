@@ -1,4 +1,4 @@
-﻿namespace SchoolManagement
+﻿namespace SchoolManagement.GUI
 {
     partial class StudentAddForm
     {

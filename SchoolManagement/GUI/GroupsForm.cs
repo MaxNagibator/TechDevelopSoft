@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
+using SchoolManagement.School;
 
-namespace SchoolManagement
+namespace SchoolManagement.GUI
 {
     public partial class GroupsForm : Form
     {
-        public int SelectedId;
+        public Group SelectedGroup;
+        private List<Group> _groups;
 
         public GroupsForm()
         {
@@ -15,8 +19,8 @@ namespace SchoolManagement
 
         private void RefreshInfo()
         {
-            var groups = DatabaseManager.GetGroups();
-            uiMainDataGridView.DataSource = groups;
+            _groups = DatabaseManager.GetGroups();
+            uiMainDataGridView.DataSource = _groups;
             var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
             if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
         }
@@ -43,7 +47,7 @@ namespace SchoolManagement
             if (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value != null)
             {
                 DialogResult = DialogResult.OK;
-                SelectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
+                SelectedGroup = _groups.FirstOrDefault(g => g.Id == (int)(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value));
             }
         }
 

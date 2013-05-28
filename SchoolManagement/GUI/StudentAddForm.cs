@@ -2,10 +2,11 @@
 using System.Windows.Forms;
 using SchoolManagement.School;
 
-namespace SchoolManagement
+namespace SchoolManagement.GUI
 {
     public partial class StudentAddForm : Form
     {
+        private Group _group;
         public StudentAddForm()
         {
             InitializeComponent();
@@ -14,7 +15,7 @@ namespace SchoolManagement
         private void uiCommintButton_Click(object sender, EventArgs e)
         {
             var student = new Student(uiNameTextBox.Text, uiBirthDayDateTimePicker.Value, uiCommentTextBox.Text,
-                                       new Group(Convert.ToInt16(uiGroupTextBox.Text)));
+                                       _group);
             student.AddToDatabase();
             DialogResult = DialogResult.OK;
             Close();
@@ -26,7 +27,8 @@ namespace SchoolManagement
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    uiGroupTextBox.Text = f.SelectedId.ToString();
+                    _group = f.SelectedGroup;
+                    uiGroupTextBox.Text = _group.ToString();
                 }
             }
         }

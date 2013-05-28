@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
@@ -8,9 +9,6 @@ namespace SchoolManagement.GUI
 {
     public partial class ClassTimeTablesForm : Form
     {
-        private int _row;
-        private int _column;
-
         public ClassTimeTablesForm()
         {
             InitializeComponent();
@@ -40,20 +38,13 @@ namespace SchoolManagement.GUI
             {
                 elements.Add(new ClassTimeTableWeekElem
                                  {
-                                     Day1 = day1[i].Text,
-                                     ClassTimeTable1 = day1[i].ClassTimeTable,
-                                     Day2 = day2[i].Text,
-                                     ClassTimeTable2 = day2[i].ClassTimeTable,
-                                     Day3 = day3[i].Text,
-                                     ClassTimeTable3 = day3[i].ClassTimeTable,
-                                     Day4 = day4[i].Text,
-                                     ClassTimeTable4 = day4[i].ClassTimeTable,
-                                     Day5 = day5[i].Text,
-                                     ClassTimeTable5 = day5[i].ClassTimeTable,
-                                     Day6 = day6[i].Text,
-                                     ClassTimeTable6 = day6[i].ClassTimeTable,
-                                     Day7 = day7[i].Text,
-                                     ClassTimeTable7 = day7[i].ClassTimeTable,
+                                     Day1 = day1[i],
+                                     Day2 = day2[i],
+                                     Day3 = day3[i],
+                                     Day4 = day4[i],
+                                     Day5 = day5[i],
+                                     Day6 = day6[i],
+                                     Day7 = day7[i],
                                  });
             }
             RefreshClassTimeTableElemInfo(uiMainDataGridView, elements);
@@ -93,21 +84,9 @@ namespace SchoolManagement.GUI
                                                    List<ClassTimeTableWeekElem> elementsByDateAndGroup)
         {
             dataGridView.DataSource = elementsByDateAndGroup;
-            dataGridView.DataMember = "";
             var dataGridViewColumn = dataGridView.Columns["ClassTimeNumber"];
             if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-        }
-
-        private void uiAddButton_Click(object sender, EventArgs e)
-        {
-            using (var f = new ClassTimeAddForm())
-            {
-                if (f.ShowDialog() == DialogResult.OK)
-                {
-                    RefreshInfo();
-                }
-            }
         }
 
         private void uiDeleteButton_Click(object sender, EventArgs e)
@@ -131,28 +110,24 @@ namespace SchoolManagement.GUI
             RefreshInfo();
         }
 
-        private void uiMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                _row = e.RowIndex;
-                _column = e.ColumnIndex;
-                var a = uiMainDataGridView[_column, _row].Value;
-                contextMenuStrip1.Show();
-            }
-        }
-
         private void uiDeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_row.ToString());
-
+            var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
+            var classTimeTable = classTimeTableDayElem.ClassTimeTable;
             RefreshInfo();
         }
 
         private void uiAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_column.ToString());
-
+            var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
+            var classTimeTable = classTimeTableDayElem.ClassTimeTable;
+            using (var f = new ClassTimeTableAddForm(classTimeTable))
+            {
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshInfo();
+                }
+            }
             RefreshInfo();
         }
     }

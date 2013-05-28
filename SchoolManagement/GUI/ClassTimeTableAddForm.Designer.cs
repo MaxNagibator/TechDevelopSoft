@@ -31,19 +31,30 @@
             this.uiNameTextBox = new System.Windows.Forms.TextBox();
             this.uiNameLabel = new System.Windows.Forms.Label();
             this.uiCommitButton = new System.Windows.Forms.Button();
-            this.uiStartTimeLabel = new System.Windows.Forms.Label();
-            this.uiStartTimeTextBox = new System.Windows.Forms.TextBox();
-            this.uiEndTimeLabel = new System.Windows.Forms.Label();
-            this.uiEndTimeTextBox = new System.Windows.Forms.TextBox();
-            this.uiNumberLabel = new System.Windows.Forms.Label();
-            this.uiNumberTextBox = new System.Windows.Forms.TextBox();
+            this.uiDisciplineLabel = new System.Windows.Forms.Label();
+            this.uiDisciplineTextBox = new System.Windows.Forms.TextBox();
+            this.uiDateLabel = new System.Windows.Forms.Label();
+            this.uiClassTimeLabel = new System.Windows.Forms.Label();
+            this.uiClassTimeTextBox = new System.Windows.Forms.TextBox();
+            this.uiSelectClassTimeButton = new System.Windows.Forms.Button();
+            this.uiSelectDisciplineButton = new System.Windows.Forms.Button();
+            this.uiDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.uiTeacherTextBox = new System.Windows.Forms.TextBox();
+            this.uiTeacherLabel = new System.Windows.Forms.Label();
+            this.uiSelectTeacherButton = new System.Windows.Forms.Button();
+            this.uiClassRoomTextBox = new System.Windows.Forms.TextBox();
+            this.uiClassRoomLabel = new System.Windows.Forms.Label();
+            this.uiSelectClassRoomButton = new System.Windows.Forms.Button();
+            this.uiGroupTextBox = new System.Windows.Forms.TextBox();
+            this.uiGroupLabel = new System.Windows.Forms.Label();
+            this.uiSelectGroupButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uiNameTextBox
             // 
-            this.uiNameTextBox.Location = new System.Drawing.Point(95, 6);
+            this.uiNameTextBox.Location = new System.Drawing.Point(86, 6);
             this.uiNameTextBox.Name = "uiNameTextBox";
-            this.uiNameTextBox.Size = new System.Drawing.Size(177, 20);
+            this.uiNameTextBox.Size = new System.Drawing.Size(186, 20);
             this.uiNameTextBox.TabIndex = 0;
             // 
             // uiNameLabel
@@ -57,7 +68,7 @@
             // 
             // uiCommitButton
             // 
-            this.uiCommitButton.Location = new System.Drawing.Point(95, 110);
+            this.uiCommitButton.Location = new System.Drawing.Point(86, 188);
             this.uiCommitButton.Name = "uiCommitButton";
             this.uiCommitButton.Size = new System.Drawing.Size(87, 23);
             this.uiCommitButton.TabIndex = 8;
@@ -65,69 +76,178 @@
             this.uiCommitButton.UseVisualStyleBackColor = true;
             this.uiCommitButton.Click += new System.EventHandler(this.uiCommintButton_Click);
             // 
-            // uiStartTimeLabel
+            // uiDisciplineLabel
             // 
-            this.uiStartTimeLabel.AutoSize = true;
-            this.uiStartTimeLabel.Location = new System.Drawing.Point(12, 61);
-            this.uiStartTimeLabel.Name = "uiStartTimeLabel";
-            this.uiStartTimeLabel.Size = new System.Drawing.Size(78, 13);
-            this.uiStartTimeLabel.TabIndex = 10;
-            this.uiStartTimeLabel.Text = "Время начала";
+            this.uiDisciplineLabel.AutoSize = true;
+            this.uiDisciplineLabel.Location = new System.Drawing.Point(12, 61);
+            this.uiDisciplineLabel.Name = "uiDisciplineLabel";
+            this.uiDisciplineLabel.Size = new System.Drawing.Size(70, 13);
+            this.uiDisciplineLabel.TabIndex = 10;
+            this.uiDisciplineLabel.Text = "Дисциплина";
             // 
-            // uiStartTimeTextBox
+            // uiDisciplineTextBox
             // 
-            this.uiStartTimeTextBox.Location = new System.Drawing.Point(95, 58);
-            this.uiStartTimeTextBox.Name = "uiStartTimeTextBox";
-            this.uiStartTimeTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiStartTimeTextBox.TabIndex = 9;
+            this.uiDisciplineTextBox.Location = new System.Drawing.Point(86, 58);
+            this.uiDisciplineTextBox.Name = "uiDisciplineTextBox";
+            this.uiDisciplineTextBox.Size = new System.Drawing.Size(135, 20);
+            this.uiDisciplineTextBox.TabIndex = 9;
             // 
-            // uiEndTimeLabel
+            // uiDateLabel
             // 
-            this.uiEndTimeLabel.AutoSize = true;
-            this.uiEndTimeLabel.Location = new System.Drawing.Point(12, 87);
-            this.uiEndTimeLabel.Name = "uiEndTimeLabel";
-            this.uiEndTimeLabel.Size = new System.Drawing.Size(62, 13);
-            this.uiEndTimeLabel.TabIndex = 12;
-            this.uiEndTimeLabel.Text = "Окончание";
+            this.uiDateLabel.AutoSize = true;
+            this.uiDateLabel.Location = new System.Drawing.Point(12, 87);
+            this.uiDateLabel.Name = "uiDateLabel";
+            this.uiDateLabel.Size = new System.Drawing.Size(33, 13);
+            this.uiDateLabel.TabIndex = 12;
+            this.uiDateLabel.Text = "Дата";
             // 
-            // uiEndTimeTextBox
+            // uiClassTimeLabel
             // 
-            this.uiEndTimeTextBox.Location = new System.Drawing.Point(95, 84);
-            this.uiEndTimeTextBox.Name = "uiEndTimeTextBox";
-            this.uiEndTimeTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiEndTimeTextBox.TabIndex = 11;
+            this.uiClassTimeLabel.AutoSize = true;
+            this.uiClassTimeLabel.Location = new System.Drawing.Point(12, 35);
+            this.uiClassTimeLabel.Name = "uiClassTimeLabel";
+            this.uiClassTimeLabel.Size = new System.Drawing.Size(72, 13);
+            this.uiClassTimeLabel.TabIndex = 14;
+            this.uiClassTimeLabel.Text = "Время урока";
             // 
-            // uiNumberLabel
+            // uiClassTimeTextBox
             // 
-            this.uiNumberLabel.AutoSize = true;
-            this.uiNumberLabel.Location = new System.Drawing.Point(12, 35);
-            this.uiNumberLabel.Name = "uiNumberLabel";
-            this.uiNumberLabel.Size = new System.Drawing.Size(41, 13);
-            this.uiNumberLabel.TabIndex = 14;
-            this.uiNumberLabel.Text = "Номер";
+            this.uiClassTimeTextBox.Location = new System.Drawing.Point(86, 32);
+            this.uiClassTimeTextBox.Name = "uiClassTimeTextBox";
+            this.uiClassTimeTextBox.Size = new System.Drawing.Size(135, 20);
+            this.uiClassTimeTextBox.TabIndex = 13;
             // 
-            // uiNumberTextBox
+            // uiSelectClassTimeButton
             // 
-            this.uiNumberTextBox.Location = new System.Drawing.Point(95, 32);
-            this.uiNumberTextBox.Name = "uiNumberTextBox";
-            this.uiNumberTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiNumberTextBox.TabIndex = 13;
+            this.uiSelectClassTimeButton.Location = new System.Drawing.Point(227, 30);
+            this.uiSelectClassTimeButton.Name = "uiSelectClassTimeButton";
+            this.uiSelectClassTimeButton.Size = new System.Drawing.Size(45, 23);
+            this.uiSelectClassTimeButton.TabIndex = 15;
+            this.uiSelectClassTimeButton.Text = "♥";
+            this.uiSelectClassTimeButton.UseVisualStyleBackColor = true;
+            this.uiSelectClassTimeButton.Click += new System.EventHandler(this.uiSelectClassTimeButton_Click);
             // 
-            // ClassTimeAddForm
+            // uiSelectDisciplineButton
+            // 
+            this.uiSelectDisciplineButton.Location = new System.Drawing.Point(227, 56);
+            this.uiSelectDisciplineButton.Name = "uiSelectDisciplineButton";
+            this.uiSelectDisciplineButton.Size = new System.Drawing.Size(45, 23);
+            this.uiSelectDisciplineButton.TabIndex = 16;
+            this.uiSelectDisciplineButton.Text = "♥";
+            this.uiSelectDisciplineButton.UseVisualStyleBackColor = true;
+            this.uiSelectDisciplineButton.Click += new System.EventHandler(this.uiSelectDisciplineButton_Click);
+            // 
+            // uiDateDateTimePicker
+            // 
+            this.uiDateDateTimePicker.Location = new System.Drawing.Point(86, 84);
+            this.uiDateDateTimePicker.Name = "uiDateDateTimePicker";
+            this.uiDateDateTimePicker.Size = new System.Drawing.Size(186, 20);
+            this.uiDateDateTimePicker.TabIndex = 17;
+            // 
+            // uiTeacherTextBox
+            // 
+            this.uiTeacherTextBox.Location = new System.Drawing.Point(86, 110);
+            this.uiTeacherTextBox.Name = "uiTeacherTextBox";
+            this.uiTeacherTextBox.Size = new System.Drawing.Size(135, 20);
+            this.uiTeacherTextBox.TabIndex = 9;
+            // 
+            // uiTeacherLabel
+            // 
+            this.uiTeacherLabel.AutoSize = true;
+            this.uiTeacherLabel.Location = new System.Drawing.Point(12, 113);
+            this.uiTeacherLabel.Name = "uiTeacherLabel";
+            this.uiTeacherLabel.Size = new System.Drawing.Size(45, 13);
+            this.uiTeacherLabel.TabIndex = 10;
+            this.uiTeacherLabel.Text = "Препод";
+            // 
+            // uiSelectTeacherButton
+            // 
+            this.uiSelectTeacherButton.Location = new System.Drawing.Point(227, 108);
+            this.uiSelectTeacherButton.Name = "uiSelectTeacherButton";
+            this.uiSelectTeacherButton.Size = new System.Drawing.Size(45, 23);
+            this.uiSelectTeacherButton.TabIndex = 16;
+            this.uiSelectTeacherButton.Text = "♥";
+            this.uiSelectTeacherButton.UseVisualStyleBackColor = true;
+            this.uiSelectTeacherButton.Click += new System.EventHandler(this.uiSelectTeacherButton_Click);
+            // 
+            // uiClassRoomTextBox
+            // 
+            this.uiClassRoomTextBox.Location = new System.Drawing.Point(86, 136);
+            this.uiClassRoomTextBox.Name = "uiClassRoomTextBox";
+            this.uiClassRoomTextBox.Size = new System.Drawing.Size(135, 20);
+            this.uiClassRoomTextBox.TabIndex = 9;
+            // 
+            // uiClassRoomLabel
+            // 
+            this.uiClassRoomLabel.AutoSize = true;
+            this.uiClassRoomLabel.Location = new System.Drawing.Point(12, 139);
+            this.uiClassRoomLabel.Name = "uiClassRoomLabel";
+            this.uiClassRoomLabel.Size = new System.Drawing.Size(49, 13);
+            this.uiClassRoomLabel.TabIndex = 10;
+            this.uiClassRoomLabel.Text = "Кабинет";
+            // 
+            // uiSelectClassRoomButton
+            // 
+            this.uiSelectClassRoomButton.Location = new System.Drawing.Point(227, 134);
+            this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
+            this.uiSelectClassRoomButton.Size = new System.Drawing.Size(45, 23);
+            this.uiSelectClassRoomButton.TabIndex = 16;
+            this.uiSelectClassRoomButton.Text = "♥";
+            this.uiSelectClassRoomButton.UseVisualStyleBackColor = true;
+            this.uiSelectClassRoomButton.Click += new System.EventHandler(this.uiSelectClassRoomButton_Click);
+            // 
+            // uiGroupTextBox
+            // 
+            this.uiGroupTextBox.Location = new System.Drawing.Point(86, 162);
+            this.uiGroupTextBox.Name = "uiGroupTextBox";
+            this.uiGroupTextBox.Size = new System.Drawing.Size(135, 20);
+            this.uiGroupTextBox.TabIndex = 9;
+            // 
+            // uiGroupLabel
+            // 
+            this.uiGroupLabel.AutoSize = true;
+            this.uiGroupLabel.Location = new System.Drawing.Point(12, 165);
+            this.uiGroupLabel.Name = "uiGroupLabel";
+            this.uiGroupLabel.Size = new System.Drawing.Size(42, 13);
+            this.uiGroupLabel.TabIndex = 10;
+            this.uiGroupLabel.Text = "Группа";
+            // 
+            // uiSelectGroupButton
+            // 
+            this.uiSelectGroupButton.Location = new System.Drawing.Point(227, 160);
+            this.uiSelectGroupButton.Name = "uiSelectGroupButton";
+            this.uiSelectGroupButton.Size = new System.Drawing.Size(45, 23);
+            this.uiSelectGroupButton.TabIndex = 16;
+            this.uiSelectGroupButton.Text = "♥";
+            this.uiSelectGroupButton.UseVisualStyleBackColor = true;
+            this.uiSelectGroupButton.Click += new System.EventHandler(this.uiSelectGroupButton_Click);
+            // 
+            // ClassTimeTableAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 140);
-            this.Controls.Add(this.uiNumberLabel);
-            this.Controls.Add(this.uiNumberTextBox);
-            this.Controls.Add(this.uiEndTimeLabel);
-            this.Controls.Add(this.uiEndTimeTextBox);
-            this.Controls.Add(this.uiStartTimeLabel);
-            this.Controls.Add(this.uiStartTimeTextBox);
+            this.ClientSize = new System.Drawing.Size(284, 217);
+            this.Controls.Add(this.uiDateDateTimePicker);
+            this.Controls.Add(this.uiSelectGroupButton);
+            this.Controls.Add(this.uiSelectClassRoomButton);
+            this.Controls.Add(this.uiSelectTeacherButton);
+            this.Controls.Add(this.uiSelectDisciplineButton);
+            this.Controls.Add(this.uiSelectClassTimeButton);
+            this.Controls.Add(this.uiClassTimeLabel);
+            this.Controls.Add(this.uiClassTimeTextBox);
+            this.Controls.Add(this.uiDateLabel);
+            this.Controls.Add(this.uiGroupLabel);
+            this.Controls.Add(this.uiClassRoomLabel);
+            this.Controls.Add(this.uiTeacherLabel);
+            this.Controls.Add(this.uiDisciplineLabel);
+            this.Controls.Add(this.uiGroupTextBox);
+            this.Controls.Add(this.uiClassRoomTextBox);
+            this.Controls.Add(this.uiTeacherTextBox);
+            this.Controls.Add(this.uiDisciplineTextBox);
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNameTextBox);
-            this.Name = "ClassTimeAddForm";
+            this.Name = "ClassTimeTableAddForm";
             this.Text = "добавление времени урока";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,12 +259,23 @@
         private System.Windows.Forms.TextBox uiNameTextBox;
         private System.Windows.Forms.Label uiNameLabel;
         private System.Windows.Forms.Button uiCommitButton;
-        private System.Windows.Forms.Label uiStartTimeLabel;
-        private System.Windows.Forms.TextBox uiStartTimeTextBox;
-        private System.Windows.Forms.Label uiEndTimeLabel;
-        private System.Windows.Forms.TextBox uiEndTimeTextBox;
-        private System.Windows.Forms.Label uiNumberLabel;
-        private System.Windows.Forms.TextBox uiNumberTextBox;
+        private System.Windows.Forms.Label uiDisciplineLabel;
+        private System.Windows.Forms.TextBox uiDisciplineTextBox;
+        private System.Windows.Forms.Label uiDateLabel;
+        private System.Windows.Forms.Label uiClassTimeLabel;
+        private System.Windows.Forms.TextBox uiClassTimeTextBox;
+        private System.Windows.Forms.Button uiSelectClassTimeButton;
+        private System.Windows.Forms.Button uiSelectDisciplineButton;
+        private System.Windows.Forms.DateTimePicker uiDateDateTimePicker;
+        private System.Windows.Forms.TextBox uiTeacherTextBox;
+        private System.Windows.Forms.Label uiTeacherLabel;
+        private System.Windows.Forms.Button uiSelectTeacherButton;
+        private System.Windows.Forms.TextBox uiClassRoomTextBox;
+        private System.Windows.Forms.Label uiClassRoomLabel;
+        private System.Windows.Forms.Button uiSelectClassRoomButton;
+        private System.Windows.Forms.TextBox uiGroupTextBox;
+        private System.Windows.Forms.Label uiGroupLabel;
+        private System.Windows.Forms.Button uiSelectGroupButton;
 
     }
 }
