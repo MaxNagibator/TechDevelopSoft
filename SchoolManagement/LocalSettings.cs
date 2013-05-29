@@ -9,7 +9,6 @@ namespace SchoolManagement
         private const string ROOT_NODE_NAME = "Main";
         private const string CONNECTION_STRING_NAME = "ConnectionString";
         private const string SETTINGS_FILE_NAME = "\\settings.xml";
-
         private string ConfigurationFolderPath{get;set;}
         private string _configurationFilePath;
         private XDocument _configurationDocument;
