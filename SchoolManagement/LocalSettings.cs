@@ -34,7 +34,6 @@ namespace SchoolManagement
             catch (FileNotFoundException)
             {
                 MessageBox.Show("Configuration file " + _configurationFilePath + " not found, creating new document");
-                //Globals.Logger.Warn("Configuration file " + _configurationFilePath + " not found, creating new document");
                 CreateConfigurationDocument();
             }
         }
