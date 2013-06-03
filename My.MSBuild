@@ -8,7 +8,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">x86</Configuration>
     <BuildPlatform Condition=" '$(BuildPlatform)' == '' ">Any CPU</BuildPlatform>
   </PropertyGroup>
   
