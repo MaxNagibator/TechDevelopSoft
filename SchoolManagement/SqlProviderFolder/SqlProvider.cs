@@ -421,11 +421,11 @@ namespace SchoolManagement.SqlProviderFolder
             _command.ExecuteNonQuery();
         }
 
-        public void ExecuteInOneTransaction(IEnumerable<SqlCeProviderCommand> commands)
+        public void ExecuteInOneTransaction(IEnumerable<SqlProviderCommand> commands)
         {
             using (SqlTransaction transaction = _connection.BeginTransaction())
             {
-                foreach (SqlCeProviderCommand command in commands)
+                foreach (SqlProviderCommand command in commands)
                 {
                     using (SqlCommand sqlCommand = ConvertToSqlCommandInTransaction(command, transaction))
                     {
@@ -442,7 +442,7 @@ namespace SchoolManagement.SqlProviderFolder
             }
         }
 
-        private SqlCommand ConvertToSqlCommandInTransaction(SqlCeProviderCommand command, SqlTransaction transaction)
+        private SqlCommand ConvertToSqlCommandInTransaction(SqlProviderCommand command, SqlTransaction transaction)
         {
             var sqlCommand = new SqlCommand(command.Instruction, _connection, transaction);
             foreach (var parameter in command.Parameters)

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTarget ="Test">
+
+  <ItemGroup>
+    <TestBuildScriptDir Include="TestBuildScript\"/>
+    <SolutionFile Include="SchoolManagement.sln" />
+    <NUnitTestsDll Include="TestBuildScript\MyFirstTest.dll" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <BuildPlatform Condition=" '$(BuildPlatform)' == '' ">x86</BuildPlatform>
+  </PropertyGroup>
+  
+  <Target Name="Test" DependsOnTargets="Compile">
+    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\mstest.exe" /testcontainer:@(NUnitTestsDll)' >
+      <Output TaskParameter="ExitCode" PropertyName="TestSuccess"/>
+    </Exec>
+  </Target>
+  
+  <Target Name="Compile" DependsOnTargets="Init">
+    <MSBuild Projects="@(SolutionFile)" Targets="Rebuild"
+             Properties="OutDir=%(TestBuildScriptDir.FullPath);Configuration=$(Configuration);Platform=$(BuildPlatform)" />
+  </Target>
+  
+  <Target Name="Clean">
+    <RemoveDir Directories="@(TestBuildScriptDir)" />
+  </Target>
+
+  <Target Name="Init">
+    <MakeDir Directories="@(TestBuildScriptDir)" />
+  </Target>
+  
+</Project>

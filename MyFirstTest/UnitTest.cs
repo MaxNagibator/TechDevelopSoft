@@ -1,7 +1,6 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SchoolManagement;
-using SchoolManagement.Exceptions;
 using SchoolManagement.School;
 
 namespace MyFirstTest
@@ -46,32 +45,17 @@ namespace MyFirstTest
             var c = new EducationalDiscipline("1", "3");
             Assert.AreEqual(c.ToString(), "1", "Не верны данные");
         }
-        
-        [TestMethod]
-        [ExpectedException(typeof(SqlProviderException))]
-        public void TestGroupAddToDatabase()
-        {
-            Globals.LocalSettings = new LocalSettings();
-            var g = new Group(1);
-           g.AddToDatabase();
-        }
+
+        private MockLocalSettings _mockLocalSettings = new MockLocalSettings();
 
         [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
-        public void TestStudentAddToDatabase()
+        public void TestMockClassRoom()
         {
-            Globals.LocalSettings = new LocalSettings();
-            var g = new Student();
-            g.AddToDatabase();
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
-        public void TestClassTimeTableAddToDatabase()
-        {
-            Globals.LocalSettings = new LocalSettings();
-            var g = new ClassTimeTable(new Group(1),DateTime.Now,new ClassTime("1",1,"1","1"));
-            g.AddToDatabase();
+            var g = new MockClassRoom("1", "1");
+            g.AddToDatabase(_mockLocalSettings);
+            string query = _mockLocalSettings.SqlQueries.First();
+            Assert.AreEqual("INSERT INTO [ClassRoom] (Name, Number) VALUES(@Name, @Number)", query);
         }
     }
+    
 }

@@ -126,7 +126,6 @@
     <Compile Include="SqlProviderFolder\IQueryResultRow.cs" />
     <Compile Include="SqlProviderFolder\ISqlProvider.cs" />
     <Compile Include="SqlProviderFolder\SqlProvider.cs" />
-    <Compile Include="SqlProviderFolder\SqlProviderCommand.cs" />
     <Compile Include="GUI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +183,7 @@
     <Compile Include="GUI\TeachersForm.Designer.cs">
       <DependentUpon>TeachersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlProviderFolder\SqlProviderCommand.cs" />
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

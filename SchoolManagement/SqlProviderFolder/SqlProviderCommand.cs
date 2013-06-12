@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace SchoolManagement.SqlProviderFolder
 {
-    public class SqlCeProviderCommand
+    public class SqlProviderCommand
     {
         public class Parameter
         {
@@ -18,6 +18,11 @@ namespace SchoolManagement.SqlProviderFolder
         }
 
         private Dictionary<string, object> _parameters;
+
+        public SqlProviderCommand(Dictionary<string, object> parameters)
+        {
+            _parameters = parameters;
+        }
 
         public string Instruction { get; set; }
 
