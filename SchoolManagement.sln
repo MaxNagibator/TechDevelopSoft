@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagement", "SchoolManagement\SchoolManagement.csproj", "{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}"
@@ -22,8 +22,8 @@ Global
 		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|x64.ActiveCfg = Debug|x86
 		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|x64.Build.0 = Debug|x86
-		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|x86.ActiveCfg = Debug|x86
-		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|x86.Build.0 = Debug|x86
+		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|x86.ActiveCfg = Release|x86
+		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Debug|x86.Build.0 = Release|x86
 		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Release|Any CPU.ActiveCfg = Release|x86
 		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}.Release|Mixed Platforms.Build.0 = Release|x86
@@ -36,8 +36,8 @@ Global
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|x64.ActiveCfg = Debug|x86
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|x64.Build.0 = Debug|x86
-		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|x86.Build.0 = Debug|Any CPU
+		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|x86.ActiveCfg = Release|x86
+		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Debug|x86.Build.0 = Release|x86
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
