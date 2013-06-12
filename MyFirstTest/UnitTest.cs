@@ -46,7 +46,7 @@ namespace MyFirstTest
             Assert.AreEqual(c.ToString(), "1", "Не верны данные");
         }
 
-        private MockLocalSettings _mockLocalSettings = new MockLocalSettings();
+        private readonly MockLocalSettings _mockLocalSettings = new MockLocalSettings();
 
         [TestMethod]
         public void TestMockClassRoom()
