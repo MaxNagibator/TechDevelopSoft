@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
-    <BuildPlatform Condition=" '$(BuildPlatform)' == '' ">Any CPU</BuildPlatform>
+    <BuildPlatform Condition=" '$(BuildPlatform)' == '' ">x86</BuildPlatform>
   </PropertyGroup>
   
   <Target Name="Test" DependsOnTargets="Compile">
