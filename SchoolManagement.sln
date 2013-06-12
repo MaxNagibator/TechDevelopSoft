@@ -1,9 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagement", "SchoolManagement\SchoolManagement.csproj", "{D461BFE3-7ECF-4FF8-B458-B7E59A0C65B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstTest", "MyFirstTest\MyFirstTest.csproj", "{D52A49E2-F349-415F-9F68-9B0A57A2E725}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "MainModelingProject", "MainModelingProject\MainModelingProject.modelproj", "{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +47,18 @@ Global
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Release|x64.Build.0 = Release|x64
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Release|x86.ActiveCfg = Release|x86
 		{D52A49E2-F349-415F-9F68-9B0A57A2E725}.Release|x86.Build.0 = Release|x86
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Release|x64.ActiveCfg = Release|Any CPU
+		{3F1251DD-FE87-463E-89BE-1E868CDBAEC0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

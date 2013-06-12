@@ -6,6 +6,7 @@ namespace SchoolManagement
     {
         public static LocalSettings LocalSettings = new LocalSettings();
         public static string SqlProviderConnectionString { get; set; }
+        public static bool IsRootMode { get; set; }
 
         public static SqlProvider GetSqlProvider()
         {

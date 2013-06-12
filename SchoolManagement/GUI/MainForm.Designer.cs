@@ -147,7 +147,7 @@
             this.Name = "MainForm";
             this.Tag = "606217";
             this.Text = "Школа";
-            this.Load += new System.EventHandler(this.UIQuestionnaireServerMainForm_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.uiMainToolStrip.ResumeLayout(false);
             this.uiMainToolStrip.PerformLayout();
             this.ResumeLayout(false);

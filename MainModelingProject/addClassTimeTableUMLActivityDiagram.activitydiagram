@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="0babb3fe-f4cd-4b7a-aca4-e1e067b04e0e" name="addClassTimeTableUMLActivityDiagram" linkedPackageId="c1991553-3573-43da-9190-98dda009843d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="fb337813-0242-4485-b920-c339c123eadc">
+      <profileInstance Id="9a271bd3-a43c-428e-b6c2-0400f25ad505" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="aa133484-0f6d-4909-a4d6-2dce376a70e4">
+      <profileInstance Id="26dcf619-0394-49fd-8e2d-ff84239f7075" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="7d681435-e0c9-4c52-9803-c852c6f5b6fe" name="addClassTimeTableUMLActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="d1ab9754-ea5a-4a0d-b2d7-22aa01e6909d" />
+        <nodes>
+          <initialNode Id="eb9aa524-f45f-494c-8ddd-c14a31f11c79" name="Initial1" isLeaf="false">
+            <elementDefinition Id="10507a08-c1e9-483f-a6f8-57f012164a58" />
+            <flowNodeTargets>
+              <controlFlow Id="c7d7c48c-212c-47da-a7b4-418dc094dfc0" isLeaf="false">
+                <opaqueActionMoniker Id="157a293c-2736-4b9a-ab5f-5bf057c4ce54" LastKnownName="Перейти на форму расписания" />
+                <elementDefinition Id="d4341037-ca04-4621-ab90-41417cbc5f67" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="19e1876f-d11e-4800-8679-63a0957b3efd" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="5f9013bd-e9d1-4bcd-beb7-1eba92b1bf4f" />
+          </activityFinalNode>
+          <decisionNode Id="5a603778-f2ee-477d-a106-7ec18dde2afc" name="Проверка возможности добавления заполненных параметров прошла успешно" isLeaf="false">
+            <description>Проверка возможности добавления заполненных параметров прошла успешно</description>
+            <elementDefinition Id="dfac5c46-ac00-402b-b31a-0700287a40c1" />
+            <flowNodeTargets>
+              <controlFlow Id="b5c12f02-41c5-4b3a-842f-40d5aa7b76da" guard="Проверка возможности добавления заполненных параметров прошла неудачно" isLeaf="false">
+                <opaqueActionMoniker Id="157241c5-9f6f-4453-b3ed-65b2bda19ea0" LastKnownName="Заполнение параметров" />
+                <elementDefinition Id="6dcbc353-ae4b-4a87-b0c8-2cd219d40cc0" />
+              </controlFlow>
+              <controlFlow Id="bfa43f4c-1bef-4ce3-968e-6e98d2c9762e" guard="Проверка возможности добавления заполненных параметров прошла успешно" isLeaf="false">
+                <opaqueActionMoniker Id="65c30e02-93d6-436f-a292-b8b0f1db24c9" LastKnownName="Запись в БД" />
+                <elementDefinition Id="5c507408-9f1f-4626-a86d-4e5c56824057" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="157a293c-2736-4b9a-ab5f-5bf057c4ce54" name="Перейти на форму расписания" isLeaf="false">
+            <elementDefinition Id="4af36b7c-e33d-44c2-aa8a-2e37cb8750f9" />
+            <flowNodeTargets>
+              <controlFlow Id="178a4d88-09d8-4767-a289-e1e7a3e60620" isLeaf="false">
+                <opaqueActionMoniker Id="866e3f7e-92f4-474a-a5d0-3afbfd537864" LastKnownName="Вызов формы добавления  элемента расписания" />
+                <elementDefinition Id="590032e8-be1e-44ea-991e-57dbcfc9a12b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="866e3f7e-92f4-474a-a5d0-3afbfd537864" name="Вызов формы добавления  элемента расписания" isLeaf="false">
+            <elementDefinition Id="424ca438-8bc1-429f-9882-c6687d0c61eb" />
+            <flowNodeTargets>
+              <controlFlow Id="a82476fc-6311-4fde-a2e8-9cfa6d730198" isLeaf="false">
+                <opaqueActionMoniker Id="157241c5-9f6f-4453-b3ed-65b2bda19ea0" LastKnownName="Заполнение параметров" />
+                <elementDefinition Id="73b4e7f1-0672-4a48-a6a3-9bf833e616f1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="157241c5-9f6f-4453-b3ed-65b2bda19ea0" name="Заполнение параметров" isLeaf="false">
+            <elementDefinition Id="d4ba019c-78b0-4d41-a87b-57362a4ed547" />
+            <flowNodeTargets>
+              <controlFlow Id="809390e8-a820-41d0-bd25-dab2b319d054" isLeaf="false">
+                <opaqueActionMoniker Id="971e1170-541b-4d89-8d0f-a6c0b8bc51d8" LastKnownName="Подтверждение добавления" />
+                <elementDefinition Id="3a74b0d4-d8f8-4db7-a442-db8b69a2502a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="971e1170-541b-4d89-8d0f-a6c0b8bc51d8" name="Подтверждение добавления" isLeaf="false">
+            <elementDefinition Id="15af10b0-e619-4ea2-a2f9-cf236834f7c4" />
+            <flowNodeTargets>
+              <controlFlow Id="b6a13176-0069-4c4c-b2f7-131b4e8a6c68" isLeaf="false">
+                <decisionNodeMoniker Id="5a603778-f2ee-477d-a106-7ec18dde2afc" LastKnownName="Проверка возможности добавления заполненных параметров прошла успешно" />
+                <elementDefinition Id="59cf830b-4674-4426-89f1-a99ab642a5e3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="65c30e02-93d6-436f-a292-b8b0f1db24c9" name="Запись в БД" isLeaf="false">
+            <elementDefinition Id="33967553-ad20-48c6-97bc-807113d9c490" />
+            <flowNodeTargets>
+              <controlFlow Id="09885e83-7424-4648-ae23-7a54d080c792" isLeaf="false">
+                <activityFinalNodeMoniker Id="19e1876f-d11e-4800-8679-63a0957b3efd" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="1c0236bd-b8b0-4c09-bde6-3f1dd5213b37" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="c1991553-3573-43da-9190-98dda009843d" name="MainModelingProject">
+    <elementDefinition Id="af7a2d79-fa73-4240-9eff-b2f0755a1b41" />
+  </package>
+</activityRootModel>

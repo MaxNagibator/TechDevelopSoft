@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f64e1eb2-a6b5-486e-be09-57ed9bc7b0be" name="mainUMLClassDiagram" linkedPackageId="8ffe78ba-0a7d-4691-8651-e1f72329ffb6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="44fb0afe-8d12-49d6-a364-c033167a5970">
+      <profileInstance Id="d8c5f714-3d7f-461f-95a2-b7f562721ad8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6d7648cc-b6f6-4c14-a302-18cda0a3e418">
+      <profileInstance Id="1ce79586-c905-4810-abe8-8482872cdf9a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" name="Entity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f86f46bc-617d-4ffc-b536-4662fcecc2b9" />
+        <ownedAttributesInternal>
+          <property Id="04ec08c7-0de1-4cf7-bc3c-ebf71258ad59" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d16b4c0f-146a-44b8-b2a0-4443388716ca" />
+          </property>
+          <property Id="865cf361-0a6e-4ae3-a9b7-59fbae43521e" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4a8ac5f2-ff8d-4692-86cc-7c64cb2d5cdd" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="fdaad178-b828-4f13-9467-36e295169c31" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="24efeba8-7b62-4102-82ad-ae49a3e89571" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="74d52276-b3c9-4e2f-8c24-5446191d9fe5" name="Teacher" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c8f54ea3-f35a-47f4-aafb-94af377c4e75" />
+        <generalsInternal>
+          <generalization Id="3bf51257-acff-4a23-9dc7-c1553d4ad89e" isSubstitutable="false">
+            <classMoniker Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" LastKnownName="Entity" />
+            <elementDefinition Id="2d448e42-55b0-4fbd-a037-8a1f00b8edfa" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="d103e95b-f33e-4d56-b111-70b17a08bd1d" name="EducationalDiscipline" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ff4a7a98-eac4-4409-8232-a0fb3b621359" />
+          </property>
+          <property Id="c2eb8ccb-6a11-4b17-be46-6d658a4a15dd" name="BirthDay" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a084cb6d-e4a0-47c8-af7e-86d9a15bcb2d" />
+          </property>
+          <property Id="6631a460-da3a-4ba6-9956-1ca509880cdb" name="StartWorkDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36f2d40b-a7ef-48de-b962-a31e21334592" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e7a5e48f-4f05-4d9a-b553-7290fc58941c" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="56f545dc-45c4-494a-a59d-928d86e40ae3" />
+          </operation>
+          <operation Id="48af1bc9-d3a2-42c6-b611-9f7e871fb339" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="468db86e-657d-4124-96d7-37482f65c7f2" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="74d0150d-cad5-4107-aaae-aaf68c5bf27d" name="Group" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="022ea2b9-92db-4f44-861e-8f834aefde01" />
+        <generalsInternal>
+          <generalization Id="7eb03a89-0e92-4602-adc0-8a4c08adda83" isSubstitutable="false">
+            <classMoniker Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" LastKnownName="Entity" />
+            <elementDefinition Id="83ac8927-b0e5-4512-81fc-9dfd59940e1c" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="1323b977-ace8-40c6-970d-41ec17625afb" name="Comment" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9ad343da-a001-4dcf-b03c-da6ffac46acc" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="26fdf1a0-2c83-4309-aaec-0ee1c393ee84" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="087f20f4-cb2b-40bd-b561-8c84baeff756" />
+          </operation>
+          <operation Id="e9756fc6-e9f2-4c7a-a90b-ed7e6077bb51" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e5576a46-23ce-42bb-883d-737c8eebd8a7" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6270a011-e8ab-4579-81f5-072a9c50b411" name="ClassRoom" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d505df7d-1ee7-484d-bbe1-a2f2ffe7334b" />
+        <generalsInternal>
+          <generalization Id="e279e458-92c9-4ee5-b85c-1aaa0481edc8" isSubstitutable="false">
+            <classMoniker Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" LastKnownName="Entity" />
+            <elementDefinition Id="6f826cc5-a69b-4010-aaa1-6b875c6c2197" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="dc5f7956-481c-4181-9a70-47bfe6e4d69a" name="Number" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eba5a8f2-78d6-466b-af02-1b53b85454fb" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="db9008d0-81e7-4c0a-a2c0-7a487aa6370e" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="34077eb5-c180-4f97-b707-a35c58890c42" />
+          </operation>
+          <operation Id="77c415cb-76be-4abd-a75b-02b166924727" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="91915f26-473b-48a5-b997-0e3f9910a8bf" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c2d9bb3a-c303-484c-a9a6-95a258b849fb" name="ClassTime" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cb5b3062-ec75-48ca-837b-7b8d6998425b" />
+        <generalsInternal>
+          <generalization Id="b7dba2bf-f49f-4432-882a-42bc4098e42b" isSubstitutable="false">
+            <classMoniker Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" LastKnownName="Entity" />
+            <elementDefinition Id="e3c8dfc8-9aef-4424-a9b1-44f3586ba80c" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="73ffbce4-1be7-4181-84d9-838f6c1a8895" name="EndTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3149f9cd-2348-4f0f-9bf7-4c1cce2238ff" />
+          </property>
+          <property Id="88a28b95-0718-4731-81c0-5f5146bb4ed5" name="Number" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b343ef93-9c47-441d-ab6f-0d78d87a2ed3" />
+          </property>
+          <property Id="c88e420f-1683-46e9-b7d7-f4a584e1070a" name="StartTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4dfc93e5-fa04-4473-9580-d84009659b97" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b351c524-1509-4610-a986-7bf166d507ba" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d3051e28-648b-4c4c-a214-57e6419c1a07" />
+          </operation>
+          <operation Id="4583c84f-1607-42fd-a7a5-66d2989a3beb" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b92052cc-498b-45d2-a739-f0e62e5377d9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b6ab2461-edab-43ea-9ae8-b7ff855db739" name="EducationalDiscipline" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c83bbf6f-fe33-4f6a-97ab-25a1470bd573" />
+        <generalsInternal>
+          <generalization Id="66aacb61-1202-4f44-a049-b1f052178987" isSubstitutable="false">
+            <classMoniker Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" LastKnownName="Entity" />
+            <elementDefinition Id="3b87bcac-43ca-4b07-8db5-00f3166a78bf" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="9ca1a6c9-8c9e-4bae-9f36-7e8e06420f09" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1abf1df9-e428-466b-8289-67e904fdbf11" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ab1a3c16-27cf-48cd-bb3f-e9c3ab8e1907" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="77eff37e-5223-4477-8cea-d67e2d883375" />
+          </operation>
+          <operation Id="94b8aac1-a66f-4e8c-91ef-d25ac5d07774" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7cf0b572-5286-4122-a6dd-01b93e7fe638" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="597acf9a-7f39-4d23-a8df-6ab3a9a47695" name="ClassTimeTable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7bea77cc-203c-4963-9d31-c8f91f8c271d" />
+        <generalsInternal>
+          <generalization Id="2dc90dc2-ff36-448f-803b-9cfbba22b358" isSubstitutable="false">
+            <classMoniker Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" LastKnownName="Entity" />
+            <elementDefinition Id="ab82d144-d68e-4b43-8e89-359003e95bb6" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="8d0838a6-1eeb-4fb2-9ab9-c2c012a8f247" name="ClassRoom" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e52d4691-71cd-4fad-9c67-727396b4d547" />
+          </property>
+          <property Id="4f25f565-4bc2-43e4-85c6-3778f695d6b6" name="ClassTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="56d1e44e-7545-4e7f-b6ce-3d215e491048" />
+          </property>
+          <property Id="f864ae37-1e2e-4ab6-99a6-2ecbd04d3263" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2edb10a8-17fb-4165-a130-1d32210e7d7b" />
+          </property>
+          <property Id="c605c23a-ae52-4fa4-acbd-368ca5a26ef9" name="EducationalDiscipline" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="33932964-d9aa-4b3c-975c-3828b4496f89" />
+          </property>
+          <property Id="ed8a2cee-c262-4a64-ba2a-1aa12f1875c0" name="Group" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="60e9596f-690e-42f5-8f33-0f5a358a2f7d" />
+          </property>
+          <property Id="9dd3e195-80a9-4835-aca0-e4626daebea9" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bbf60d2d-77d1-449f-93d6-0cbd218d8856" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="75c440e6-912c-4a5a-9b57-1fc46fa292c4" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9747484d-03ce-498e-97f9-e5e6a64f2482" />
+          </operation>
+          <operation Id="16be8b72-2be7-4039-b226-55d1cdf031b5" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f616bf88-7509-4419-9a0e-57ac4ae903a5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3f48c06d-04e2-4bc7-bc40-5462b6915921" name="ClassTimeTableDatElem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="42a456f8-dce8-4af6-97db-58265a40b1b6" />
+        <ownedAttributesInternal>
+          <property Id="57464706-0406-4387-955a-0c842095ad9a" name="Text" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="715b5d68-d0a8-4bac-845c-ac25cd97f25e" />
+          </property>
+          <property Id="c71d182b-05f3-4fa3-bf4d-46780152fa4a" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0a6f6a83-f32a-446e-8863-ae0bdb032098" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="01492c3b-80b0-4c05-ac08-015ba3db0694" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca62320f-6d96-49fb-9d76-89dad9694504" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="021e2c8c-60f5-451a-8b58-71a3a81677c0" name="ClassTimeTableWeekElem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="70bc5e6a-29e1-4287-a46f-2fab9f28bd39" />
+        <ownedAttributesInternal>
+          <property Id="51c5e8f8-a945-49b9-92f3-0a5681a8cabc" name="ClassTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="13665610-6e5f-4c74-9a5d-6e50f53f55e8" />
+          </property>
+          <property Id="15750bfe-0028-4cc8-aa99-9027f0a874ad" name="Day1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7222c692-d75d-4926-91de-89c90f4e49ff" />
+          </property>
+          <property Id="44841065-ada1-410b-afe9-38d53c2c1f4d" name="Day2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5357c956-1080-49ae-ace8-4b42d0cb163f" />
+          </property>
+          <property Id="016ebfce-5529-4d38-b80c-2f16f88ed9c9" name="Day3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e52af349-9b0a-4f64-8bba-ba25f1fa74e7" />
+          </property>
+          <property Id="a0840c6d-309e-426d-a0a4-0e2a3ab74c2d" name="Day4" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c50d1119-29f7-4d34-aa71-59d90b353861" />
+          </property>
+          <property Id="7beb02ec-b35b-4c7b-ac3b-b24439b56373" name="Day5" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ce77a0c-c950-45ed-8032-d824bc43874d" />
+          </property>
+          <property Id="a2b93812-170c-43a8-9da7-ed07efb3316b" name="Day6" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="455eb4bf-9e48-4091-b039-8dd6679f6031" />
+          </property>
+          <property Id="756199ad-bea9-4d27-88b9-871de5f64ea6" name="Day7" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="beda172b-456e-4352-b2b4-ed55ab124b8b" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="787f94f5-7b15-4f4a-93af-5141c8877284" name="DatabaseManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6ae07831-faed-4ae0-ab27-4d0b9afbebab" />
+        <ownedOperationsInternal>
+          <operation Id="2d3e7e64-d530-43f8-a77d-61ffb9fb6ec1" name="AddClassTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="924529f8-0198-4db8-9deb-0b7fc97561d1" />
+          </operation>
+          <operation Id="7f63193d-a0fc-483f-b1cb-8e7bafb811e2" name="AddClassTimeTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d64caf0a-aa8c-4a0e-8c36-31e902845a8b" />
+          </operation>
+          <operation Id="0f6fe999-827f-4f86-9e84-5fa111cd1fbb" name="AddEducationalDiscipline" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="074cef6a-cae3-4445-87c2-afc30f581494" />
+          </operation>
+          <operation Id="1029df82-a5c2-4136-84d2-aa61b33f78d8" name="AddGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d1cf4d2b-debb-4eca-b97c-bdd9640ee6d7" />
+          </operation>
+          <operation Id="bd051a60-c695-4ddc-9d7c-4729555de8c1" name="AddTeacher" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f5bcc8fe-50bd-4cf5-93ac-293370a18f96" />
+          </operation>
+          <operation Id="5228f9eb-9c04-4d95-8afc-e5b9243b505d" name="DeleteClassRoomById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c3064d8b-8fab-4e45-9385-7c10a19c28ba" />
+          </operation>
+          <operation Id="9c13aea1-6d2c-4bf4-b4b7-d61897adda48" name="DeleteClassTimeById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8256a413-8790-4b4d-8e02-7010b26b6d25" />
+          </operation>
+          <operation Id="a53cfc5a-642a-4155-8506-90230c732b3c" name="DeleteClassTimeTableById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a80b4060-20ef-4bc3-a462-2ff5f37d4840" />
+          </operation>
+          <operation Id="dd4fecba-8eeb-4bdd-8bb6-cd653939ba62" name="DeleteEducationalDisciplineById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7b66a3ca-5c23-44b7-a382-057dfd5064cb" />
+          </operation>
+          <operation Id="5d50bc81-0235-4e53-96b5-5fcbf188864d" name="DeleteTeacherById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4ceb097d-404a-4867-917a-0b1b1f40211b" />
+          </operation>
+          <operation Id="929e54f1-395f-4434-92d9-8b0025065e03" name="GetClassRooms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="727aff7e-1588-4f93-9be5-420f0ac06705" />
+          </operation>
+          <operation Id="78a161d8-3a80-4d5a-b62f-410830e89ef6" name="GetClassTimes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="965a0f61-d9df-44ca-8672-0051264e1a37" />
+          </operation>
+          <operation Id="e4d4f17b-f568-4131-859b-f3badaa229ab" name="GetClassTimeTables" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c3f262b6-cdb4-488a-bbb3-bd98f1192f95" />
+          </operation>
+          <operation Id="6aca58da-5817-4323-9cbf-3f757a9083c6" name="GetEducationalDisciplines" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c233e0cc-b6ab-4ba6-98a6-35b4d51ea048" />
+          </operation>
+          <operation Id="d2c2fc07-8d2e-4fa3-8cc8-307175030748" name="GetGroups" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="94c13ea1-9a2c-4ff7-aba4-fa1afd622d20" />
+          </operation>
+          <operation Id="a531ad02-f1fd-49aa-a8c2-05bc06afc54e" name="GetTeacher" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e0f3bafc-171c-49f9-8839-4a725adc8c1a" />
+          </operation>
+          <operation Id="e977c70e-8728-44f7-91e6-c86f952676aa" name="DeleteGroupById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="11ba2040-bf80-4a82-80f2-80f57e98a74d" />
+          </operation>
+          <operation Id="db769428-f687-487d-a3b6-54c6a3b98870" name="AddClassRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3d72dc32-a192-40cf-a221-b3858121073b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="8ffe78ba-0a7d-4691-8651-e1f72329ffb6" name="MainModelingProject">
+    <elementDefinition Id="af7a2d79-fa73-4240-9eff-b2f0755a1b41" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="30e90062-33b9-4972-8636-764ce8537e23" name="rootUMLUseCaseDiagram" linkedPackageId="931fb515-fc90-4bef-acb7-30a2f2756381" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="379480de-282f-4e1f-be34-cce02ddca428">
+      <profileInstance Id="d2921941-aac2-46bf-9af1-1ef1ee0ce26a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="757f7066-110e-4822-bd61-a800f5cb561e">
+      <profileInstance Id="41e01ff0-e58b-4bfc-809f-abbb0dd8587c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6669d5d3-ad39-4c9c-91e2-19cc5ea694e9" name="Admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d08f2f3b-3055-447f-baa4-5f888ae5a01d" />
+        <targetEnds>
+          <association Id="19e246a5-cdc3-4755-b850-b30280c20653" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Добавление элемента расписания" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="76837989-915d-4da3-92e3-04c3cbd41749" LastKnownName="Добавление элемента расписания" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c850dce7-0f7a-460c-a469-c14832c766d3" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b711a027-c635-4498-bd4e-ce086eb37b78" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="897722cf-63d9-4822-bfbb-c3b418a78b78" name="Добавление элемента расписания" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e359aafe-b747-4ebf-9ad6-12455d57044b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ecfcc560-6d0b-4ce7-95a2-90050bfa203d" />
+          </association>
+          <association Id="814db078-d8f4-494f-a208-88b61fece24f" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Удаление элемента расписания" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="789dae90-09d7-4428-ada8-9d59c31bfeef" LastKnownName="Удаление элемента расписания" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f1fa431-0b51-4948-8821-3af2018acab5" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3149420b-33e9-41e7-8487-dab867a21e8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1e67aa0d-c452-4eb6-a673-27b70193e688" name="Удаление элемента расписания" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c012c395-3186-4057-a7e8-a6f774f16a72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="59ec70a6-69e0-4451-8700-c752bc327f0b" />
+          </association>
+          <association Id="a38af03d-7b14-462e-85dc-c83f86501f82" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Добавление учителя" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b40a7c68-39cb-4d21-96ad-225c67852554" LastKnownName="Добавление учителя" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dac7669c-78bf-4cd4-835e-e2ed58148100" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b66af800-424b-45f4-a801-c900e2284e6f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb84d5e8-f202-410b-a2b1-277e003b06f8" name="Добавление учителя" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8a3151ec-acac-44cd-b37e-b65c48bdfba6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3adfa39c-1c40-4c78-9ea0-62f0db83bd8a" />
+          </association>
+          <association Id="065c6565-30b4-49db-8f66-ac6b80114ed2" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Удаление учителя" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="606ebb45-27d9-4897-9757-d52f412bcbcf" LastKnownName="Удаление учителя" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="43350c70-8120-450b-8c0d-ff9a962028bf" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e407dd73-7dc6-4caa-a51b-b0b577cd68a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62102ffb-549b-4958-b0d6-11aa5932e13f" name="Удаление учителя" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02bb89c8-c817-41de-bfbb-0379982ae4df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a564aa36-3eb5-459e-8ecc-335b9789d989" />
+          </association>
+          <association Id="566ae121-965d-4b09-891c-f8ef6879a3a7" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Просмотр учителей" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8ca7f714-7a78-48a5-98ad-02852ec23100" LastKnownName="Просмотр учителей" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92664c3a-47db-467f-a6d2-09d6306e7cc2" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a155a1cc-7493-4bbf-8deb-cfcab57188ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6047fd51-2a75-487d-a555-b1d2e0a25a92" name="Просмотр учителей" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="da7fb0af-0a6b-4817-998d-8abd74735fa7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="45ce3b62-1474-4816-a099-7eaa56b02b7c" />
+          </association>
+          <association Id="f412a30d-933d-4230-8e1f-877dd262c0e7" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Добавление времени урока" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0af9731e-965f-4d2d-be5a-ff7c60584b5c" LastKnownName="Добавление времени урока" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9392451b-603c-4ee5-9255-092ba5896f25" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9d418220-5e12-42c0-93f0-f749201b736b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="71f410b2-6b96-4747-9630-8299450eaf7b" name="Добавление времени урока" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f7ca1b7d-c9f7-4dc0-9c8f-bd663c8e9c9c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="db397a6d-51f0-4602-9388-3d60f156ef7c" />
+          </association>
+          <association Id="be79b2f4-7c9f-4ca7-8dac-a0ba163907cd" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Удаление времени урока" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9d900690-ba13-4eab-bc13-8fcb1b3a67e4" LastKnownName="Удаление времени урока" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e29f9bf6-65f7-4c40-93b9-95cdf419805e" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c02c347-16be-45af-9f84-324bd255ae90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cffe51cc-3176-40c9-a3d8-294a9b96d527" name="Удаление времени урока" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bce76c50-1abc-4794-9f63-d00776c70c22" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="17fa3b76-5f7b-4238-b942-2d4b81404ccf" />
+          </association>
+          <association Id="c8872632-3e9c-487f-b654-2797aefbfbba" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Просмотр времени уроков" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7c9363f0-24f4-40b7-b4a8-a0998846c9be" LastKnownName="Просмотр времени уроков" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ccbfabf8-6e65-437e-903e-3a2b4b7568c5" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="88267230-8d48-488d-837a-ebc2eae0b690" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="15994cfb-ce7e-4575-b1e1-7ae742181408" name="Просмотр времени уроков" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="11e17c8b-9ad7-4099-ab22-01ab888be147" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8f4bbbf3-2f2f-41dc-9b1f-446c4e8d33ed" />
+          </association>
+          <association Id="f1f28a79-5b06-4098-ade8-aba8b343800c" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Добавление кабинета" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c9fbc0a9-11eb-43b0-9cca-1844848d08d9" LastKnownName="Добавление кабинета" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="628697f8-dda0-4d1d-b4b4-46600b2deb47" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c1132f32-8378-4d1d-8ce5-1714412ba3a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7521711-ea44-4d02-9e49-72fa963bb62a" name="Добавление кабинета" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="38936290-b0e3-4c39-8151-7bc272cdabad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3812d754-556f-44ff-9208-14cd484580d4" />
+          </association>
+          <association Id="3cbb1589-8923-42f7-8d4f-d9458f480e87" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Удаление кабинета" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="68dd6b86-5cc4-49a8-ac3d-82c04f288846" LastKnownName="Удаление кабинета" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ca35ebe-11ed-4501-8ccc-7035f6a2ae35" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="308dc522-01e0-41f1-bd21-0ee1481bd6a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="597a3974-6877-467f-ac12-d43b2df0c608" name="Удаление кабинета" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="61e6ef87-a835-4ee1-99f6-89817ab54d98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4d1e8f4c-49c6-49e0-bd5c-b10c9dea4f8c" />
+          </association>
+          <association Id="c63cfede-6d6c-4424-9be4-b320e1d6d3a5" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Просмотр кабинетов" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9807a457-b878-4682-ac00-fd6142015fff" LastKnownName="Просмотр кабинетов" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="298605d8-b24b-4f66-a4bb-2c503568f308" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8855c425-b12a-4120-9579-2fe05746d80a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c3012ffa-787e-4ae5-9a45-f34210608578" name="Просмотр кабинетов" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="37029cf5-0d0a-42a2-af59-cadde0cdedd2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9e19d7a6-bab6-4722-9cc9-9118a3e6fdcd" />
+          </association>
+          <association Id="139b68cc-5326-4b64-9a10-88832b4109d0" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Добавление  предмета" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d18df461-c3e3-4fce-a97a-d77902b5c56c" LastKnownName="Добавление  предмета" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="54c52a4c-e94f-4339-b49a-9f2fa6740c84" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e82b7124-39c8-4f32-bf9a-0da709d580f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="954fa716-fc95-475d-85ab-510a3f5713e8" name="Добавление  предмета" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94990aa2-46f7-4f4c-86fc-2592a75e137c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="87ca9f16-f2c4-454f-8fb9-a15c2004c9d2" />
+          </association>
+          <association Id="cf536938-9d8a-435e-84d4-d0a8b461279b" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Удаление предмета" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6fe53f0a-9fea-41de-a271-e0aab0a2bf15" LastKnownName="Удаление предмета" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea7880e3-4098-4a6d-ad77-4671fa2ee8ee" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2d5984be-8d5c-4301-b11c-bc4438db7826" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0dc827f-ab23-471d-8a2e-565865f492a1" name="Удаление предмета" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="481625c5-4ea3-4146-8d2a-6090f629a7b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cdfdc389-2cbd-47e0-88bb-d1dd8080b45e" />
+          </association>
+          <association Id="dda3e33c-f2d3-4bf0-b6ec-8eac9dd9fea2" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Просмотр предметов" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="89ad5ab1-521a-48c4-9aa8-4e4892ed94e0" LastKnownName="Просмотр предметов" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e9061cc-3524-4445-9816-62b36254925c" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7348abd6-a69f-4a02-b963-024df017f20e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97a0ceda-2dcd-409c-adfb-747726cd0514" name="Просмотр предметов" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="87c57782-1679-4a4e-b63c-f023f509f0fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="55241fb1-be81-4157-b707-0b723f77d2cf" />
+          </association>
+          <association Id="2c3156ec-2fed-4c04-9b93-9d4a1802eedc" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Добавление групп" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c879423-f322-4450-88d6-1e0b717d0b20" LastKnownName="Добавление группы" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bddcc2b6-4984-4e73-988d-a731267c0a9c" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e6f86336-b875-47ff-935c-bb057aeefd6f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7cd0f792-ffae-4948-bcf0-7fa6b3c77241" name="Добавление групп" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7aaa7088-f30e-4ebe-980d-4fe0dee41623" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c7f317d3-93ea-4ba5-b5f3-6f1f9db9efea" />
+          </association>
+          <association Id="3f8de1f5-f0a0-4b7c-adca-0fd462c743ea" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Удаление групп" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1bf6e2e2-c64f-4e05-b84b-8305f842aa8b" LastKnownName="Удаление группы" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1d4243dc-17a7-40a0-af22-a8bc7dc329b4" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5f35cd9f-073b-4b99-8ab0-dc17393b48b1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0495bb35-170e-406b-af28-f8bb0a9965b4" name="Удаление групп" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="19d46431-4a46-4666-b15a-ad4a6611409a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="df7c6913-84aa-4bc7-ada5-909b00fec88d" />
+          </association>
+          <association Id="d64019ab-169f-4c6d-80b5-797ab18760ff" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Просмотр групп" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="629f9738-c612-4bed-9596-fa56c79b037e" LastKnownName="Просмотр групп" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e47c1967-a37d-405a-9f82-d66c48155a67" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3ec4afac-8669-4e96-ae61-0550c8bcd2e6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a69ce42d-af45-4ce0-8f68-4032d538820f" name="Просмотр групп" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e8194b4e-20d9-4ca7-b169-931967625783" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="db53ff7f-3153-4ac3-9507-27141be08a4b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="76837989-915d-4da3-92e3-04c3cbd41749" name="Добавление элемента расписания" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b5d93ea1-9ea9-41c5-9daa-c173ec160efc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="789dae90-09d7-4428-ada8-9d59c31bfeef" name="Удаление элемента расписания" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12121433-9d27-46a9-a6b1-9e6086a04b99" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6cf8f501-70c5-4497-bdb2-6f12a5193a26" name="Просмотр расписания" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="abb457a2-a1b4-4be3-a1d9-a67823e25c8a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b40a7c68-39cb-4d21-96ad-225c67852554" name="Добавление учителя" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="645e6b46-3c43-4048-a14f-d18ee9964347" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="606ebb45-27d9-4897-9757-d52f412bcbcf" name="Удаление учителя" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85957bd2-29ba-43d5-a919-7f0752caf515" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8ca7f714-7a78-48a5-98ad-02852ec23100" name="Просмотр учителей" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f85469d8-50a2-489d-bc91-2713d6303a5a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0af9731e-965f-4d2d-be5a-ff7c60584b5c" name="Добавление времени урока" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9e154acf-9b73-43a7-aadb-9407b4e01bc7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9d900690-ba13-4eab-bc13-8fcb1b3a67e4" name="Удаление времени урока" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2a13adde-7573-4677-afab-ee7365004737" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7c9363f0-24f4-40b7-b4a8-a0998846c9be" name="Просмотр времени уроков" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ce65e4a3-04a7-4d17-ac58-16a843a5905b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d18df461-c3e3-4fce-a97a-d77902b5c56c" name="Добавление  предмета" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f39f2fba-4992-481f-bfa4-0411adce4589" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6fe53f0a-9fea-41de-a271-e0aab0a2bf15" name="Удаление предмета" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f52cfa7f-9340-430a-a4cd-a548d82a391f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="89ad5ab1-521a-48c4-9aa8-4e4892ed94e0" name="Просмотр предметов" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="13d3d604-47fa-4269-a04b-ad6f18563b2f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c9fbc0a9-11eb-43b0-9cca-1844848d08d9" name="Добавление кабинета" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="160246a2-ab5b-4b91-89a5-163e2bfc019c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="68dd6b86-5cc4-49a8-ac3d-82c04f288846" name="Удаление кабинета" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="99984740-af77-45a5-a6a0-7b6558967953" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9807a457-b878-4682-ac00-fd6142015fff" name="Просмотр кабинетов" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="de45525a-88e5-4757-9f72-e8cdd0eec2f8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1c879423-f322-4450-88d6-1e0b717d0b20" name="Добавление группы" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a78f992c-193e-4dc3-8876-0980d7f0c573" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1bf6e2e2-c64f-4e05-b84b-8305f842aa8b" name="Удаление группы" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9de21bc3-90f0-4ca3-8ddd-02fdb747fbe5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="629f9738-c612-4bed-9596-fa56c79b037e" name="Просмотр групп" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d10d73f1-7176-43c2-b554-5c88ceb22b77" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="16e66a6a-20b7-487c-be79-b30975ed0e82" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="42dab407-2f9f-4741-af88-7815a347f046" />
+        <generalsInternal>
+          <generalization Id="fea749bb-21f6-4dac-b210-2093bd67d991" isSubstitutable="false">
+            <actorMoniker Id="6669d5d3-ad39-4c9c-91e2-19cc5ea694e9" LastKnownName="Admin" />
+            <elementDefinition Id="adfcbf6f-0a56-4958-9c28-feba33fc60b7" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="110dba26-9ab7-4283-8ea0-61e83a0518b0" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Просмотр расписания" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6cf8f501-70c5-4497-bdb2-6f12a5193a26" LastKnownName="Просмотр расписания" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="07c0b387-63c0-47b1-bff1-be8fef309314" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c9347aec-cdb9-4361-b224-24d5091b6f00" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8af1d776-2b39-4ace-953a-158915589960" name="Просмотр расписания" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fcdb1eb0-9ff6-4f1d-a6e5-16d5abfed49a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a5b53eeb-fcf7-4b91-9793-c2d876dff8b3" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="931fb515-fc90-4bef-acb7-30a2f2756381" name="MainModelingProject">
+    <elementDefinition Id="af7a2d79-fa73-4240-9eff-b2f0755a1b41" />
+  </package>
+</useCaseModelRoot>

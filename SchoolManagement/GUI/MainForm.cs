@@ -10,9 +10,23 @@ namespace SchoolManagement.GUI
             InitializeComponent();
         }
 
-        private void UIQuestionnaireServerMainForm_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
+            using (var f = new LoginForm())
+            {
+                f.ShowDialog();
+            }
+            SetVisible();
+        }
 
+        private void SetVisible()
+        {
+            uiClassRoomToolStripButton.Visible = Globals.IsRootMode;
+            uiStudentsToolStripButton.Visible = Globals.IsRootMode;
+            uiTeacherToolStripButton.Visible = Globals.IsRootMode;
+            uiEducationalDisciplineToolStripButton.Visible = Globals.IsRootMode;
+            uiGroupToolStripButton.Visible = Globals.IsRootMode;
+            uiClassTimeToolStripButton.Visible = Globals.IsRootMode;
         }
 
         private void uiStudentsToolStripButton_Click(object sender, EventArgs e)

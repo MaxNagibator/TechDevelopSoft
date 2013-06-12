@@ -8,6 +8,8 @@ namespace SchoolManagement
     {
         private const string ROOT_NODE_NAME = "Main";
         private const string CONNECTION_STRING_NAME = "ConnectionString";
+        private const string ROOT_LOGIN_NAME = "RootLogin";
+        private const string ROOT_PASS_NAME = "RootPass";
         private const string SETTINGS_FILE_NAME = "\\settings.xml";
         private string ConfigurationFolderPath{get;set;}
         private string _configurationFilePath;
@@ -65,6 +67,7 @@ namespace SchoolManagement
             ConfigurationFolderPath = folderPath;
             _configurationFilePath = ConfigurationFolderPath + SETTINGS_FILE_NAME;
         }
+
         public string ConnectionString
         {
             get
@@ -74,6 +77,29 @@ namespace SchoolManagement
             set
             {
                 SetNodeValue(CONNECTION_STRING_NAME, value);
+            }
+        }
+        public string RootLogin
+        {
+            get
+            {
+                return ParseNode(ROOT_LOGIN_NAME);
+            }
+            set
+            {
+                SetNodeValue(ROOT_LOGIN_NAME, value);
+            }
+        }
+
+        public string RootPass
+        {
+            get
+            {
+                return ParseNode(ROOT_PASS_NAME);
+            }
+            set
+            {
+                SetNodeValue(ROOT_PASS_NAME, value);
             }
         }
 

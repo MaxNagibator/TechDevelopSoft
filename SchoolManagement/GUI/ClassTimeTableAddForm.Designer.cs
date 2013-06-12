@@ -72,8 +72,8 @@
             this.uiCommitButton.Location = new System.Drawing.Point(86, 188);
             this.uiCommitButton.Name = "uiCommitButton";
             this.uiCommitButton.Size = new System.Drawing.Size(87, 23);
-            this.uiCommitButton.TabIndex = 8;
-            this.uiCommitButton.Text = "OK";
+            this.uiCommitButton.TabIndex = 12;
+            this.uiCommitButton.Text = "подтвердить";
             this.uiCommitButton.UseVisualStyleBackColor = true;
             this.uiCommitButton.Click += new System.EventHandler(this.uiCommintButton_Click);
             // 
@@ -91,7 +91,7 @@
             this.uiEducationalDisciplineTextBox.Location = new System.Drawing.Point(86, 58);
             this.uiEducationalDisciplineTextBox.Name = "uiEducationalDisciplineTextBox";
             this.uiEducationalDisciplineTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiEducationalDisciplineTextBox.TabIndex = 9;
+            this.uiEducationalDisciplineTextBox.TabIndex = 3;
             // 
             // uiDateLabel
             // 
@@ -116,14 +116,14 @@
             this.uiClassTimeTextBox.Location = new System.Drawing.Point(86, 32);
             this.uiClassTimeTextBox.Name = "uiClassTimeTextBox";
             this.uiClassTimeTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiClassTimeTextBox.TabIndex = 13;
+            this.uiClassTimeTextBox.TabIndex = 1;
             // 
             // uiSelectClassTimeButton
             // 
             this.uiSelectClassTimeButton.Location = new System.Drawing.Point(227, 30);
             this.uiSelectClassTimeButton.Name = "uiSelectClassTimeButton";
             this.uiSelectClassTimeButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectClassTimeButton.TabIndex = 15;
+            this.uiSelectClassTimeButton.TabIndex = 2;
             this.uiSelectClassTimeButton.Text = "♥";
             this.uiSelectClassTimeButton.UseVisualStyleBackColor = true;
             this.uiSelectClassTimeButton.Click += new System.EventHandler(this.uiSelectClassTimeButton_Click);
@@ -133,7 +133,7 @@
             this.uiEducationalDisciplineButton.Location = new System.Drawing.Point(227, 56);
             this.uiEducationalDisciplineButton.Name = "uiEducationalDisciplineButton";
             this.uiEducationalDisciplineButton.Size = new System.Drawing.Size(45, 23);
-            this.uiEducationalDisciplineButton.TabIndex = 16;
+            this.uiEducationalDisciplineButton.TabIndex = 4;
             this.uiEducationalDisciplineButton.Text = "♥";
             this.uiEducationalDisciplineButton.UseVisualStyleBackColor = true;
             this.uiEducationalDisciplineButton.Click += new System.EventHandler(this.uiSelectEducationalDisciplineButton_Click);
@@ -143,7 +143,7 @@
             this.uiDateDateTimePicker.Location = new System.Drawing.Point(86, 84);
             this.uiDateDateTimePicker.Name = "uiDateDateTimePicker";
             this.uiDateDateTimePicker.Size = new System.Drawing.Size(186, 20);
-            this.uiDateDateTimePicker.TabIndex = 17;
+            this.uiDateDateTimePicker.TabIndex = 5;
             this.uiDateDateTimePicker.ValueChanged += new System.EventHandler(this.uiDateDateTimePicker_ValueChanged);
             // 
             // uiTeacherTextBox
@@ -151,7 +151,7 @@
             this.uiTeacherTextBox.Location = new System.Drawing.Point(86, 110);
             this.uiTeacherTextBox.Name = "uiTeacherTextBox";
             this.uiTeacherTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiTeacherTextBox.TabIndex = 9;
+            this.uiTeacherTextBox.TabIndex = 6;
             // 
             // uiTeacherLabel
             // 
@@ -167,7 +167,7 @@
             this.uiSelectTeacherButton.Location = new System.Drawing.Point(227, 108);
             this.uiSelectTeacherButton.Name = "uiSelectTeacherButton";
             this.uiSelectTeacherButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectTeacherButton.TabIndex = 16;
+            this.uiSelectTeacherButton.TabIndex = 7;
             this.uiSelectTeacherButton.Text = "♥";
             this.uiSelectTeacherButton.UseVisualStyleBackColor = true;
             this.uiSelectTeacherButton.Click += new System.EventHandler(this.uiSelectTeacherButton_Click);
@@ -177,7 +177,7 @@
             this.uiClassRoomTextBox.Location = new System.Drawing.Point(86, 136);
             this.uiClassRoomTextBox.Name = "uiClassRoomTextBox";
             this.uiClassRoomTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiClassRoomTextBox.TabIndex = 9;
+            this.uiClassRoomTextBox.TabIndex = 8;
             // 
             // uiClassRoomLabel
             // 
@@ -193,7 +193,7 @@
             this.uiSelectClassRoomButton.Location = new System.Drawing.Point(227, 134);
             this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
             this.uiSelectClassRoomButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectClassRoomButton.TabIndex = 16;
+            this.uiSelectClassRoomButton.TabIndex = 9;
             this.uiSelectClassRoomButton.Text = "♥";
             this.uiSelectClassRoomButton.UseVisualStyleBackColor = true;
             this.uiSelectClassRoomButton.Click += new System.EventHandler(this.uiSelectClassRoomButton_Click);
@@ -203,7 +203,7 @@
             this.uiGroupTextBox.Location = new System.Drawing.Point(86, 162);
             this.uiGroupTextBox.Name = "uiGroupTextBox";
             this.uiGroupTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiGroupTextBox.TabIndex = 9;
+            this.uiGroupTextBox.TabIndex = 10;
             // 
             // uiGroupLabel
             // 
@@ -219,7 +219,7 @@
             this.uiSelectGroupButton.Location = new System.Drawing.Point(227, 160);
             this.uiSelectGroupButton.Name = "uiSelectGroupButton";
             this.uiSelectGroupButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectGroupButton.TabIndex = 16;
+            this.uiSelectGroupButton.TabIndex = 11;
             this.uiSelectGroupButton.Text = "♥";
             this.uiSelectGroupButton.UseVisualStyleBackColor = true;
             this.uiSelectGroupButton.Click += new System.EventHandler(this.uiSelectGroupButton_Click);

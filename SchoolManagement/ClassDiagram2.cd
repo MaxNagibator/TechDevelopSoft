@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchoolManagement.School.Teacher">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAEAAAAAAAAAAAIAgAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassRoom">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTime">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAAAIAAgAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTimeTable">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAgAABAAAAAAgAAAAAAAAhAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassTimeTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTimeTableDayElem">
+    <Position X="10.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAgAAAA=</HashCode>
+      <FileName>School\ClassTimeTableDayElem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTimeTableWeekElem">
+    <Position X="11.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAANAPAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassTimeTableWeekElem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.EducationalDiscipline">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\EducationalDiscipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.Entity" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.Group">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.Student">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAEAAAAAAAAAAAAAAAAAAAIAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Strudent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.StudentRate" Collapsed="true">
+    <Position X="1" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School\StudentRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.DatabaseManager">
+    <Position X="2.5" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAoAAAABCQgAAQAAQgAQAAoAAAEAAKFQAQAAhA=</HashCode>
+      <FileName>DatabaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.Globals">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAAAAAABAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Globals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.LocalSettings">
+    <Position X="6.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAFAEERAgAAAAEQAABAAEggAEAIAAAAACAGABAAAAA=</HashCode>
+      <FileName>LocalSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -110,6 +110,7 @@ namespace SchoolManagement.GUI
 
         private void uiMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (!Globals.IsRootMode) return;
             if (e.Button == MouseButtons.Right && e.RowIndex > -1 && uiMainDataGridView.Columns[e.ColumnIndex].DisplayIndex > 0)
             {
                 uiMainDataGridView[e.ColumnIndex, e.RowIndex].Selected = true;
