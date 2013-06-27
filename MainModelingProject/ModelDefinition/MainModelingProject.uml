@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="af7a2d79-fa73-4240-9eff-b2f0755a1b41"
   name="MainModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -910,28 +910,7 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
-          <property
-            Id="4a8ac5f2-ff8d-4692-86cc-7c64cb2d5cdd"
-            name="Id"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="24efeba8-7b62-4102-82ad-ae49a3e89571"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -951,6 +930,47 @@
               LastKnownLocation="MainModelingProject.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="5789d025-b2c0-49ce-ab15-cd4b8cc5f204"
+            isDerived="false"
+            sourceEndRoleName="Teacher"
+            targetEndRoleName="EducationalDiscipline"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c83bbf6f-fe33-4f6a-97ab-25a1470bd573"
+              LastKnownName="EducationalDiscipline"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45f8444a-a415-428f-95b5-3c9df68c60c2"
+                  name="Teacher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="852d35d2-7329-4cd0-9b55-ccbcda1e520e"
+                  name="EducationalDiscipline"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ff4a7a98-eac4-4409-8232-a0fb3b621359"
@@ -986,24 +1006,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="56f545dc-45c4-494a-a59d-928d86e40ae3"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="468db86e-657d-4124-96d7-37482f65c7f2"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1036,24 +1038,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="087f20f4-cb2b-40bd-b561-8c84baeff756"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="e5576a46-23ce-42bb-883d-737c8eebd8a7"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1086,24 +1070,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="34077eb5-c180-4f97-b707-a35c58890c42"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="91915f26-473b-48a5-b997-0e3f9910a8bf"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1231,24 +1197,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="d3051e28-648b-4c4c-a214-57e6419c1a07"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="b92052cc-498b-45d2-a739-f0e62e5377d9"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1281,24 +1229,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="77eff37e-5223-4477-8cea-d67e2d883375"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="7cf0b572-5286-4122-a6dd-01b93e7fe638"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1318,6 +1248,203 @@
               LastKnownLocation="MainModelingProject.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="a23192ff-83fd-4e85-930d-eb8dce7a0481"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTable"
+            targetEndRoleName="EducationalDiscipline"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c83bbf6f-fe33-4f6a-97ab-25a1470bd573"
+              LastKnownName="EducationalDiscipline"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5473bd7-6f66-432d-af94-dac46e46fbfc"
+                  name="ClassTimeTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="64d99ddb-6a41-4563-9fa9-ccc4fbce4da3"
+                  name="EducationalDiscipline"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2a0358eb-bc01-4bd3-ad4b-45e67b75322b"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTable"
+            targetEndRoleName="ClassTime"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cb5b3062-ec75-48ca-837b-7b8d6998425b"
+              LastKnownName="ClassTime"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d305bee-a8e3-4651-b486-b96bae13467d"
+                  name="ClassTimeTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4020a13c-5327-4dc8-bfaf-7d428cde2a65"
+                  name="ClassTime"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a7d51df6-922b-4edc-9957-227d6e96dc1e"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTable"
+            targetEndRoleName="Teacher"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c8f54ea3-f35a-47f4-aafb-94af377c4e75"
+              LastKnownName="Teacher"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5860c5c-ff78-46a7-9ba9-906641865264"
+                  name="ClassTimeTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7a417de-aea5-4dca-ad5d-3f1e61bb056c"
+                  name="Teacher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fcb3159e-717e-45bf-9812-c5f9ff0a12f4"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTable"
+            targetEndRoleName="ClassRoom"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d505df7d-1ee7-484d-bbe1-a2f2ffe7334b"
+              LastKnownName="ClassRoom"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1eccaaec-7df4-4917-8440-79dc545c0723"
+                  name="ClassTimeTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d361f7b5-64ab-40dd-952a-388177442d7e"
+                  name="ClassRoom"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="627a1f00-54fa-499f-93e7-8d689dfe1fc5"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTable"
+            targetEndRoleName="Group"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="022ea2b9-92db-4f44-861e-8f834aefde01"
+              LastKnownName="Group"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34df1af6-4b04-4b44-8db0-fa518e8ecfdc"
+                  name="ClassTimeTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="63a62931-6b0a-41e6-9c58-7c073cf8fc04"
+                  name="Group"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e52d4691-71cd-4fad-9c67-727396b4d547"
@@ -1386,24 +1513,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="9747484d-03ce-498e-97f9-e5e6a64f2482"
-            name="AddToDatabase"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="f616bf88-7509-4419-9a0e-57ac4ae903a5"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1413,6 +1522,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="43dddc63-4fb2-4aa8-a95e-9f5557e0968e"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTableDatElem"
+            targetEndRoleName="ClassTimeTable"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7bea77cc-203c-4963-9d31-c8f91f8c271d"
+              LastKnownName="ClassTimeTable"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ee41eee-94d9-4a9c-92a5-4ed73965869a"
+                  name="ClassTimeTableDatElem"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5a968ec5-2118-44e3-b94c-3fe362faf3bd"
+                  name="ClassTimeTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="715b5d68-d0a8-4bac-845c-ac25cd97f25e"
@@ -1437,16 +1587,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="ca62320f-6d96-49fb-9d76-89dad9694504"
-            name="ToString"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1456,6 +1596,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="8e572a67-9319-4741-9025-0a2c4a2ef01a"
+            isDerived="false"
+            sourceEndRoleName="ClassTimeTableWeekElem"
+            targetEndRoleName="ClassTime"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cb5b3062-ec75-48ca-837b-7b8d6998425b"
+              LastKnownName="ClassTime"
+              LastKnownLocation="MainModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0d8636a8-7359-4fde-9fdc-cdd189db8d77"
+                  name="ClassTimeTableWeekElem"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17da7f88-5337-43bd-be22-9599990e3cc4"
+                  name="ClassTime"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="13665610-6e5f-4c74-9a5d-6e50f53f55e8"
@@ -1546,161 +1727,6 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="6ae07831-faed-4ae0-ab27-4d0b9afbebab"
-        name="DatabaseManager"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <ownedOperationsInternal>
-          <operation
-            Id="924529f8-0198-4db8-9deb-0b7fc97561d1"
-            name="AddClassTime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="d64caf0a-aa8c-4a0e-8c36-31e902845a8b"
-            name="AddClassTimeTable"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="074cef6a-cae3-4445-87c2-afc30f581494"
-            name="AddEducationalDiscipline"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="d1cf4d2b-debb-4eca-b97c-bdd9640ee6d7"
-            name="AddGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="f5bcc8fe-50bd-4cf5-93ac-293370a18f96"
-            name="AddTeacher"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="c3064d8b-8fab-4e45-9385-7c10a19c28ba"
-            name="DeleteClassRoomById"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="8256a413-8790-4b4d-8e02-7010b26b6d25"
-            name="DeleteClassTimeById"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="a80b4060-20ef-4bc3-a462-2ff5f37d4840"
-            name="DeleteClassTimeTableById"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="7b66a3ca-5c23-44b7-a382-057dfd5064cb"
-            name="DeleteEducationalDisciplineById"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="4ceb097d-404a-4867-917a-0b1b1f40211b"
-            name="DeleteTeacherById"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="727aff7e-1588-4f93-9be5-420f0ac06705"
-            name="GetClassRooms"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="965a0f61-d9df-44ca-8672-0051264e1a37"
-            name="GetClassTimes"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="c3f262b6-cdb4-488a-bbb3-bd98f1192f95"
-            name="GetClassTimeTables"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="c233e0cc-b6ab-4ba6-98a6-35b4d51ea048"
-            name="GetEducationalDisciplines"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="94c13ea1-9a2c-4ff7-aba4-fa1afd622d20"
-            name="GetGroups"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="e0f3bafc-171c-49f9-8839-4a725adc8c1a"
-            name="GetTeacher"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="11ba2040-bf80-4a82-80f2-80f57e98a74d"
-            name="DeleteGroupById"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="3d72dc32-a192-40cf-a221-b3858121073b"
-            name="AddClassRoom"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1798,7 +1824,7 @@
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="bdf2046d-7051-45c4-88c8-000f3e89a8e2"
+            Id="d041c8fe-71ba-4606-a8d2-fc8222e66385"
             name="BehaviorExecutionSpecification3">
             <coveredLifelines>
               <lifelineMoniker
@@ -1808,30 +1834,42 @@
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="3de4b3d5-247e-455c-a730-390ad9f83772"
+                Id="8b576fa0-0da8-4768-9852-8ff5c259025d"
                 LastKnownName="ExecutionOccurrenceSpecification6"
                 LastKnownLocation="MainModelingProject.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="1e06fe6c-96fe-4e56-8aca-6b52a53ab636"
+                Id="92a24450-aa52-4fc5-894a-8ad83521c456"
                 LastKnownName="ExecutionOccurrenceSpecification5"
                 LastKnownLocation="MainModelingProject.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="da5ebb0a-a443-4336-8b0a-4a246132abf0"
+                Id="ce1ed705-6f68-4b1d-a75e-42010c53528d"
                 LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="47485a7d-0aed-44d0-bff2-e4c549f99c50"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d3065188-c509-43e5-834b-95d032dc52f5"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9bf4e3ec-603b-4479-a494-933572b5338f"
+                LastKnownName="MessageOccurrenceSpecification38"
                 LastKnownLocation="MainModelingProject.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="1e06fe6c-96fe-4e56-8aca-6b52a53ab636"
+            Id="92a24450-aa52-4fc5-894a-8ad83521c456"
             name="ExecutionOccurrenceSpecification5">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="500ec2d8-f10b-4db0-a1d1-527a3669d8a2"
+                  Id="007b5874-5a43-4006-864b-2fcc744a2afa"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="MainModelingProject.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -1844,7 +1882,7 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="139c3ce7-1968-4954-9f34-fd5b22a1eafd"
+            Id="2d489703-369a-412a-8385-a0531ed8ae6d"
             name="MessageOccurrenceSpecification6">
             <covered>
               <lifelineMoniker
@@ -1854,7 +1892,7 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="da5ebb0a-a443-4336-8b0a-4a246132abf0"
+            Id="ce1ed705-6f68-4b1d-a75e-42010c53528d"
             name="MessageOccurrenceSpecification7">
             <covered>
               <lifelineMoniker
@@ -1863,13 +1901,187 @@
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d4cf3ea3-72cc-4974-94bb-25bf4aa2360b"
+            name="BehaviorExecutionSpecification13">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
+                LastKnownName="Объект класса Group"
+                LastKnownLocation="MainModelingProject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="3e10fc31-dd8b-4755-924b-8f06a0f4be01"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="MainModelingProject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="50faa36c-282a-4e01-83f8-5530500e6e17"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="MainModelingProject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d94d4dd0-32e2-430a-868e-4439b5cb66cd"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dc8eb29a-1646-4e81-89bc-2e788c39882b"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="MainModelingProject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="3de4b3d5-247e-455c-a730-390ad9f83772"
+            Id="50faa36c-282a-4e01-83f8-5530500e6e17"
+            name="ExecutionOccurrenceSpecification25">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="31bf525b-3647-40ab-9bc3-72551b6d9d5c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
+                LastKnownName="Объект класса Group"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d94d4dd0-32e2-430a-868e-4439b5cb66cd"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
+                LastKnownName="Объект класса Group"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="47485a7d-0aed-44d0-bff2-e4c549f99c50"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="313a6002-592c-4d14-b0b7-3cc37b223806"
+                LastKnownName="Форма добавления группы"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d3065188-c509-43e5-834b-95d032dc52f5"
+            name="MessageOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="313a6002-592c-4d14-b0b7-3cc37b223806"
+                LastKnownName="Форма добавления группы"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dc8eb29a-1646-4e81-89bc-2e788c39882b"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
+                LastKnownName="Объект класса Group"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="3e10fc31-dd8b-4755-924b-8f06a0f4be01"
+            name="ExecutionOccurrenceSpecification26">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4d8d9a21-abd5-4fcf-acd7-8c3c9951fe2c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
+                LastKnownName="Объект класса Group"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f7810038-ee05-4efe-9636-873184fbc58d"
+            name="BehaviorExecutionSpecification15">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="c242948d-33f5-420b-99cf-383fe9374a82"
+                LastKnownName="Admin"
+                LastKnownLocation="MainModelingProject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e95c06ba-f86d-4ad0-8846-c52aab4a1f0e"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="MainModelingProject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="26ffed91-d4cf-4227-a4ee-a98057c194da"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="MainModelingProject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="06c075a7-9fbf-45d9-83f5-2d284474b3b7"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="MainModelingProject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="26ffed91-d4cf-4227-a4ee-a98057c194da"
+            name="ExecutionOccurrenceSpecification29">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="05d249ec-ef7a-45fd-a35b-656b07dcaefa"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="c242948d-33f5-420b-99cf-383fe9374a82"
+                LastKnownName="Admin"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9bf4e3ec-603b-4479-a494-933572b5338f"
+            name="MessageOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="313a6002-592c-4d14-b0b7-3cc37b223806"
+                LastKnownName="Форма добавления группы"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="06c075a7-9fbf-45d9-83f5-2d284474b3b7"
+            name="MessageOccurrenceSpecification39">
+            <covered>
+              <lifelineMoniker
+                Id="c242948d-33f5-420b-99cf-383fe9374a82"
+                LastKnownName="Admin"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="8b576fa0-0da8-4768-9852-8ff5c259025d"
             name="ExecutionOccurrenceSpecification6">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="69604835-0d84-4673-81ea-d8020bbf8e80"
+                  Id="70270f8e-5e4d-414e-8969-41a1935151dc"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="MainModelingProject.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -1881,171 +2093,21 @@
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="832f37d1-2a10-403a-8f07-42d91ef57af3"
-            name="BehaviorExecutionSpecification4">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="80b0b886-968b-436d-81eb-a884a1dc84fc"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="MainModelingProject.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="0c1647f0-2994-4cad-8ae2-f74426b37701"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="MainModelingProject.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="87d4e2ac-6aa1-41a5-bc5e-242f56ad4447"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="MainModelingProject.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="0c1647f0-2994-4cad-8ae2-f74426b37701"
-            name="ExecutionOccurrenceSpecification7">
+            Id="e95c06ba-f86d-4ad0-8846-c52aab4a1f0e"
+            name="ExecutionOccurrenceSpecification30">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="bfa51f3f-1032-4226-95a8-7196a8ba5923"
+                  Id="3b2b3aad-3c88-4ec9-9b46-54127f128c80"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="MainModelingProject.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="add7f388-b85d-495c-8f87-4a126e8a38d3"
-            name="MessageOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="313a6002-592c-4d14-b0b7-3cc37b223806"
-                LastKnownName="Форма добавления группы"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="87d4e2ac-6aa1-41a5-bc5e-242f56ad4447"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="80b0b886-968b-436d-81eb-a884a1dc84fc"
-            name="ExecutionOccurrenceSpecification8">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="241fc75a-54ee-427b-b062-93b65adef7c5"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="532f8025-94fa-46ea-a82c-d1dad9f4685b"
-            name="BehaviorExecutionSpecification5">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="cf8a5e10-43c6-42da-8bb0-ee21d808568c"
-                LastKnownName="База данных"
-                LastKnownLocation="MainModelingProject.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="a40236e7-bb17-417f-b1c7-c11acc4a30b8"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="MainModelingProject.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="370d99fb-44e6-409d-a5dd-ed22919bc335"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="MainModelingProject.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="c7f02624-5ed0-44a8-839c-1f9316484376"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="MainModelingProject.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="370d99fb-44e6-409d-a5dd-ed22919bc335"
-            name="ExecutionOccurrenceSpecification9">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="016d9c7e-e3e9-4edc-8c11-27d9d2c9bd02"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="cf8a5e10-43c6-42da-8bb0-ee21d808568c"
-                LastKnownName="База данных"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="80afd46a-aeb5-4238-a247-8d11d7970c98"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="c7f02624-5ed0-44a8-839c-1f9316484376"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="cf8a5e10-43c6-42da-8bb0-ee21d808568c"
-                LastKnownName="База данных"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="a40236e7-bb17-417f-b1c7-c11acc4a30b8"
-            name="ExecutionOccurrenceSpecification10">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="a101408c-d603-44da-8a9a-fa5f2ea00231"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="cf8a5e10-43c6-42da-8bb0-ee21d808568c"
-                LastKnownName="База данных"
+                Id="c242948d-33f5-420b-99cf-383fe9374a82"
+                LastKnownName="Admin"
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2067,8 +2129,16 @@
                 LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="MainModelingProject.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="139c3ce7-1968-4954-9f34-fd5b22a1eafd"
+                Id="2d489703-369a-412a-8385-a0531ed8ae6d"
                 LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="MainModelingProject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="26ffed91-d4cf-4227-a4ee-a98057c194da"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="MainModelingProject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e95c06ba-f86d-4ad0-8846-c52aab4a1f0e"
+                LastKnownName="ExecutionOccurrenceSpecification30"
                 LastKnownLocation="MainModelingProject.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -2087,52 +2157,28 @@
                 LastKnownName="ExecutionOccurrenceSpecification4"
                 LastKnownLocation="MainModelingProject.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="1e06fe6c-96fe-4e56-8aca-6b52a53ab636"
+                Id="92a24450-aa52-4fc5-894a-8ad83521c456"
                 LastKnownName="ExecutionOccurrenceSpecification5"
                 LastKnownLocation="MainModelingProject.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="3de4b3d5-247e-455c-a730-390ad9f83772"
+                Id="8b576fa0-0da8-4768-9852-8ff5c259025d"
                 LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="add7f388-b85d-495c-8f87-4a126e8a38d3"
-                LastKnownName="MessageOccurrenceSpecification8"
                 LastKnownLocation="MainModelingProject.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="8500bd9a-e102-450d-ae17-5453b69ccd36"
-            name="Database Manager"
+            name="Объект класса Group"
             isActor="false"
-            lifelineDisplayName="Database Manager">
+            lifelineDisplayName="Объект класса Group">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="0c1647f0-2994-4cad-8ae2-f74426b37701"
-                LastKnownName="ExecutionOccurrenceSpecification7"
+                Id="50faa36c-282a-4e01-83f8-5530500e6e17"
+                LastKnownName="ExecutionOccurrenceSpecification25"
                 LastKnownLocation="MainModelingProject.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="80b0b886-968b-436d-81eb-a884a1dc84fc"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="80afd46a-aeb5-4238-a247-8d11d7970c98"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="MainModelingProject.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="cf8a5e10-43c6-42da-8bb0-ee21d808568c"
-            name="База данных"
-            isActor="false"
-            lifelineDisplayName="База данных">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="370d99fb-44e6-409d-a5dd-ed22919bc335"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="MainModelingProject.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="a40236e7-bb17-417f-b1c7-c11acc4a30b8"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="3e10fc31-dd8b-4755-924b-8f06a0f4be01"
+                LastKnownName="ExecutionOccurrenceSpecification26"
                 LastKnownLocation="MainModelingProject.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -2158,59 +2204,78 @@
             </receiveEvent>
           </message>
           <message
-            Id="b25672f7-84cf-4647-9297-8a4cdb776dd2"
+            Id="ac966d4a-dbbe-477a-a1fa-7fc55a471e81"
             name="Подтверждение занесения"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="139c3ce7-1968-4954-9f34-fd5b22a1eafd"
+                Id="2d489703-369a-412a-8385-a0531ed8ae6d"
                 LastKnownName="MessageOccurrenceSpecification6"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="da5ebb0a-a443-4336-8b0a-4a246132abf0"
+                Id="ce1ed705-6f68-4b1d-a75e-42010c53528d"
                 LastKnownName="MessageOccurrenceSpecification7"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="6ed7e3ac-3b17-42e4-8ade-33126608f7e3"
-            name="Формирование группы и её передача в DataBase Manager"
+            Id="83aa0e41-2ef2-47f3-ba51-362bfaba8225"
+            name="&lt;&lt;create&gt;&gt;"
             messageKind="Complete"
-            messageSort="AsynchCall"
+            messageSort="CreateMessage"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="add7f388-b85d-495c-8f87-4a126e8a38d3"
-                LastKnownName="MessageOccurrenceSpecification8"
+                Id="47485a7d-0aed-44d0-bff2-e4c549f99c50"
+                LastKnownName="MessageOccurrenceSpecification32"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="87d4e2ac-6aa1-41a5-bc5e-242f56ad4447"
-                LastKnownName="MessageOccurrenceSpecification9"
+                Id="d94d4dd0-32e2-430a-868e-4439b5cb66cd"
+                LastKnownName="MessageOccurrenceSpecification33"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="89396f73-751f-407f-b3ea-4760c30b1b6c"
-            name="Занесение в БД"
+            Id="2d9ad555-2c7f-40cd-8ad2-100b19be9061"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dc8eb29a-1646-4e81-89bc-2e788c39882b"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="MainModelingProject.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d3065188-c509-43e5-834b-95d032dc52f5"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="MainModelingProject.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b09c8b0a-5818-4658-9120-084ec0f09f21"
+            name="Message"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="80afd46a-aeb5-4238-a247-8d11d7970c98"
-                LastKnownName="MessageOccurrenceSpecification10"
+                Id="9bf4e3ec-603b-4479-a494-933572b5338f"
+                LastKnownName="MessageOccurrenceSpecification38"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="c7f02624-5ed0-44a8-839c-1f9316484376"
-                LastKnownName="MessageOccurrenceSpecification11"
+                Id="06c075a7-9fbf-45d9-83f5-2d284474b3b7"
+                LastKnownName="MessageOccurrenceSpecification39"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
@@ -2246,36 +2311,6 @@
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <executionEvent
-        Id="500ec2d8-f10b-4db0-a1d1-527a3669d8a2"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="69604835-0d84-4673-81ea-d8020bbf8e80"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="bfa51f3f-1032-4226-95a8-7196a8ba5923"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="241fc75a-54ee-427b-b062-93b65adef7c5"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="016d9c7e-e3e9-4edc-8c11-27d9d2c9bd02"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="a101408c-d603-44da-8a9a-fa5f2ea00231"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <interaction
         Id="60392c65-562d-4f6f-a7be-644a95b23cf0"
         name="getTimeTablesTableUMLSequenceDiagram"
@@ -2291,7 +2326,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
+                LastKnownName="Форма работы с расписанием"
                 LastKnownLocation="MainModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -2311,6 +2346,26 @@
                 Id="def3b977-4990-49af-b7e5-7e022e583fc9"
                 LastKnownName="MessageOccurrenceSpecification22"
                 LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5381623a-d7b1-4e95-975c-208b0b4f7e83"
+                LastKnownName="MessageOccurrenceSpecification45"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5a3a96a1-49a2-42b1-a2e3-fecb695dfe5f"
+                LastKnownName="MessageOccurrenceSpecification48"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="905bdb26-499d-4df7-a44a-af67c42332b1"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="MainModelingProject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="bd558be6-70ab-4a2c-95c3-52507e594249"
+                LastKnownName="ExecutionOccurrenceSpecification43"
+                LastKnownLocation="MainModelingProject.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fa396834-9cfa-4c1a-ab48-9638eb27a439"
+                LastKnownName="ExecutionOccurrenceSpecification44"
+                LastKnownLocation="MainModelingProject.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -2327,7 +2382,7 @@
             <covered>
               <lifelineMoniker
                 Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
+                LastKnownName="Форма работы с расписанием"
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2337,7 +2392,7 @@
             <covered>
               <lifelineMoniker
                 Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
+                LastKnownName="Форма работы с расписанием"
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2351,6 +2406,314 @@
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="512a6c8e-c4d1-4dad-9301-174872bf1bac"
+            name="BehaviorExecutionSpecification20">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="8011b919-9211-4fa1-a273-ebcaf9d9978e"
+                LastKnownName="ExecutionOccurrenceSpecification40"
+                LastKnownLocation="MainModelingProject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="64d17931-16c9-4004-a616-0193292dda2f"
+                LastKnownName="ExecutionOccurrenceSpecification39"
+                LastKnownLocation="MainModelingProject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ae5b50e-e2a0-4c1f-812d-9390ba5c6b1b"
+                LastKnownName="MessageOccurrenceSpecification46"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="496d1a10-097b-41d3-83bf-48dff7ef6091"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bfdf0e92-01b2-4ecd-9f8e-b083a46fb201"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5498fdab-7091-4534-8cd9-f33642aec648"
+                LastKnownName="MessageOccurrenceSpecification47"
+                LastKnownLocation="MainModelingProject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="64d17931-16c9-4004-a616-0193292dda2f"
+            name="ExecutionOccurrenceSpecification39">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0a57ce6b-b350-4ffc-9f2f-28005b122516"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3ae5b50e-e2a0-4c1f-812d-9390ba5c6b1b"
+            name="MessageOccurrenceSpecification46">
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5381623a-d7b1-4e95-975c-208b0b4f7e83"
+            name="MessageOccurrenceSpecification45">
+            <covered>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="4bcdbe6a-af88-4b82-862f-0236c7c402b7"
+            name="BehaviorExecutionSpecification21">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
+                LastKnownName="Экземпляры ClassTimeTableDayElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="cbacffa7-3509-471a-b566-5558d770632c"
+                LastKnownName="ExecutionOccurrenceSpecification42"
+                LastKnownLocation="MainModelingProject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="b3c02594-8b21-43ad-a3f0-d97083a3328c"
+                LastKnownName="ExecutionOccurrenceSpecification41"
+                LastKnownLocation="MainModelingProject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="19f804b8-2143-462d-a9ce-b84ed43d4ec3"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="MainModelingProject.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="94b96a4d-1e81-417e-8b22-1df7733adaab"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="MainModelingProject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="b3c02594-8b21-43ad-a3f0-d97083a3328c"
+            name="ExecutionOccurrenceSpecification41">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ab85ddd6-6e5e-4470-954c-3575933d592b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
+                LastKnownName="Экземпляры ClassTimeTableDayElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="496d1a10-097b-41d3-83bf-48dff7ef6091"
+            name="MessageOccurrenceSpecification49">
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="19f804b8-2143-462d-a9ce-b84ed43d4ec3"
+            name="MessageOccurrenceSpecification50">
+            <covered>
+              <lifelineMoniker
+                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
+                LastKnownName="Экземпляры ClassTimeTableDayElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="94b96a4d-1e81-417e-8b22-1df7733adaab"
+            name="MessageOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
+                LastKnownName="Экземпляры ClassTimeTableDayElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bfdf0e92-01b2-4ecd-9f8e-b083a46fb201"
+            name="MessageOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="cbacffa7-3509-471a-b566-5558d770632c"
+            name="ExecutionOccurrenceSpecification42">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3ce82760-30b0-47c0-9d59-d73d46343f86"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
+                LastKnownName="Экземпляры ClassTimeTableDayElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5498fdab-7091-4534-8cd9-f33642aec648"
+            name="MessageOccurrenceSpecification47">
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5a3a96a1-49a2-42b1-a2e3-fecb695dfe5f"
+            name="MessageOccurrenceSpecification48">
+            <covered>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="8011b919-9211-4fa1-a273-ebcaf9d9978e"
+            name="ExecutionOccurrenceSpecification40">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="04e6430e-6017-4d2a-8baf-13cac6c00713"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="905bdb26-499d-4df7-a44a-af67c42332b1"
+            name="MessageOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="79a4dbe5-393f-4d26-bedf-c3f947b004e1"
+            name="BehaviorExecutionSpecification22">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="fa396834-9cfa-4c1a-ab48-9638eb27a439"
+                LastKnownName="ExecutionOccurrenceSpecification44"
+                LastKnownLocation="MainModelingProject.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="bd558be6-70ab-4a2c-95c3-52507e594249"
+                LastKnownName="ExecutionOccurrenceSpecification43"
+                LastKnownLocation="MainModelingProject.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="bb90bdc7-7771-46c4-a6db-9d14edff8d1f"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="MainModelingProject.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="bd558be6-70ab-4a2c-95c3-52507e594249"
+            name="ExecutionOccurrenceSpecification43">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="383e5ead-878e-4c5f-a34e-a87277a5c71e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bb90bdc7-7771-46c4-a6db-9d14edff8d1f"
+            name="MessageOccurrenceSpecification54">
+            <covered>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="fa396834-9cfa-4c1a-ab48-9638eb27a439"
+            name="ExecutionOccurrenceSpecification44">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c58f4464-599c-4de4-a375-5c3e13bba962"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="MainModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
+                LastKnownName="Форма работы с расписанием"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="5d3eb4c6-8213-4c5f-ad09-2e3f4d0894ed"
             name="ExecutionOccurrenceSpecification22">
@@ -2365,315 +2728,7 @@
             <covered>
               <lifelineMoniker
                 Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="d7a6bac0-68f9-4ca3-8250-d30f4296f6c0"
-            name="BehaviorExecutionSpecification15">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="20e3a5b5-74ee-4b69-a1f1-af7b47ddf8ba"
-                LastKnownName="ExecutionOccurrenceSpecification30"
-                LastKnownLocation="MainModelingProject.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="c04e4091-2a50-4aae-9baa-8d17058edc34"
-                LastKnownName="ExecutionOccurrenceSpecification29"
-                LastKnownLocation="MainModelingProject.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="876566d4-334c-41c5-aa02-f56e0e39d8f3"
-                LastKnownName="MessageOccurrenceSpecification32"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="aee10244-2d1e-4afe-b395-7d8fd0171bb2"
-                LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="9e3ae465-1e9b-4d19-a96b-402699904039"
-                LastKnownName="MessageOccurrenceSpecification38"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="ecd501bd-0b61-4ce6-975b-949c91efa89c"
-                LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="MainModelingProject.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="c04e4091-2a50-4aae-9baa-8d17058edc34"
-            name="ExecutionOccurrenceSpecification29">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="600d1027-a71b-40ca-ae98-c608b3391acf"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="876566d4-334c-41c5-aa02-f56e0e39d8f3"
-            name="MessageOccurrenceSpecification32">
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="463e8636-676a-48ca-8239-e8f9358894eb"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="ee38e4c4-2452-4172-89c2-f05bfea18473"
-            name="BehaviorExecutionSpecification16">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
-                LastKnownName="Database"
-                LastKnownLocation="MainModelingProject.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="1007377f-2752-4a5a-a8c4-a5add636f28d"
-                LastKnownName="ExecutionOccurrenceSpecification32"
-                LastKnownLocation="MainModelingProject.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="7f66d683-f8d6-4c7a-81ab-e509e7c74ae9"
-                LastKnownName="ExecutionOccurrenceSpecification31"
-                LastKnownLocation="MainModelingProject.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="6f5b76ca-4179-4dcd-9fa5-70dd71997c94"
-                LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="b44b8066-ad49-4b9b-8d05-d73d3f9ea1c5"
-                LastKnownName="MessageOccurrenceSpecification37"
-                LastKnownLocation="MainModelingProject.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="7f66d683-f8d6-4c7a-81ab-e509e7c74ae9"
-            name="ExecutionOccurrenceSpecification31">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="86defb28-a0d5-4dfc-9895-fc5ac7e5604d"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
-                LastKnownName="Database"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="6f5b76ca-4179-4dcd-9fa5-70dd71997c94"
-            name="MessageOccurrenceSpecification36">
-            <covered>
-              <lifelineMoniker
-                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
-                LastKnownName="Database"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="aee10244-2d1e-4afe-b395-7d8fd0171bb2"
-            name="MessageOccurrenceSpecification35">
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="9e3ae465-1e9b-4d19-a96b-402699904039"
-            name="MessageOccurrenceSpecification38">
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="b44b8066-ad49-4b9b-8d05-d73d3f9ea1c5"
-            name="MessageOccurrenceSpecification37">
-            <covered>
-              <lifelineMoniker
-                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
-                LastKnownName="Database"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="1007377f-2752-4a5a-a8c4-a5add636f28d"
-            name="ExecutionOccurrenceSpecification32">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="cb8a4fd8-eced-4ecd-b6de-700530f43f45"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
-                LastKnownName="Database"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="b9d8d639-a515-4fe3-8cc3-2d9344253043"
-            name="MessageOccurrenceSpecification34">
-            <covered>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="ecd501bd-0b61-4ce6-975b-949c91efa89c"
-            name="MessageOccurrenceSpecification33">
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="20e3a5b5-74ee-4b69-a1f1-af7b47ddf8ba"
-            name="ExecutionOccurrenceSpecification30">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="0a3e37a2-2eb5-46d5-a8e0-e0a28ced5e62"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Database Manager"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="8b849562-7057-4aa0-b6eb-006daaab446c"
-            name="MessageOccurrenceSpecification41">
-            <covered>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="75ed9efb-b373-490f-b974-5d1549a872a3"
-            name="BehaviorExecutionSpecification18">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="0f908f80-8a6c-4fcc-b38d-76d76b68b0a0"
-                LastKnownName="ExecutionOccurrenceSpecification36"
-                LastKnownLocation="MainModelingProject.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="1f192550-6f93-4cda-8133-c7147822bbab"
-                LastKnownName="ExecutionOccurrenceSpecification35"
-                LastKnownLocation="MainModelingProject.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="c23fdf6a-cd1c-42dc-a320-4c2a9feee676"
-                LastKnownName="MessageOccurrenceSpecification42"
-                LastKnownLocation="MainModelingProject.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="1f192550-6f93-4cda-8133-c7147822bbab"
-            name="ExecutionOccurrenceSpecification35">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="b2544d31-ebca-469a-b03a-e7eb4ba2f439"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="c23fdf6a-cd1c-42dc-a320-4c2a9feee676"
-            name="MessageOccurrenceSpecification42">
-            <covered>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="0f908f80-8a6c-4fcc-b38d-76d76b68b0a0"
-            name="ExecutionOccurrenceSpecification36">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="f6358d1c-bc05-4b11-aee7-1da787ae7a27"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="MainModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-                LastKnownName="ClassTimeTablesForm"
+                LastKnownName="Форма работы с расписанием"
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2698,9 +2753,9 @@
           </lifeline>
           <lifeline
             Id="de1d1f94-b7bc-4629-ba94-729b6bc34b76"
-            name="ClassTimeTablesForm"
+            name="Форма работы с расписанием"
             isActor="false"
-            lifelineDisplayName="ClassTimeTablesForm">
+            lifelineDisplayName="Форма работы с расписанием">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="9ac1911b-0ab5-42d9-bbe4-20164281412e"
@@ -2710,57 +2765,37 @@
                 Id="5d3eb4c6-8213-4c5f-ad09-2e3f4d0894ed"
                 LastKnownName="ExecutionOccurrenceSpecification22"
                 LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="463e8636-676a-48ca-8239-e8f9358894eb"
-                LastKnownName="MessageOccurrenceSpecification31"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="b9d8d639-a515-4fe3-8cc3-2d9344253043"
-                LastKnownName="MessageOccurrenceSpecification34"
-                LastKnownLocation="MainModelingProject.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="8b849562-7057-4aa0-b6eb-006daaab446c"
-                LastKnownName="MessageOccurrenceSpecification41"
-                LastKnownLocation="MainModelingProject.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="1f192550-6f93-4cda-8133-c7147822bbab"
-                LastKnownName="ExecutionOccurrenceSpecification35"
-                LastKnownLocation="MainModelingProject.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="0f908f80-8a6c-4fcc-b38d-76d76b68b0a0"
-                LastKnownName="ExecutionOccurrenceSpecification36"
-                LastKnownLocation="MainModelingProject.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-            name="Database Manager"
+            name="Экземпляр ClassTimeTableWeekElem"
             isActor="false"
-            lifelineDisplayName="Database Manager">
+            lifelineDisplayName="Экземпляр ClassTimeTableWeekElem">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="c04e4091-2a50-4aae-9baa-8d17058edc34"
-                LastKnownName="ExecutionOccurrenceSpecification29"
+                Id="64d17931-16c9-4004-a616-0193292dda2f"
+                LastKnownName="ExecutionOccurrenceSpecification39"
                 LastKnownLocation="MainModelingProject.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="20e3a5b5-74ee-4b69-a1f1-af7b47ddf8ba"
-                LastKnownName="ExecutionOccurrenceSpecification30"
+                Id="8011b919-9211-4fa1-a273-ebcaf9d9978e"
+                LastKnownName="ExecutionOccurrenceSpecification40"
                 LastKnownLocation="MainModelingProject.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
-            name="Database"
+            name="Экземпляры ClassTimeTableDayElem"
             isActor="false"
-            lifelineDisplayName="Database">
+            lifelineDisplayName="Экземпляры ClassTimeTableDayElem">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="7f66d683-f8d6-4c7a-81ab-e509e7c74ae9"
-                LastKnownName="ExecutionOccurrenceSpecification31"
+                Id="b3c02594-8b21-43ad-a3f0-d97083a3328c"
+                LastKnownName="ExecutionOccurrenceSpecification41"
                 LastKnownLocation="MainModelingProject.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="1007377f-2752-4a5a-a8c4-a5add636f28d"
-                LastKnownName="ExecutionOccurrenceSpecification32"
+                Id="cbacffa7-3509-471a-b566-5558d770632c"
+                LastKnownName="ExecutionOccurrenceSpecification42"
                 LastKnownLocation="MainModelingProject.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -2786,97 +2821,97 @@
             </receiveEvent>
           </message>
           <message
-            Id="f3b2f31d-fc11-4d6c-b04a-96194ddcd2bb"
-            name="Запрос элементов расписания на выбранную неделю"
+            Id="4da5cb98-2585-4491-b403-e2a34e9d05c0"
+            name="&lt;&lt;create&gt;&gt; на выбранную неделю и группу"
             messageKind="Complete"
-            messageSort="SynchCall"
+            messageSort="CreateMessage"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="463e8636-676a-48ca-8239-e8f9358894eb"
-                LastKnownName="MessageOccurrenceSpecification31"
+                Id="5381623a-d7b1-4e95-975c-208b0b4f7e83"
+                LastKnownName="MessageOccurrenceSpecification45"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="876566d4-334c-41c5-aa02-f56e0e39d8f3"
-                LastKnownName="MessageOccurrenceSpecification32"
+                Id="3ae5b50e-e2a0-4c1f-812d-9390ba5c6b1b"
+                LastKnownName="MessageOccurrenceSpecification46"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="9c2e4f92-348e-4ee2-ad05-9d225aef0814"
-            name="Запрос информации"
+            Id="edacf80d-f920-435c-877f-70fedf70762e"
+            name="&lt;&lt;create&gt;&gt; на каждый день выбранной недели"
             messageKind="Complete"
-            messageSort="SynchCall"
+            messageSort="CreateMessage"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="aee10244-2d1e-4afe-b395-7d8fd0171bb2"
-                LastKnownName="MessageOccurrenceSpecification35"
+                Id="496d1a10-097b-41d3-83bf-48dff7ef6091"
+                LastKnownName="MessageOccurrenceSpecification49"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="6f5b76ca-4179-4dcd-9fa5-70dd71997c94"
-                LastKnownName="MessageOccurrenceSpecification36"
+                Id="19f804b8-2143-462d-a9ce-b84ed43d4ec3"
+                LastKnownName="MessageOccurrenceSpecification50"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="a06d84ac-6a5b-4518-870c-d7c6a1ad99c0"
-            name="Получение информации"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="b44b8066-ad49-4b9b-8d05-d73d3f9ea1c5"
-                LastKnownName="MessageOccurrenceSpecification37"
-                LastKnownLocation="MainModelingProject.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="9e3ae465-1e9b-4d19-a96b-402699904039"
-                LastKnownName="MessageOccurrenceSpecification38"
-                LastKnownLocation="MainModelingProject.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="4e2db62f-f5df-4026-be61-7ed891495fa7"
-            name="Передача запрошенных элементов расписания"
+            Id="9e78cd8b-06cf-4f3a-86fe-7876e2db7b6a"
+            name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="ecd501bd-0b61-4ce6-975b-949c91efa89c"
-                LastKnownName="MessageOccurrenceSpecification33"
+                Id="94b96a4d-1e81-417e-8b22-1df7733adaab"
+                LastKnownName="MessageOccurrenceSpecification51"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="b9d8d639-a515-4fe3-8cc3-2d9344253043"
-                LastKnownName="MessageOccurrenceSpecification34"
+                Id="bfdf0e92-01b2-4ecd-9f8e-b083a46fb201"
+                LastKnownName="MessageOccurrenceSpecification52"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="8fe49dbb-5e77-4903-b26d-eaba8781f0b5"
+            Id="284d9d89-b071-434e-9563-8c83b6cc8dfd"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5498fdab-7091-4534-8cd9-f33642aec648"
+                LastKnownName="MessageOccurrenceSpecification47"
+                LastKnownLocation="MainModelingProject.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5a3a96a1-49a2-42b1-a2e3-fecb695dfe5f"
+                LastKnownName="MessageOccurrenceSpecification48"
+                LastKnownLocation="MainModelingProject.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c28cd5c7-59a6-46d6-a5f0-53f3e41916b5"
             name="Отображение расписания"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="true">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="8b849562-7057-4aa0-b6eb-006daaab446c"
-                LastKnownName="MessageOccurrenceSpecification41"
+                Id="905bdb26-499d-4df7-a44a-af67c42332b1"
+                LastKnownName="MessageOccurrenceSpecification53"
                 LastKnownLocation="MainModelingProject.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="c23fdf6a-cd1c-42dc-a320-4c2a9feee676"
-                LastKnownName="MessageOccurrenceSpecification42"
+                Id="bb90bdc7-7771-46c4-a6db-9d14edff8d1f"
+                LastKnownName="MessageOccurrenceSpecification54"
                 LastKnownLocation="MainModelingProject.uml" />
             </receiveEvent>
           </message>
@@ -2909,36 +2944,6 @@
     <packageHasNamedElement>
       <executionEvent
         Id="d5d4d897-d2f8-4277-bd43-b25e86cd8f7e"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="600d1027-a71b-40ca-ae98-c608b3391acf"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="0a3e37a2-2eb5-46d5-a8e0-e0a28ced5e62"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="86defb28-a0d5-4dfc-9895-fc5ac7e5604d"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="cb8a4fd8-eced-4ecd-b6de-700530f43f45"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="b2544d31-ebca-469a-b03a-e7eb4ba2f439"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="f6358d1c-bc05-4b11-aee7-1da787ae7a27"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -3074,6 +3079,66 @@
           </opaqueAction>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="007b5874-5a43-4006-864b-2fcc744a2afa"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="70270f8e-5e4d-414e-8969-41a1935151dc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="31bf525b-3647-40ab-9bc3-72551b6d9d5c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4d8d9a21-abd5-4fcf-acd7-8c3c9951fe2c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="05d249ec-ef7a-45fd-a35b-656b07dcaefa"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3b2b3aad-3c88-4ec9-9b46-54127f128c80"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0a57ce6b-b350-4ffc-9f2f-28005b122516"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="04e6430e-6017-4d2a-8baf-13cac6c00713"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ab85ddd6-6e5e-4470-954c-3575933d592b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3ce82760-30b0-47c0-9d59-d73d46343f86"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="383e5ead-878e-4c5f-a34e-a87277a5c71e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c58f4464-599c-4de4-a375-5c3e13bba962"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

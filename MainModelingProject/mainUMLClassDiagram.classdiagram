@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f64e1eb2-a6b5-486e-be09-57ed9bc7b0be" name="mainUMLClassDiagram" linkedPackageId="8ffe78ba-0a7d-4691-8651-e1f72329ffb6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="44fb0afe-8d12-49d6-a364-c033167a5970">
-      <profileInstance Id="d8c5f714-3d7f-461f-95a2-b7f562721ad8" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="6d7648cc-b6f6-4c14-a302-18cda0a3e418">
-      <profileInstance Id="1ce79586-c905-4810-abe8-8482872cdf9a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f64e1eb2-a6b5-486e-be09-57ed9bc7b0be" name="mainUMLClassDiagram" linkedPackageId="8ffe78ba-0a7d-4691-8651-e1f72329ffb6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="b0fbdab5-5a2b-440f-bb66-882dca72f15d" name="Entity" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -22,15 +8,7 @@
           <property Id="04ec08c7-0de1-4cf7-bc3c-ebf71258ad59" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d16b4c0f-146a-44b8-b2a0-4443388716ca" />
           </property>
-          <property Id="865cf361-0a6e-4ae3-a9b7-59fbae43521e" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="4a8ac5f2-ff8d-4692-86cc-7c64cb2d5cdd" />
-          </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="fdaad178-b828-4f13-9467-36e295169c31" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="24efeba8-7b62-4102-82ad-ae49a3e89571" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -42,6 +20,24 @@
             <elementDefinition Id="2d448e42-55b0-4fbd-a037-8a1f00b8edfa" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="b940280c-094b-4622-8401-298c72e954e6" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="EducationalDiscipline" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b6ab2461-edab-43ea-9ae8-b7ff855db739" LastKnownName="EducationalDiscipline" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1caa740b-50ef-4911-ad75-118e0243339c" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="45f8444a-a415-428f-95b5-3c9df68c60c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5698aa14-c04b-4da5-b4c0-b37331193acb" name="EducationalDiscipline" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="852d35d2-7329-4cd0-9b55-ccbcda1e520e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5789d025-b2c0-49ce-ab15-cd4b8cc5f204" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="d103e95b-f33e-4d56-b111-70b17a08bd1d" name="EducationalDiscipline" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ff4a7a98-eac4-4409-8232-a0fb3b621359" />
@@ -53,14 +49,6 @@
             <elementDefinition Id="36f2d40b-a7ef-48de-b962-a31e21334592" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="e7a5e48f-4f05-4d9a-b553-7290fc58941c" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="56f545dc-45c4-494a-a59d-928d86e40ae3" />
-          </operation>
-          <operation Id="48af1bc9-d3a2-42c6-b611-9f7e871fb339" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="468db86e-657d-4124-96d7-37482f65c7f2" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -77,14 +65,6 @@
             <elementDefinition Id="9ad343da-a001-4dcf-b03c-da6ffac46acc" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="26fdf1a0-2c83-4309-aaec-0ee1c393ee84" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="087f20f4-cb2b-40bd-b561-8c84baeff756" />
-          </operation>
-          <operation Id="e9756fc6-e9f2-4c7a-a90b-ed7e6077bb51" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="e5576a46-23ce-42bb-883d-737c8eebd8a7" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -101,14 +81,6 @@
             <elementDefinition Id="eba5a8f2-78d6-466b-af02-1b53b85454fb" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="db9008d0-81e7-4c0a-a2c0-7a487aa6370e" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="34077eb5-c180-4f97-b707-a35c58890c42" />
-          </operation>
-          <operation Id="77c415cb-76be-4abd-a75b-02b166924727" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="91915f26-473b-48a5-b997-0e3f9910a8bf" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -131,14 +103,6 @@
             <elementDefinition Id="4dfc93e5-fa04-4473-9580-d84009659b97" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="b351c524-1509-4610-a986-7bf166d507ba" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="d3051e28-648b-4c4c-a214-57e6419c1a07" />
-          </operation>
-          <operation Id="4583c84f-1607-42fd-a7a5-66d2989a3beb" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="b92052cc-498b-45d2-a739-f0e62e5377d9" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -155,14 +119,6 @@
             <elementDefinition Id="1abf1df9-e428-466b-8289-67e904fdbf11" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="ab1a3c16-27cf-48cd-bb3f-e9c3ab8e1907" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="77eff37e-5223-4477-8cea-d67e2d883375" />
-          </operation>
-          <operation Id="94b8aac1-a66f-4e8c-91ef-d25ac5d07774" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="7cf0b572-5286-4122-a6dd-01b93e7fe638" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -174,6 +130,88 @@
             <elementDefinition Id="ab82d144-d68e-4b43-8e89-359003e95bb6" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="5d6f523a-f687-4ebd-8317-eaa339352f7d" isDerived="false" sourceEndRoleName="ClassTimeTable" targetEndRoleName="EducationalDiscipline" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b6ab2461-edab-43ea-9ae8-b7ff855db739" LastKnownName="EducationalDiscipline" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6c082705-4817-46e5-a93c-5ad4ad0dce4c" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a5473bd7-6f66-432d-af94-dac46e46fbfc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5544bc8d-2064-48ee-8f79-f520391e2764" name="EducationalDiscipline" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="64d99ddb-6a41-4563-9fa9-ccc4fbce4da3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a23192ff-83fd-4e85-930d-eb8dce7a0481" />
+          </association>
+          <association Id="2e26d510-063c-475e-93ca-df6938342b39" isDerived="false" sourceEndRoleName="ClassTimeTable" targetEndRoleName="ClassTime" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c2d9bb3a-c303-484c-a9a6-95a258b849fb" LastKnownName="ClassTime" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="36ad4932-b345-4438-b03e-9bfb33cdffc4" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d305bee-a8e3-4651-b486-b96bae13467d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1e7b1c98-b913-4df9-ada5-10c53e8d9ada" name="ClassTime" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4020a13c-5327-4dc8-bfaf-7d428cde2a65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a0358eb-bc01-4bd3-ad4b-45e67b75322b" />
+          </association>
+          <association Id="1ed45620-5cd7-4b66-aa2a-33fbb55543cb" isDerived="false" sourceEndRoleName="ClassTimeTable" targetEndRoleName="Teacher" isLeaf="false" isAbstract="false">
+            <classMoniker Id="74d52276-b3c9-4e2f-8c24-5446191d9fe5" LastKnownName="Teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c01eed23-5d7e-40a7-91ae-43515697bf40" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c5860c5c-ff78-46a7-9ba9-906641865264" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9995e94b-6563-441a-86b8-b2f97ceb5d57" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b7a417de-aea5-4dca-ad5d-3f1e61bb056c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a7d51df6-922b-4edc-9957-227d6e96dc1e" />
+          </association>
+          <association Id="a774b52a-63df-4974-8c4e-b24a25bed89f" isDerived="false" sourceEndRoleName="ClassTimeTable" targetEndRoleName="ClassRoom" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6270a011-e8ab-4579-81f5-072a9c50b411" LastKnownName="ClassRoom" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e41e99b-c13a-4adc-8338-4f8d532579ce" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1eccaaec-7df4-4917-8440-79dc545c0723" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cfb53096-7280-4395-95d6-719293b5a901" name="ClassRoom" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d361f7b5-64ab-40dd-952a-388177442d7e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fcb3159e-717e-45bf-9812-c5f9ff0a12f4" />
+          </association>
+          <association Id="f3e2a89f-3ef0-44ae-ac78-31bb34c6fcf5" isDerived="false" sourceEndRoleName="ClassTimeTable" targetEndRoleName="Group" isLeaf="false" isAbstract="false">
+            <classMoniker Id="74d0150d-cad5-4107-aaae-aaf68c5bf27d" LastKnownName="Group" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e2757a8-e1ba-4a6e-8e4b-5078194e32bd" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="34df1af6-4b04-4b44-8db0-fa518e8ecfdc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="24997e95-ecc5-481f-9267-4aff88070834" name="Group" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="63a62931-6b0a-41e6-9c58-7c073cf8fc04" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="627a1f00-54fa-499f-93e7-8d689dfe1fc5" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="8d0838a6-1eeb-4fb2-9ab9-c2c012a8f247" name="ClassRoom" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="e52d4691-71cd-4fad-9c67-727396b4d547" />
@@ -194,19 +232,29 @@
             <elementDefinition Id="bbf60d2d-77d1-449f-93d6-0cbd218d8856" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="75c440e6-912c-4a5a-9b57-1fc46fa292c4" name="AddToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="9747484d-03ce-498e-97f9-e5e6a64f2482" />
-          </operation>
-          <operation Id="16be8b72-2be7-4039-b226-55d1cdf031b5" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="f616bf88-7509-4419-9a0e-57ac4ae903a5" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="3f48c06d-04e2-4bc7-bc40-5462b6915921" name="ClassTimeTableDatElem" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="42a456f8-dce8-4af6-97db-58265a40b1b6" />
+        <targetEnds>
+          <association Id="b00ab606-ba60-49da-8950-89e7ccba5303" isDerived="false" sourceEndRoleName="ClassTimeTableDatElem" targetEndRoleName="ClassTimeTable" isLeaf="false" isAbstract="false">
+            <classMoniker Id="597acf9a-7f39-4d23-a8df-6ab3a9a47695" LastKnownName="ClassTimeTable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81742e10-3246-4ae3-b109-33e058658038" name="ClassTimeTableDatElem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6ee41eee-94d9-4a9c-92a5-4ed73965869a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49bd8ee1-349a-4a5d-a3c1-faa6794b1fc4" name="ClassTimeTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5a968ec5-2118-44e3-b94c-3fe362faf3bd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="43dddc63-4fb2-4aa8-a95e-9f5557e0968e" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="57464706-0406-4387-955a-0c842095ad9a" name="Text" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="715b5d68-d0a8-4bac-845c-ac25cd97f25e" />
@@ -215,16 +263,29 @@
             <elementDefinition Id="0a6f6a83-f32a-446e-8863-ae0bdb032098" />
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="01492c3b-80b0-4c05-ac08-015ba3db0694" name="ToString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="ca62320f-6d96-49fb-9d76-89dad9694504" />
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="021e2c8c-60f5-451a-8b58-71a3a81677c0" name="ClassTimeTableWeekElem" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="70bc5e6a-29e1-4287-a46f-2fab9f28bd39" />
+        <targetEnds>
+          <association Id="10cf25f7-fcc0-465f-9455-1f54fb9016f5" isDerived="false" sourceEndRoleName="ClassTimeTableWeekElem" targetEndRoleName="ClassTime" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c2d9bb3a-c303-484c-a9a6-95a258b849fb" LastKnownName="ClassTime" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb1fb865-25ec-4268-8db9-35970703c1e2" name="ClassTimeTableWeekElem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0d8636a8-7359-4fde-9fdc-cdd189db8d77" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dce8fcd4-3765-4b6c-87d1-f0b0687c0321" name="ClassTime" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="17da7f88-5337-43bd-be22-9599990e3cc4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8e572a67-9319-4741-9025-0a2c4a2ef01a" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="51c5e8f8-a945-49b9-92f3-0a5681a8cabc" name="ClassTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="13665610-6e5f-4c74-9a5d-6e50f53f55e8" />
@@ -253,69 +314,22 @@
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="787f94f5-7b15-4f4a-93af-5141c8877284" name="DatabaseManager" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="6ae07831-faed-4ae0-ab27-4d0b9afbebab" />
-        <ownedOperationsInternal>
-          <operation Id="2d3e7e64-d530-43f8-a77d-61ffb9fb6ec1" name="AddClassTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="924529f8-0198-4db8-9deb-0b7fc97561d1" />
-          </operation>
-          <operation Id="7f63193d-a0fc-483f-b1cb-8e7bafb811e2" name="AddClassTimeTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="d64caf0a-aa8c-4a0e-8c36-31e902845a8b" />
-          </operation>
-          <operation Id="0f6fe999-827f-4f86-9e84-5fa111cd1fbb" name="AddEducationalDiscipline" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="074cef6a-cae3-4445-87c2-afc30f581494" />
-          </operation>
-          <operation Id="1029df82-a5c2-4136-84d2-aa61b33f78d8" name="AddGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="d1cf4d2b-debb-4eca-b97c-bdd9640ee6d7" />
-          </operation>
-          <operation Id="bd051a60-c695-4ddc-9d7c-4729555de8c1" name="AddTeacher" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="f5bcc8fe-50bd-4cf5-93ac-293370a18f96" />
-          </operation>
-          <operation Id="5228f9eb-9c04-4d95-8afc-e5b9243b505d" name="DeleteClassRoomById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="c3064d8b-8fab-4e45-9385-7c10a19c28ba" />
-          </operation>
-          <operation Id="9c13aea1-6d2c-4bf4-b4b7-d61897adda48" name="DeleteClassTimeById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="8256a413-8790-4b4d-8e02-7010b26b6d25" />
-          </operation>
-          <operation Id="a53cfc5a-642a-4155-8506-90230c732b3c" name="DeleteClassTimeTableById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="a80b4060-20ef-4bc3-a462-2ff5f37d4840" />
-          </operation>
-          <operation Id="dd4fecba-8eeb-4bdd-8bb6-cd653939ba62" name="DeleteEducationalDisciplineById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="7b66a3ca-5c23-44b7-a382-057dfd5064cb" />
-          </operation>
-          <operation Id="5d50bc81-0235-4e53-96b5-5fcbf188864d" name="DeleteTeacherById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="4ceb097d-404a-4867-917a-0b1b1f40211b" />
-          </operation>
-          <operation Id="929e54f1-395f-4434-92d9-8b0025065e03" name="GetClassRooms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="727aff7e-1588-4f93-9be5-420f0ac06705" />
-          </operation>
-          <operation Id="78a161d8-3a80-4d5a-b62f-410830e89ef6" name="GetClassTimes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="965a0f61-d9df-44ca-8672-0051264e1a37" />
-          </operation>
-          <operation Id="e4d4f17b-f568-4131-859b-f3badaa229ab" name="GetClassTimeTables" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="c3f262b6-cdb4-488a-bbb3-bd98f1192f95" />
-          </operation>
-          <operation Id="6aca58da-5817-4323-9cbf-3f757a9083c6" name="GetEducationalDisciplines" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="c233e0cc-b6ab-4ba6-98a6-35b4d51ea048" />
-          </operation>
-          <operation Id="d2c2fc07-8d2e-4fa3-8cc8-307175030748" name="GetGroups" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="94c13ea1-9a2c-4ff7-aba4-fa1afd622d20" />
-          </operation>
-          <operation Id="a531ad02-f1fd-49aa-a8c2-05bc06afc54e" name="GetTeacher" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="e0f3bafc-171c-49f9-8839-4a725adc8c1a" />
-          </operation>
-          <operation Id="e977c70e-8728-44f7-91e6-c86f952676aa" name="DeleteGroupById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="11ba2040-bf80-4a82-80f2-80f57e98a74d" />
-          </operation>
-          <operation Id="db769428-f687-487d-a3b6-54c6a3b98870" name="AddClassRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="3d72dc32-a192-40cf-a221-b3858121073b" />
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="8ffe78ba-0a7d-4691-8651-e1f72329ffb6" name="MainModelingProject">
     <elementDefinition Id="af7a2d79-fa73-4240-9eff-b2f0755a1b41" />
+    <profileInstances>
+      <packageHasProfileInstances Id="44fb0afe-8d12-49d6-a364-c033167a5970">
+        <profileInstance Id="d8c5f714-3d7f-461f-95a2-b7f562721ad8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6d7648cc-b6f6-4c14-a302-18cda0a3e418">
+        <profileInstance Id="1ce79586-c905-4810-abe8-8482872cdf9a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
