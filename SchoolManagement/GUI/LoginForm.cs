@@ -19,19 +19,30 @@ namespace SchoolManagement.GUI
         {
             if (uiLoginTextBox.Text == Globals.LocalSettings.RootLogin && uiPasswordTextBox.Text == Globals.LocalSettings.RootPass)
             {
-                Globals.IsRootMode = true;
-                Close();
+                using (var f = new MainForm())
+                {
+                    Globals.IsRootMode = true;
+                    Hide();
+                    f.ShowDialog();
+                    uiPasswordTextBox.Text = "";
+                    Show();
+                }
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль", "Ошибка");
+                MessageBox.Show("Неверный логин или пароль!", "Ошибка авторизации");
             }
         }
 
         private void uiOnlyReadButton_Click(object sender, EventArgs e)
         {
-            Globals.IsRootMode = false;
-            Close();
+            using(var f = new ClassTimeTablesForm())
+            {
+                Globals.IsRootMode = false;
+                Hide();
+                f.ShowDialog();
+                Show();
+            }
         }
 
         private void uiPasswordTextBox_KeyDown(object sender, KeyEventArgs e)

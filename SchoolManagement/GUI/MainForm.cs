@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SchoolManagement.GUI
@@ -12,21 +13,7 @@ namespace SchoolManagement.GUI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            using (var f = new LoginForm())
-            {
-                f.ShowDialog();
-            }
-            SetVisible();
-        }
-
-        private void SetVisible()
-        {
-            uiClassRoomToolStripButton.Visible = Globals.IsRootMode;
-            uiStudentsToolStripButton.Visible = Globals.IsRootMode;
-            uiTeacherToolStripButton.Visible = Globals.IsRootMode;
-            uiEducationalDisciplineToolStripButton.Visible = Globals.IsRootMode;
-            uiGroupToolStripButton.Visible = Globals.IsRootMode;
-            uiClassTimeToolStripButton.Visible = Globals.IsRootMode;
+            // няняня пусто :)
         }
 
         private void uiStudentsToolStripButton_Click(object sender, EventArgs e)
@@ -41,6 +28,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new ClassRoomsForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X,Location.Y);
                 f.ShowDialog();
             }
         }

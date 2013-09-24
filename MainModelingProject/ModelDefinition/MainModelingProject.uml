@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="af7a2d79-fa73-4240-9eff-b2f0755a1b41"
   name="MainModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2535,22 +2535,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="496d1a10-097b-41d3-83bf-48dff7ef6091"
-            name="MessageOccurrenceSpecification49">
-            <covered>
-              <lifelineMoniker
-                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
-                LastKnownName="Экземпляр ClassTimeTableWeekElem"
-                LastKnownLocation="MainModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="19f804b8-2143-462d-a9ce-b84ed43d4ec3"
             name="MessageOccurrenceSpecification50">
             <covered>
               <lifelineMoniker
                 Id="0642267c-79e0-4dc2-86cc-b63ffd9c3948"
                 LastKnownName="Экземпляры ClassTimeTableDayElem"
+                LastKnownLocation="MainModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="496d1a10-097b-41d3-83bf-48dff7ef6091"
+            name="MessageOccurrenceSpecification49">
+            <covered>
+              <lifelineMoniker
+                Id="9cc3f862-049d-41bd-b0c6-f1612145db7e"
+                LastKnownName="Экземпляр ClassTimeTableWeekElem"
                 LastKnownLocation="MainModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2803,7 +2803,7 @@
         <messages>
           <message
             Id="d0d65b38-6473-4f43-9701-d586ad984e08"
-            name="Выбор нужных параметров для отоюражения"
+            name="Выбор нужных параметров для отображения"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchoolManagement.School.ClassRoom">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTime">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAAAIAAgAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTimeTable">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAgAABAAAAAAgAAAAAAAAhAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassTimeTable.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClassRoom" />
+      <Property Name="ClassTime" />
+      <Property Name="EducationalDiscipline" />
+      <Property Name="Teacher" />
+      <Property Name="Group" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTimeTableDayElem">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAgAAAA=</HashCode>
+      <FileName>School\ClassTimeTableDayElem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.ClassTimeTableWeekElem">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAANAPAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School\ClassTimeTableWeekElem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Day1" />
+      <Property Name="Day2" />
+      <Property Name="Day4" />
+      <Property Name="Day5" />
+      <Property Name="Day7" />
+      <Property Name="Day3" />
+      <Property Name="Day6" />
+      <Property Name="ClassTime" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SchoolManagement.School.EducationalDiscipline">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\EducationalDiscipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.Entity">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.Group">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolManagement.School.Teacher">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAEAAAAAAAAAAAIAgAgAAAAAAAAAAA=</HashCode>
+      <FileName>School\Teacher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EducationalDisciplines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

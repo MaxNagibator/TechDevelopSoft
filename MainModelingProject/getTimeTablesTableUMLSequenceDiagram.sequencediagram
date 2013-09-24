@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="4d51aed6-5ad7-4579-935e-8432683df110" name="getTimeTablesTableUMLSequenceDiagram" linkedPackageId="8184734f-676a-4e2a-afc3-657e3cd1a433" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="4d51aed6-5ad7-4579-935e-8432683df110" name="getTimeTablesTableUMLSequenceDiagram" linkedPackageId="8184734f-676a-4e2a-afc3-657e3cd1a433" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="edba4b25-4cc8-400a-973b-293e04bc3eaa" name="getTimeTablesTableUMLSequenceDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -116,16 +116,16 @@
               <lifelineMoniker Id="0124dce3-5f8d-4040-a0ec-cb32a7159bb8" LastKnownName="Экземпляры ClassTimeTableDayElem" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="566ff602-3ab1-4131-afd5-94eae815ea19" name="MessageOccurrenceSpecification49">
-            <elementDefinition Id="496d1a10-097b-41d3-83bf-48dff7ef6091" />
-            <covered>
-              <lifelineMoniker Id="e7b758a6-b6d2-4cb4-a5a4-d72b689bbbb4" LastKnownName="Экземпляр ClassTimeTableWeekElem" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="aef75724-c19a-4baa-abf2-ec4bb5e2ebec" name="MessageOccurrenceSpecification50">
             <elementDefinition Id="19f804b8-2143-462d-a9ce-b84ed43d4ec3" />
             <covered>
               <lifelineMoniker Id="0124dce3-5f8d-4040-a0ec-cb32a7159bb8" LastKnownName="Экземпляры ClassTimeTableDayElem" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="566ff602-3ab1-4131-afd5-94eae815ea19" name="MessageOccurrenceSpecification49">
+            <elementDefinition Id="496d1a10-097b-41d3-83bf-48dff7ef6091" />
+            <covered>
+              <lifelineMoniker Id="e7b758a6-b6d2-4cb4-a5a4-d72b689bbbb4" LastKnownName="Экземпляр ClassTimeTableWeekElem" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="bf341485-ac5b-45be-94de-815797cd4942" name="MessageOccurrenceSpecification51">
@@ -268,7 +268,7 @@
           </lifeline>
         </lifelines>
         <messages>
-          <message Id="47df4d70-a13c-4860-b3f1-77921d5d507d" name="Выбор нужных параметров для отоюражения" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+          <message Id="47df4d70-a13c-4860-b3f1-77921d5d507d" name="Выбор нужных параметров для отображения" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
             <elementDefinition Id="d0d65b38-6473-4f43-9701-d586ad984e08" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="74cba719-1361-466b-a0c0-3d003d3a37f2" LastKnownName="MessageOccurrenceSpecification21" />

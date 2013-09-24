@@ -42,6 +42,7 @@
             // 
             // uiMainToolStrip
             // 
+            this.uiMainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.uiMainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uiClassRoomToolStripButton,
             this.uiStudentsToolStripButton,
@@ -52,7 +53,7 @@
             this.uiClassTimeTableToolStripButton});
             this.uiMainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.uiMainToolStrip.Name = "uiMainToolStrip";
-            this.uiMainToolStrip.Size = new System.Drawing.Size(506, 71);
+            this.uiMainToolStrip.Size = new System.Drawing.Size(485, 71);
             this.uiMainToolStrip.TabIndex = 0;
             this.uiMainToolStrip.Text = "Менюшка";
             // 
@@ -140,13 +141,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 76);
+            this.ClientSize = new System.Drawing.Size(485, 76);
             this.Controls.Add(this.uiMainToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Tag = "606217";
-            this.Text = "Школа";
+            this.Text = "Расписание";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.uiMainToolStrip.ResumeLayout(false);
             this.uiMainToolStrip.PerformLayout();
