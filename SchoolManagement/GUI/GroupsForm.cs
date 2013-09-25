@@ -77,15 +77,24 @@ namespace SchoolManagement.GUI
             {
                 try
                 {
-                    var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
-                    DatabaseManager.DeleteGroupById(selectedId);
-                    RefreshInfo();
+                    if(IsDeleteConfirm())
+                    {
+                        var selectedId = Convert.ToInt32(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value);
+                        DatabaseManager.DeleteGroupById(selectedId);
+                        RefreshInfo();
+                    }
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Данный кабинет используется в расписание, его невозможно удалить.", "Информация");
                 }
             }
+        }
+
+        private bool IsDeleteConfirm()
+        {
+            return MessageBox.Show("Удалить группу и расписание для неё?", "Требуется подтверждение",
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes;
         }
 
         private void uiSelectToolStripButton_Click(object sender, EventArgs e)

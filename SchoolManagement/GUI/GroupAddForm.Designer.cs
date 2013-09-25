@@ -1,4 +1,4 @@
-﻿namespace SchoolManagement
+﻿namespace SchoolManagement.GUI
 {
     partial class GroupAddForm
     {
@@ -38,17 +38,23 @@
             // 
             // uiNameTextBox
             // 
+            this.uiNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiNameTextBox.Location = new System.Drawing.Point(95, 6);
             this.uiNameTextBox.Name = "uiNameTextBox";
             this.uiNameTextBox.Size = new System.Drawing.Size(177, 20);
             this.uiNameTextBox.TabIndex = 0;
+            this.uiNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
             // uiCommentTextBox
             // 
+            this.uiCommentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiCommentTextBox.Location = new System.Drawing.Point(95, 32);
             this.uiCommentTextBox.Name = "uiCommentTextBox";
             this.uiCommentTextBox.Size = new System.Drawing.Size(177, 20);
             this.uiCommentTextBox.TabIndex = 1;
+            this.uiCommentTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
             // uiNameLabel
             // 
@@ -70,27 +76,31 @@
             // 
             // uiCommitButton
             // 
-            this.uiCommitButton.Location = new System.Drawing.Point(15, 58);
+            this.uiCommitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiCommitButton.Location = new System.Drawing.Point(12, 58);
             this.uiCommitButton.Name = "uiCommitButton";
-            this.uiCommitButton.Size = new System.Drawing.Size(87, 23);
-            this.uiCommitButton.TabIndex = 8;
-            this.uiCommitButton.Text = "OK";
+            this.uiCommitButton.Size = new System.Drawing.Size(260, 23);
+            this.uiCommitButton.TabIndex = 9;
+            this.uiCommitButton.Text = "Добавить";
             this.uiCommitButton.UseVisualStyleBackColor = true;
-            this.uiCommitButton.Click += new System.EventHandler(this.uiCommintButton_Click);
+            this.uiCommitButton.Click += new System.EventHandler(this.uiCommitButton_Click);
             // 
             // GroupAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 87);
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiCommentLabel);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiCommentTextBox);
             this.Controls.Add(this.uiNameTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1024, 125);
+            this.MinimumSize = new System.Drawing.Size(300, 125);
             this.Name = "GroupAddForm";
-            this.Text = "добавление группы";
+            this.Text = "Добавление класса";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -2,7 +2,8 @@
 {
     public class Group : Entity
     {
-
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Comment { get; set; }
 
         public Group(string name, string comment)

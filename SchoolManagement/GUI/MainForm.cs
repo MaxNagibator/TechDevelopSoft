@@ -16,14 +16,6 @@ namespace SchoolManagement.GUI
             // няняня пусто :)
         }
 
-        private void uiStudentsToolStripButton_Click(object sender, EventArgs e)
-        {
-            using (var f = new StudentsForm())
-            {
-                f.ShowDialog();
-            }
-        }
-
         private void uiClassRoomToolStripButton_Click(object sender, EventArgs e)
         {
             using (var f = new ClassRoomsForm())

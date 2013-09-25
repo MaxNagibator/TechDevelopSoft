@@ -5,6 +5,8 @@ namespace SchoolManagement.School
 {
     public class Teacher : Entity
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
         public DateTime BirthDay { get; set; }
         public DateTime StartWorkDate { get; set; }
         public List<EducationalDiscipline> EducationalDisciplines { get; set; }

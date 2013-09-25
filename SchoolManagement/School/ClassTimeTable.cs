@@ -4,6 +4,8 @@ namespace SchoolManagement.School
 {
     public class ClassTimeTable : Entity
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
         public ClassTime ClassTime { get; set; }
         public EducationalDiscipline EducationalDiscipline { get; set; }
         public DateTime Date { get; set; }

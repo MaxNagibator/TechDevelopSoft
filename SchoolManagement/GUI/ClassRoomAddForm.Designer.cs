@@ -1,4 +1,4 @@
-﻿namespace SchoolManagement
+﻿namespace SchoolManagement.GUI
 {
     partial class ClassRoomAddForm
     {
@@ -44,6 +44,7 @@
             this.uiNameTextBox.Name = "uiNameTextBox";
             this.uiNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.uiNameTextBox.TabIndex = 0;
+            this.uiNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
             // uiNumberTextBox
             // 
@@ -53,7 +54,7 @@
             this.uiNumberTextBox.Name = "uiNumberTextBox";
             this.uiNumberTextBox.Size = new System.Drawing.Size(200, 20);
             this.uiNumberTextBox.TabIndex = 1;
-            this.uiNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiNumberTextBox_KeyDown);
+            this.uiNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
             // uiNameLabel
             // 

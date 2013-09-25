@@ -26,6 +26,11 @@ namespace SchoolManagement.GUI
 
         private void Commit()
         {
+            if (String.IsNullOrWhiteSpace(uiNameTextBox.Text))
+            {
+                MessageBox.Show("Заполните пожалуйста ФИО учителя!", "Так не камильфо");
+                return;
+            }
             var teacher = new Teacher(uiNameTextBox.Text, uiBirthDayDateTimePicker.Value,
                                       uiStartWorkDateDateTimePicker.Value);
             teacher.AddToDatabase();

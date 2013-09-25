@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.uiMainToolStrip = new System.Windows.Forms.ToolStrip();
             this.uiClassRoomToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.uiStudentsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiGroupToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiEducationalDisciplineToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiTeacherToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -45,7 +44,6 @@
             this.uiMainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.uiMainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uiClassRoomToolStripButton,
-            this.uiStudentsToolStripButton,
             this.uiGroupToolStripButton,
             this.uiEducationalDisciplineToolStripButton,
             this.uiTeacherToolStripButton,
@@ -68,18 +66,6 @@
             this.uiClassRoomToolStripButton.Text = "кабинеты";
             this.uiClassRoomToolStripButton.ToolTipText = "кабинеты";
             this.uiClassRoomToolStripButton.Click += new System.EventHandler(this.uiClassRoomToolStripButton_Click);
-            // 
-            // uiStudentsToolStripButton
-            // 
-            this.uiStudentsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.uiStudentsToolStripButton.Image = global::SchoolManagement.Properties.Resources.User;
-            this.uiStudentsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiStudentsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.uiStudentsToolStripButton.Name = "uiStudentsToolStripButton";
-            this.uiStudentsToolStripButton.Size = new System.Drawing.Size(68, 68);
-            this.uiStudentsToolStripButton.Text = "ученики";
-            this.uiStudentsToolStripButton.ToolTipText = "ученики";
-            this.uiStudentsToolStripButton.Click += new System.EventHandler(this.uiStudentsToolStripButton_Click);
             // 
             // uiGroupToolStripButton
             // 
@@ -159,7 +145,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip uiMainToolStrip;
-        private System.Windows.Forms.ToolStripButton uiStudentsToolStripButton;
         private System.Windows.Forms.ToolStripButton uiClassRoomToolStripButton;
         private System.Windows.Forms.ToolStripButton uiTeacherToolStripButton;
         private System.Windows.Forms.ToolStripButton uiGroupToolStripButton;

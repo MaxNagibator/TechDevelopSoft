@@ -7,68 +7,6 @@ namespace SchoolManagement
 {
     public class DatabaseManager
     {
-        public static List<Student> GetStudents()
-        {
-            var students = new List<Student>();
-            using (var sqlProvider = Globals.GetSqlProvider())
-            {
-                sqlProvider.ExecuteQuery(@"SELECT .[Student].[Id]
-                                            ,[Student].[Name]
-                                            ,[Student].[BirthDay]
-                                            ,[Student].[GroupId]
-                                            ,[Student].[Comment]
-                                            ,[Group].[Name] AS GroupName
-                                            ,[Group].[Comment] AS GroupComment
-                                        FROM [Student]
-                                        INNER JOIN [Group] ON [Group].[Id] = [Student].[GroupId]
-                                        ORDER BY [Student].[Name]");
-                students.AddRange(sqlProvider.Rows
-                                      .Select(row =>
-                                              new Student(row.Field<string>("Name"),
-                                                          row.Field<DateTime>("BirthDay"),
-                                                          row.Field<string>("Comment"),
-                                                          new Group(row.Field<string>("GroupName"),
-                                                                    row.Field<string>("GroupComment")
-                                                              )
-                                                              {
-                                                                  Id = row.Field<int>("GroupId")
-                                                              })
-                                                  {
-                                                      Id = row.Field<int>("Id"),
-                                                  }));
-            }
-            return students;
-        }
-
-        public static void AddStudent(string name, DateTime birthDay, string comment, int groupId)
-        {
-            using (var sqlProvider = Globals.GetSqlProvider())
-            {
-                sqlProvider.SetParameter("@Name", name);
-                sqlProvider.SetParameter("@BirthDay", birthDay);
-                sqlProvider.SetParameter("@Comment", comment);
-                sqlProvider.SetParameter("@GroupId", groupId);
-                sqlProvider.ExecuteQuery(@"INSERT INTO [Student] 
-                    (Name, BirthDay, Comment, GroupId) 
-                    VALUES(@Name, @BirthDay, @Comment, @GroupId)");
-            }
-        }
-
-        public static void DeleteStudentById(int id)
-        {
-            DeleteFromTableById(id, "Student");
-        }
-
-        public static void DeleteStudentByGroupId(int groupId)
-        {
-            using (var sqlProvider = Globals.GetSqlProvider())
-            {
-                sqlProvider.SetParameter("@GroupId", groupId);
-                sqlProvider.ExecuteQuery(
-                    @"DELETE FROM [Student]
-                    WHERE GroupId = @GroupId");
-            }
-        }
 
         public static List<Group> GetGroups()
         {
@@ -105,7 +43,7 @@ namespace SchoolManagement
 
         public static void DeleteGroupById(int id)
         {
-            DeleteStudentByGroupId(id);
+            DeleteClassTimeTableByGroupId(id);
             DeleteFromTableById(id, "Group");
         }
 
@@ -291,6 +229,17 @@ namespace SchoolManagement
         public static void DeleteClassTimeTableById(int id)
         {
             DeleteFromTableById(id, "ClassTimeTable");
+        }
+
+        private static void DeleteClassTimeTableByGroupId(int groupId)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@GroupId", groupId);
+                sqlProvider.ExecuteQuery(
+                    @"DELETE FROM [ClassTimeTable]
+                    WHERE GroupId = @GroupId");
+            }
         }
 
         public static List<EducationalDiscipline> GetEducationalDisciplines()
