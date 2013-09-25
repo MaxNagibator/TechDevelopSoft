@@ -18,8 +18,10 @@ namespace SchoolManagement
 
         public static void SetColumnWidthAndFormHeight(Form form, DataGridView uiMainDataGridView, ToolStrip uiMainToolStrip)
         {
-            uiMainDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            uiMainDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            for (int i = 1; i < uiMainDataGridView.ColumnCount; i++)
+            {
+                uiMainDataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             Rectangle screenRectangle = form.RectangleToScreen(form.ClientRectangle);
             int titleHeight = screenRectangle.Top - form.Top + 8;
             var height = (uiMainToolStrip.Height + uiMainDataGridView.Rows.GetRowsHeight(DataGridViewElementStates.None) +
