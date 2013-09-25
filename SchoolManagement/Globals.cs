@@ -23,7 +23,7 @@ namespace SchoolManagement
                 uiMainDataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             Rectangle screenRectangle = form.RectangleToScreen(form.ClientRectangle);
-            int titleHeight = screenRectangle.Top - form.Top + 8;
+            int titleHeight = screenRectangle.Top - form.Top + 10;
             var height = (uiMainToolStrip.Height + uiMainDataGridView.Rows.GetRowsHeight(DataGridViewElementStates.None) +
                           uiMainDataGridView.ColumnHeadersHeight + titleHeight);
             form.Height = height > 600 ? 600 : height;

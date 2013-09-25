@@ -28,47 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uiNameTextBox = new System.Windows.Forms.TextBox();
-            this.uiNameLabel = new System.Windows.Forms.Label();
-            this.uiCommitButton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassTimeAddForm));
             this.uiStartTimeLabel = new System.Windows.Forms.Label();
             this.uiStartTimeTextBox = new System.Windows.Forms.TextBox();
             this.uiEndTimeLabel = new System.Windows.Forms.Label();
             this.uiEndTimeTextBox = new System.Windows.Forms.TextBox();
             this.uiNumberLabel = new System.Windows.Forms.Label();
             this.uiNumberTextBox = new System.Windows.Forms.TextBox();
+            this.uiCommitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // uiNameTextBox
-            // 
-            this.uiNameTextBox.Location = new System.Drawing.Point(95, 6);
-            this.uiNameTextBox.Name = "uiNameTextBox";
-            this.uiNameTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiNameTextBox.TabIndex = 0;
-            // 
-            // uiNameLabel
-            // 
-            this.uiNameLabel.AutoSize = true;
-            this.uiNameLabel.Location = new System.Drawing.Point(12, 9);
-            this.uiNameLabel.Name = "uiNameLabel";
-            this.uiNameLabel.Size = new System.Drawing.Size(57, 13);
-            this.uiNameLabel.TabIndex = 3;
-            this.uiNameLabel.Text = "Название";
-            // 
-            // uiCommitButton
-            // 
-            this.uiCommitButton.Location = new System.Drawing.Point(95, 110);
-            this.uiCommitButton.Name = "uiCommitButton";
-            this.uiCommitButton.Size = new System.Drawing.Size(87, 23);
-            this.uiCommitButton.TabIndex = 8;
-            this.uiCommitButton.Text = "OK";
-            this.uiCommitButton.UseVisualStyleBackColor = true;
-            this.uiCommitButton.Click += new System.EventHandler(this.uiCommintButton_Click);
             // 
             // uiStartTimeLabel
             // 
             this.uiStartTimeLabel.AutoSize = true;
-            this.uiStartTimeLabel.Location = new System.Drawing.Point(12, 61);
+            this.uiStartTimeLabel.Location = new System.Drawing.Point(9, 39);
             this.uiStartTimeLabel.Name = "uiStartTimeLabel";
             this.uiStartTimeLabel.Size = new System.Drawing.Size(78, 13);
             this.uiStartTimeLabel.TabIndex = 10;
@@ -76,31 +49,37 @@
             // 
             // uiStartTimeTextBox
             // 
-            this.uiStartTimeTextBox.Location = new System.Drawing.Point(95, 58);
+            this.uiStartTimeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiStartTimeTextBox.Location = new System.Drawing.Point(112, 36);
             this.uiStartTimeTextBox.Name = "uiStartTimeTextBox";
-            this.uiStartTimeTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiStartTimeTextBox.TabIndex = 9;
+            this.uiStartTimeTextBox.Size = new System.Drawing.Size(160, 20);
+            this.uiStartTimeTextBox.TabIndex = 1;
+            this.uiStartTimeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
             // uiEndTimeLabel
             // 
             this.uiEndTimeLabel.AutoSize = true;
-            this.uiEndTimeLabel.Location = new System.Drawing.Point(12, 87);
+            this.uiEndTimeLabel.Location = new System.Drawing.Point(9, 65);
             this.uiEndTimeLabel.Name = "uiEndTimeLabel";
-            this.uiEndTimeLabel.Size = new System.Drawing.Size(62, 13);
+            this.uiEndTimeLabel.Size = new System.Drawing.Size(90, 13);
             this.uiEndTimeLabel.TabIndex = 12;
-            this.uiEndTimeLabel.Text = "Окончание";
+            this.uiEndTimeLabel.Text = "Время кончания";
             // 
             // uiEndTimeTextBox
             // 
-            this.uiEndTimeTextBox.Location = new System.Drawing.Point(95, 84);
+            this.uiEndTimeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiEndTimeTextBox.Location = new System.Drawing.Point(112, 62);
             this.uiEndTimeTextBox.Name = "uiEndTimeTextBox";
-            this.uiEndTimeTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiEndTimeTextBox.TabIndex = 11;
+            this.uiEndTimeTextBox.Size = new System.Drawing.Size(160, 20);
+            this.uiEndTimeTextBox.TabIndex = 2;
+            this.uiEndTimeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
             // uiNumberLabel
             // 
             this.uiNumberLabel.AutoSize = true;
-            this.uiNumberLabel.Location = new System.Drawing.Point(12, 35);
+            this.uiNumberLabel.Location = new System.Drawing.Point(9, 13);
             this.uiNumberLabel.Name = "uiNumberLabel";
             this.uiNumberLabel.Size = new System.Drawing.Size(41, 13);
             this.uiNumberLabel.TabIndex = 14;
@@ -108,27 +87,43 @@
             // 
             // uiNumberTextBox
             // 
-            this.uiNumberTextBox.Location = new System.Drawing.Point(95, 32);
+            this.uiNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiNumberTextBox.Location = new System.Drawing.Point(56, 10);
             this.uiNumberTextBox.Name = "uiNumberTextBox";
-            this.uiNumberTextBox.Size = new System.Drawing.Size(177, 20);
-            this.uiNumberTextBox.TabIndex = 13;
+            this.uiNumberTextBox.Size = new System.Drawing.Size(216, 20);
+            this.uiNumberTextBox.TabIndex = 0;
+            this.uiNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiTextBoxs_KeyDown);
             // 
-            // ClassTimeTableAddForm
+            // uiCommitButton
+            // 
+            this.uiCommitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiCommitButton.Location = new System.Drawing.Point(12, 88);
+            this.uiCommitButton.Name = "uiCommitButton";
+            this.uiCommitButton.Size = new System.Drawing.Size(260, 23);
+            this.uiCommitButton.TabIndex = 8;
+            this.uiCommitButton.Text = "Добавить";
+            this.uiCommitButton.UseVisualStyleBackColor = true;
+            this.uiCommitButton.Click += new System.EventHandler(this.uiCommitButton_Click);
+            // 
+            // ClassTimeAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 140);
+            this.ClientSize = new System.Drawing.Size(284, 117);
+            this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNumberLabel);
             this.Controls.Add(this.uiNumberTextBox);
             this.Controls.Add(this.uiEndTimeLabel);
             this.Controls.Add(this.uiEndTimeTextBox);
             this.Controls.Add(this.uiStartTimeLabel);
             this.Controls.Add(this.uiStartTimeTextBox);
-            this.Controls.Add(this.uiCommitButton);
-            this.Controls.Add(this.uiNameLabel);
-            this.Controls.Add(this.uiNameTextBox);
-            this.Name = "ClassTimeTableAddForm";
-            this.Text = "добавление елемента расписания";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1024, 155);
+            this.MinimumSize = new System.Drawing.Size(300, 155);
+            this.Name = "ClassTimeAddForm";
+            this.Text = "Добавление времени урока";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,15 +131,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox uiNameTextBox;
-        private System.Windows.Forms.Label uiNameLabel;
-        private System.Windows.Forms.Button uiCommitButton;
         private System.Windows.Forms.Label uiStartTimeLabel;
         private System.Windows.Forms.TextBox uiStartTimeTextBox;
         private System.Windows.Forms.Label uiEndTimeLabel;
         private System.Windows.Forms.TextBox uiEndTimeTextBox;
         private System.Windows.Forms.Label uiNumberLabel;
         private System.Windows.Forms.TextBox uiNumberTextBox;
+        private System.Windows.Forms.Button uiCommitButton;
 
     }
 }

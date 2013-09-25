@@ -60,6 +60,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new ClassTimesForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.ShowDialog();
             }
         }
@@ -68,6 +70,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new ClassTimeTablesForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.ShowDialog();
             }
         }

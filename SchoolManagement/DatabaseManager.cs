@@ -99,7 +99,6 @@ namespace SchoolManagement
                                         ORDER BY [Number]");
                 classTimes.AddRange(sqlProvider.Rows.Select(row =>
                                                             new ClassTime(
-                                                                row.Field<string>("Name"),
                                                                 row.Field<int>("Number"),
                                                                 row.Field<string>("StartTime"),
                                                                 row.Field<string>("EndTime"))
@@ -168,7 +167,6 @@ namespace SchoolManagement
                         row.Field<string>("Name"),
                         row.Field<DateTime>("Date"),
                         new ClassTime(
-                            row.Field<string>("ClassTimeName"),
                             row.Field<int>("ClassTime"),
                             row.Field<string>("ClassTimeStartTime"),
                             row.Field<string>("ClassTimeEndTime"))

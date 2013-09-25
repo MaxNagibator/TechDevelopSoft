@@ -36,8 +36,10 @@
             this.uiDateViewDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.uiGroupComboBox = new System.Windows.Forms.ComboBox();
             this.uiDatePeriodLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).BeginInit();
             this.uiMenuContextMenuStrip.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiMainDataGridView
@@ -45,13 +47,14 @@
             this.uiMainDataGridView.AllowUserToAddRows = false;
             this.uiMainDataGridView.AllowUserToDeleteRows = false;
             this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiMainDataGridView.Location = new System.Drawing.Point(12, 51);
+            this.uiMainDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiMainDataGridView.Location = new System.Drawing.Point(0, 42);
             this.uiMainDataGridView.MultiSelect = false;
             this.uiMainDataGridView.Name = "uiMainDataGridView";
             this.uiMainDataGridView.ReadOnly = true;
             this.uiMainDataGridView.RowHeadersVisible = false;
             this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.uiMainDataGridView.Size = new System.Drawing.Size(954, 199);
+            this.uiMainDataGridView.Size = new System.Drawing.Size(978, 220);
             this.uiMainDataGridView.TabIndex = 1;
             this.uiMainDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uiMainDataGridView_CellMouseClick);
             // 
@@ -79,7 +82,7 @@
             // 
             // uiDateViewDateTimePicker
             // 
-            this.uiDateViewDateTimePicker.Location = new System.Drawing.Point(485, 12);
+            this.uiDateViewDateTimePicker.Location = new System.Drawing.Point(139, 12);
             this.uiDateViewDateTimePicker.Name = "uiDateViewDateTimePicker";
             this.uiDateViewDateTimePicker.Size = new System.Drawing.Size(153, 20);
             this.uiDateViewDateTimePicker.TabIndex = 5;
@@ -89,7 +92,7 @@
             // 
             this.uiGroupComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uiGroupComboBox.FormattingEnabled = true;
-            this.uiGroupComboBox.Location = new System.Drawing.Point(358, 11);
+            this.uiGroupComboBox.Location = new System.Drawing.Point(12, 12);
             this.uiGroupComboBox.Name = "uiGroupComboBox";
             this.uiGroupComboBox.Size = new System.Drawing.Size(121, 21);
             this.uiGroupComboBox.TabIndex = 7;
@@ -98,27 +101,37 @@
             // uiDatePeriodLabel
             // 
             this.uiDatePeriodLabel.AutoSize = true;
-            this.uiDatePeriodLabel.Location = new System.Drawing.Point(482, 35);
+            this.uiDatePeriodLabel.Location = new System.Drawing.Point(298, 15);
             this.uiDatePeriodLabel.Name = "uiDatePeriodLabel";
             this.uiDatePeriodLabel.Size = new System.Drawing.Size(10, 13);
             this.uiDatePeriodLabel.TabIndex = 8;
             this.uiDatePeriodLabel.Text = "-";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.uiGroupComboBox);
+            this.panel1.Controls.Add(this.uiDateViewDateTimePicker);
+            this.panel1.Controls.Add(this.uiDatePeriodLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(978, 42);
+            this.panel1.TabIndex = 9;
             // 
             // ClassTimeTablesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 262);
-            this.Controls.Add(this.uiDatePeriodLabel);
-            this.Controls.Add(this.uiGroupComboBox);
-            this.Controls.Add(this.uiDateViewDateTimePicker);
             this.Controls.Add(this.uiMainDataGridView);
+            this.Controls.Add(this.panel1);
             this.Name = "ClassTimeTablesForm";
             this.Text = "Расписание уроков";
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.uiMenuContextMenuStrip.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -131,5 +144,6 @@
         private System.Windows.Forms.ContextMenuStrip uiMenuContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem uiDeleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uiAddToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

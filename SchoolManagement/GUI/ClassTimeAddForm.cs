@@ -11,13 +11,45 @@ namespace SchoolManagement.GUI
             InitializeComponent();
         }
 
-        private void uiCommintButton_Click(object sender, EventArgs e)
+        private void uiCommitButton_Click(object sender, EventArgs e)
         {
-            var group = new ClassTime(uiNameTextBox.Text, Convert.ToInt32(uiNumberTextBox.Text), uiStartTimeTextBox.Text,
-                                      uiEndTimeTextBox.Text);
-            group.AddToDatabase();
-            DialogResult = DialogResult.OK;
-            Close();
+            Commit();
+        }
+
+        private void uiTextBoxs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Commit();
+            }
+        }
+
+        private void Commit()
+        {
+            int number = -217;
+            try
+            {
+                number = Convert.ToInt32(uiNumberTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Заполните пожалуйста номер урока числовым значением!", "Так не камильфо");
+            }
+
+            if (number != -217)
+            {
+                try
+                {
+                    var group = new ClassTime(number, uiStartTimeTextBox.Text, uiEndTimeTextBox.Text);
+                    group.AddToDatabase();
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Номер урока должен быть уникальным!", "Так не камильфо");
+                }
+            }
         }
     }
 }

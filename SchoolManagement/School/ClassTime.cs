@@ -1,24 +1,28 @@
-﻿namespace SchoolManagement.School
+﻿using System.ComponentModel;
+
+namespace SchoolManagement.School
 {
     public class ClassTime : Entity
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string StartTime { get; set; }
-        public string EndTime { get; set; }
-        public int Number { get; set; }
 
-        public ClassTime(string name, int number   , string startTime, string endTime)
+        [DisplayName("Номер")]
+        public int Number { get; set; }
+        [DisplayName("Начало урока")]
+        public string StartTime { get; set; }
+        [DisplayName("Конец урока")]
+        public string EndTime { get; set; }
+
+        public ClassTime(int number   , string startTime, string endTime)
         {
             StartTime = startTime;
             EndTime = endTime;
-            Name = name;
             Number = number;
         }
 
         public override void AddToDatabase()
         {
-            DatabaseManager.AddClassTime(Name,Number,StartTime,EndTime);
+            DatabaseManager.AddClassTime("Рудимент типа", Number, StartTime, EndTime);
         }
 
         public override string ToString()
