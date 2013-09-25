@@ -1,9 +1,13 @@
-﻿namespace SchoolManagement.School
+﻿using System.ComponentModel;
+
+namespace SchoolManagement.School
 {
     public class Group : Entity
     {
         public int Id { get; set; }
+        [DisplayName("Название")]
         public string Name { get; set; }
+        [DisplayName("Комментарий")]
         public string Comment { get; set; }
 
         public Group(string name, string comment)

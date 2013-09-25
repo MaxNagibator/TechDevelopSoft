@@ -36,7 +36,7 @@ namespace SchoolManagement.GUI
 
         private void SetColumnWidthAndFormHeight()
         {
-            uiMainDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            uiMainDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             uiMainDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Rectangle screenRectangle = RectangleToScreen(ClientRectangle);
             int titleHeight = screenRectangle.Top - Top + 8;

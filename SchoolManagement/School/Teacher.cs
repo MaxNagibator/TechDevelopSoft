@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace SchoolManagement.School
 {
     public class Teacher : Entity
     {
         public int Id { get; set; }
+        [DisplayName("ФИО")]
         public string Name { get; set; }
+        [DisplayName("Родился")]
         public DateTime BirthDay { get; set; }
+        [DisplayName("Дата начала работы")]
         public DateTime StartWorkDate { get; set; }
         public List<EducationalDiscipline> EducationalDisciplines { get; set; }
 
