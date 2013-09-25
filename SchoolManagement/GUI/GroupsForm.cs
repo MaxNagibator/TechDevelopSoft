@@ -31,18 +31,7 @@ namespace SchoolManagement.GUI
             uiMainDataGridView.DataSource = _groups;
             var dataGridViewColumn = uiMainDataGridView.Columns["Id"];
             if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
-            SetColumnWidthAndFormHeight();
-        }
-
-        private void SetColumnWidthAndFormHeight()
-        {
-            uiMainDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            uiMainDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Rectangle screenRectangle = RectangleToScreen(ClientRectangle);
-            int titleHeight = screenRectangle.Top - Top + 8;
-            var height = (uiMainToolStrip.Height + uiMainDataGridView.Rows.GetRowsHeight(DataGridViewElementStates.None) +
-                          uiMainDataGridView.ColumnHeadersHeight + titleHeight);
-            Height = height > 600 ? 600 : height;
+            Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainToolStrip);
         }
 
         private void SelectItem()

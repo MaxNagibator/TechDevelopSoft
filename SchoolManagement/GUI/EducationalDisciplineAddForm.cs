@@ -11,8 +11,28 @@ namespace SchoolManagement.GUI
             InitializeComponent();
         }
 
-        private void uiCommintButton_Click(object sender, EventArgs e)
+
+        private void uiCommitButton_Click(object sender, EventArgs e)
         {
+
+            Commit();
+        }
+
+        private void uiTextBoxs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Commit();
+            }
+        }
+
+        private void Commit()
+        {
+            if (String.IsNullOrWhiteSpace(uiNameTextBox.Text))
+            {
+                MessageBox.Show("Заполните пожалуйста название дисчиплины!", "Так не камильфо");
+                return;
+            }
             var educationalDiscipline = new EducationalDiscipline(uiNameTextBox.Text, uiDescriptionTextBox.Text);
             educationalDiscipline.AddToDatabase();
             DialogResult = DialogResult.OK;

@@ -50,6 +50,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new EducationalDisciplinesForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.ShowDialog();
             }
         }
