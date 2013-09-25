@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupAddForm));
             this.uiNameTextBox = new System.Windows.Forms.TextBox();
             this.uiCommentTextBox = new System.Windows.Forms.TextBox();
             this.uiNameLabel = new System.Windows.Forms.Label();
@@ -87,6 +88,7 @@
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiCommentTextBox);
             this.Controls.Add(this.uiNameTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GroupAddForm";
             this.Text = "добавление группы";
             this.ResumeLayout(false);

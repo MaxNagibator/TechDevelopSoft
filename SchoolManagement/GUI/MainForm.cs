@@ -31,7 +31,6 @@ namespace SchoolManagement.GUI
                 f.StartPosition = FormStartPosition.Manual;
                 f.Location = new Point(Location.X,Location.Y);
                 f.ShowDialog();
-                Location = new Point(f.Location.X, f.Location.Y);
             }
         }
 
@@ -39,6 +38,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new TeachersForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.ShowDialog();
             }
         }
@@ -47,6 +48,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new GroupsForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.ShowDialog();
             }
         }

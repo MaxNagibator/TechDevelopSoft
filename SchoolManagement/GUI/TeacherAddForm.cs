@@ -11,7 +11,20 @@ namespace SchoolManagement.GUI
             InitializeComponent();
         }
 
-        private void uiCommintButton_Click(object sender, EventArgs e)
+        private void uiCommitButton_Click(object sender, EventArgs e)
+        {
+            Commit();
+        }
+
+        private void uiNameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Commit();
+            }
+        }
+
+        private void Commit()
         {
             var teacher = new Teacher(uiNameTextBox.Text, uiBirthDayDateTimePicker.Value,
                                       uiStartWorkDateDateTimePicker.Value);

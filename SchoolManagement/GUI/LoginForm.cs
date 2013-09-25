@@ -9,6 +9,21 @@ namespace SchoolManagement.GUI
         public LoginForm()
         {
             InitializeComponent();
+            ForDevelop();
+        }
+
+        private void ForDevelop()
+        {
+            using (var f = new MainForm())
+            {
+                Globals.IsRootMode = true;
+                Hide();
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(500, 300);
+                f.ShowDialog();
+                Location = new Point(f.Location.X, f.Location.Y);
+                uiPasswordTextBox.Text = "";
+            }
         }
 
         private void uiLoginButton_Click(object sender, EventArgs e)

@@ -28,82 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassRoomsForm));
-            this.uiAddButton = new System.Windows.Forms.Button();
             this.uiMainDataGridView = new System.Windows.Forms.DataGridView();
-            this.uiDeleteButton = new System.Windows.Forms.Button();
-            this.uiSelectClassRoomButton = new System.Windows.Forms.Button();
+            this.uiMainToolStrip = new System.Windows.Forms.ToolStrip();
+            this.uiAddToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.uiSelectToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.uiDeleteToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).BeginInit();
+            this.uiMainToolStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // uiAddButton
-            // 
-            this.uiAddButton.Location = new System.Drawing.Point(12, 12);
-            this.uiAddButton.Name = "uiAddButton";
-            this.uiAddButton.Size = new System.Drawing.Size(75, 23);
-            this.uiAddButton.TabIndex = 0;
-            this.uiAddButton.Text = "Добавить";
-            this.uiAddButton.UseVisualStyleBackColor = true;
-            this.uiAddButton.Click += new System.EventHandler(this.uiAddButton_Click);
             // 
             // uiMainDataGridView
             // 
             this.uiMainDataGridView.AllowUserToAddRows = false;
             this.uiMainDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiMainDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiMainDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.uiMainDataGridView.Location = new System.Drawing.Point(0, 41);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiMainDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.uiMainDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiMainDataGridView.Location = new System.Drawing.Point(0, 39);
             this.uiMainDataGridView.MultiSelect = false;
             this.uiMainDataGridView.Name = "uiMainDataGridView";
             this.uiMainDataGridView.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiMainDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.uiMainDataGridView.RowHeadersVisible = false;
             this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiMainDataGridView.Size = new System.Drawing.Size(666, 239);
+            this.uiMainDataGridView.Size = new System.Drawing.Size(673, 246);
             this.uiMainDataGridView.TabIndex = 1;
             this.uiMainDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiMainDataGridView_CellDoubleClick);
+            this.uiMainDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiMainDataGridView_KeyDown);
             // 
-            // uiDeleteButton
+            // uiMainToolStrip
             // 
-            this.uiDeleteButton.Location = new System.Drawing.Point(174, 12);
-            this.uiDeleteButton.Name = "uiDeleteButton";
-            this.uiDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.uiDeleteButton.TabIndex = 3;
-            this.uiDeleteButton.Text = "Удалить";
-            this.uiDeleteButton.UseVisualStyleBackColor = true;
-            this.uiDeleteButton.Click += new System.EventHandler(this.uiDeleteButton_Click);
+            this.uiMainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.uiMainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uiAddToolStripButton,
+            this.uiSelectToolStripButton,
+            this.uiDeleteToolStripButton});
+            this.uiMainToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.uiMainToolStrip.Name = "uiMainToolStrip";
+            this.uiMainToolStrip.Size = new System.Drawing.Size(673, 39);
+            this.uiMainToolStrip.TabIndex = 5;
+            this.uiMainToolStrip.Text = "uiMainToolStrip";
             // 
-            // uiSelectClassRoomButton
+            // uiAddToolStripButton
             // 
-            this.uiSelectClassRoomButton.Location = new System.Drawing.Point(93, 12);
-            this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
-            this.uiSelectClassRoomButton.Size = new System.Drawing.Size(75, 23);
-            this.uiSelectClassRoomButton.TabIndex = 4;
-            this.uiSelectClassRoomButton.Text = "Выбрать";
-            this.uiSelectClassRoomButton.UseVisualStyleBackColor = true;
-            this.uiSelectClassRoomButton.Click += new System.EventHandler(this.uiSelectClassRoomButton_Click);
+            this.uiAddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiAddToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiAddToolStripButton.Image")));
+            this.uiAddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.uiAddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiAddToolStripButton.Name = "uiAddToolStripButton";
+            this.uiAddToolStripButton.Size = new System.Drawing.Size(36, 36);
+            this.uiAddToolStripButton.Text = "Добавить";
+            this.uiAddToolStripButton.ToolTipText = "Добавить";
+            this.uiAddToolStripButton.Click += new System.EventHandler(this.uiAddToolStripButton_Click);
+            // 
+            // uiSelectToolStripButton
+            // 
+            this.uiSelectToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiSelectToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiSelectToolStripButton.Image")));
+            this.uiSelectToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.uiSelectToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiSelectToolStripButton.Name = "uiSelectToolStripButton";
+            this.uiSelectToolStripButton.Size = new System.Drawing.Size(36, 36);
+            this.uiSelectToolStripButton.Text = "Выбрать";
+            this.uiSelectToolStripButton.ToolTipText = "Выбрать";
+            this.uiSelectToolStripButton.Click += new System.EventHandler(this.uiSelectToolStripButton_Click);
+            // 
+            // uiDeleteToolStripButton
+            // 
+            this.uiDeleteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiDeleteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiDeleteToolStripButton.Image")));
+            this.uiDeleteToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.uiDeleteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiDeleteToolStripButton.Margin = new System.Windows.Forms.Padding(30, 1, 0, 2);
+            this.uiDeleteToolStripButton.Name = "uiDeleteToolStripButton";
+            this.uiDeleteToolStripButton.Size = new System.Drawing.Size(36, 36);
+            this.uiDeleteToolStripButton.Text = "Удалить";
+            this.uiDeleteToolStripButton.Click += new System.EventHandler(this.uiDeleteToolStripButton_Click);
             // 
             // ClassRoomsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 280);
-            this.Controls.Add(this.uiSelectClassRoomButton);
-            this.Controls.Add(this.uiDeleteButton);
+            this.ClientSize = new System.Drawing.Size(673, 285);
             this.Controls.Add(this.uiMainDataGridView);
-            this.Controls.Add(this.uiAddButton);
+            this.Controls.Add(this.uiMainToolStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassRoomsForm";
             this.Text = "Кабинетики";
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
+            this.uiMainToolStrip.ResumeLayout(false);
+            this.uiMainToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button uiAddButton;
         private System.Windows.Forms.DataGridView uiMainDataGridView;
-        private System.Windows.Forms.Button uiDeleteButton;
-        private System.Windows.Forms.Button uiSelectClassRoomButton;
+        private System.Windows.Forms.ToolStrip uiMainToolStrip;
+        private System.Windows.Forms.ToolStripButton uiDeleteToolStripButton;
+        private System.Windows.Forms.ToolStripButton uiAddToolStripButton;
+        private System.Windows.Forms.ToolStripButton uiSelectToolStripButton;
     }
 }

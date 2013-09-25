@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassRoomAddForm));
             this.uiNameTextBox = new System.Windows.Forms.TextBox();
             this.uiNumberTextBox = new System.Windows.Forms.TextBox();
             this.uiNameLabel = new System.Windows.Forms.Label();
@@ -37,22 +38,27 @@
             // 
             // uiNameTextBox
             // 
-            this.uiNameTextBox.Location = new System.Drawing.Point(95, 6);
+            this.uiNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiNameTextBox.Location = new System.Drawing.Point(72, 6);
             this.uiNameTextBox.Name = "uiNameTextBox";
-            this.uiNameTextBox.Size = new System.Drawing.Size(177, 20);
+            this.uiNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.uiNameTextBox.TabIndex = 0;
             // 
             // uiNumberTextBox
             // 
-            this.uiNumberTextBox.Location = new System.Drawing.Point(95, 32);
+            this.uiNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiNumberTextBox.Location = new System.Drawing.Point(72, 32);
             this.uiNumberTextBox.Name = "uiNumberTextBox";
-            this.uiNumberTextBox.Size = new System.Drawing.Size(177, 20);
+            this.uiNumberTextBox.Size = new System.Drawing.Size(200, 20);
             this.uiNumberTextBox.TabIndex = 1;
+            this.uiNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiNumberTextBox_KeyDown);
             // 
             // uiNameLabel
             // 
             this.uiNameLabel.AutoSize = true;
-            this.uiNameLabel.Location = new System.Drawing.Point(12, 9);
+            this.uiNameLabel.Location = new System.Drawing.Point(9, 9);
             this.uiNameLabel.Name = "uiNameLabel";
             this.uiNameLabel.Size = new System.Drawing.Size(57, 13);
             this.uiNameLabel.TabIndex = 3;
@@ -69,11 +75,13 @@
             // 
             // uiCommitButton
             // 
-            this.uiCommitButton.Location = new System.Drawing.Point(15, 58);
+            this.uiCommitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiCommitButton.Location = new System.Drawing.Point(12, 58);
             this.uiCommitButton.Name = "uiCommitButton";
-            this.uiCommitButton.Size = new System.Drawing.Size(87, 23);
+            this.uiCommitButton.Size = new System.Drawing.Size(260, 23);
             this.uiCommitButton.TabIndex = 8;
-            this.uiCommitButton.Text = "OK";
+            this.uiCommitButton.Text = "Добавить";
             this.uiCommitButton.UseVisualStyleBackColor = true;
             this.uiCommitButton.Click += new System.EventHandler(this.uiCommintButton_Click);
             // 
@@ -81,14 +89,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 87);
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNumberLabel);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNumberTextBox);
             this.Controls.Add(this.uiNameTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1024, 125);
+            this.MinimumSize = new System.Drawing.Size(300, 125);
             this.Name = "ClassRoomAddForm";
-            this.Text = "добавление кабинетика";
+            this.Text = "Новый кабинет";
             this.ResumeLayout(false);
             this.PerformLayout();
 
