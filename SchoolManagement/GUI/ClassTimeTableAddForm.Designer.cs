@@ -33,22 +33,22 @@
             this.uiNameLabel = new System.Windows.Forms.Label();
             this.uiCommitButton = new System.Windows.Forms.Button();
             this.uiEducationalDisciplineLabel = new System.Windows.Forms.Label();
-            this.uiEducationalDisciplineTextBox = new System.Windows.Forms.TextBox();
             this.uiDateLabel = new System.Windows.Forms.Label();
             this.uiClassTimeLabel = new System.Windows.Forms.Label();
-            this.uiClassTimeTextBox = new System.Windows.Forms.TextBox();
-            this.uiSelectClassTimeButton = new System.Windows.Forms.Button();
-            this.uiEducationalDisciplineButton = new System.Windows.Forms.Button();
             this.uiDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.uiTeacherTextBox = new System.Windows.Forms.TextBox();
             this.uiTeacherLabel = new System.Windows.Forms.Label();
-            this.uiSelectTeacherButton = new System.Windows.Forms.Button();
-            this.uiClassRoomTextBox = new System.Windows.Forms.TextBox();
             this.uiClassRoomLabel = new System.Windows.Forms.Label();
-            this.uiSelectClassRoomButton = new System.Windows.Forms.Button();
-            this.uiGroupTextBox = new System.Windows.Forms.TextBox();
             this.uiGroupLabel = new System.Windows.Forms.Label();
+            this.uiClassTimeСomboBox = new System.Windows.Forms.ComboBox();
+            this.uiEducationalDisciplineСomboBox = new System.Windows.Forms.ComboBox();
+            this.uiTeacherComboBox = new System.Windows.Forms.ComboBox();
+            this.uiClassRoomComboBox = new System.Windows.Forms.ComboBox();
+            this.uiGroupComboBox = new System.Windows.Forms.ComboBox();
             this.uiSelectGroupButton = new System.Windows.Forms.Button();
+            this.uiSelectClassRoomButton = new System.Windows.Forms.Button();
+            this.uiSelectTeacherButton = new System.Windows.Forms.Button();
+            this.uiEducationalDisciplineButton = new System.Windows.Forms.Button();
+            this.uiSelectClassTimeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uiNameTextBox
@@ -70,7 +70,7 @@
             // 
             // uiCommitButton
             // 
-            this.uiCommitButton.Location = new System.Drawing.Point(86, 188);
+            this.uiCommitButton.Location = new System.Drawing.Point(84, 233);
             this.uiCommitButton.Name = "uiCommitButton";
             this.uiCommitButton.Size = new System.Drawing.Size(87, 23);
             this.uiCommitButton.TabIndex = 12;
@@ -81,23 +81,16 @@
             // uiEducationalDisciplineLabel
             // 
             this.uiEducationalDisciplineLabel.AutoSize = true;
-            this.uiEducationalDisciplineLabel.Location = new System.Drawing.Point(12, 61);
+            this.uiEducationalDisciplineLabel.Location = new System.Drawing.Point(10, 106);
             this.uiEducationalDisciplineLabel.Name = "uiEducationalDisciplineLabel";
             this.uiEducationalDisciplineLabel.Size = new System.Drawing.Size(70, 13);
             this.uiEducationalDisciplineLabel.TabIndex = 10;
             this.uiEducationalDisciplineLabel.Text = "Дисциплина";
             // 
-            // uiEducationalDisciplineTextBox
-            // 
-            this.uiEducationalDisciplineTextBox.Location = new System.Drawing.Point(86, 58);
-            this.uiEducationalDisciplineTextBox.Name = "uiEducationalDisciplineTextBox";
-            this.uiEducationalDisciplineTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiEducationalDisciplineTextBox.TabIndex = 3;
-            // 
             // uiDateLabel
             // 
             this.uiDateLabel.AutoSize = true;
-            this.uiDateLabel.Location = new System.Drawing.Point(12, 87);
+            this.uiDateLabel.Location = new System.Drawing.Point(10, 132);
             this.uiDateLabel.Name = "uiDateLabel";
             this.uiDateLabel.Size = new System.Drawing.Size(33, 13);
             this.uiDateLabel.TabIndex = 12;
@@ -112,124 +105,148 @@
             this.uiClassTimeLabel.TabIndex = 14;
             this.uiClassTimeLabel.Text = "Время урока";
             // 
-            // uiClassTimeTextBox
-            // 
-            this.uiClassTimeTextBox.Location = new System.Drawing.Point(86, 32);
-            this.uiClassTimeTextBox.Name = "uiClassTimeTextBox";
-            this.uiClassTimeTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiClassTimeTextBox.TabIndex = 1;
-            // 
-            // uiSelectClassTimeButton
-            // 
-            this.uiSelectClassTimeButton.Location = new System.Drawing.Point(227, 30);
-            this.uiSelectClassTimeButton.Name = "uiSelectClassTimeButton";
-            this.uiSelectClassTimeButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectClassTimeButton.TabIndex = 2;
-            this.uiSelectClassTimeButton.Text = "♥";
-            this.uiSelectClassTimeButton.UseVisualStyleBackColor = true;
-            this.uiSelectClassTimeButton.Click += new System.EventHandler(this.uiSelectClassTimeButton_Click);
-            // 
-            // uiEducationalDisciplineButton
-            // 
-            this.uiEducationalDisciplineButton.Location = new System.Drawing.Point(227, 56);
-            this.uiEducationalDisciplineButton.Name = "uiEducationalDisciplineButton";
-            this.uiEducationalDisciplineButton.Size = new System.Drawing.Size(45, 23);
-            this.uiEducationalDisciplineButton.TabIndex = 4;
-            this.uiEducationalDisciplineButton.Text = "♥";
-            this.uiEducationalDisciplineButton.UseVisualStyleBackColor = true;
-            this.uiEducationalDisciplineButton.Click += new System.EventHandler(this.uiSelectEducationalDisciplineButton_Click);
-            // 
             // uiDateDateTimePicker
             // 
-            this.uiDateDateTimePicker.Location = new System.Drawing.Point(86, 84);
+            this.uiDateDateTimePicker.Location = new System.Drawing.Point(84, 129);
             this.uiDateDateTimePicker.Name = "uiDateDateTimePicker";
             this.uiDateDateTimePicker.Size = new System.Drawing.Size(186, 20);
             this.uiDateDateTimePicker.TabIndex = 5;
             this.uiDateDateTimePicker.ValueChanged += new System.EventHandler(this.uiDateDateTimePicker_ValueChanged);
             // 
-            // uiTeacherTextBox
-            // 
-            this.uiTeacherTextBox.Location = new System.Drawing.Point(86, 110);
-            this.uiTeacherTextBox.Name = "uiTeacherTextBox";
-            this.uiTeacherTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiTeacherTextBox.TabIndex = 6;
-            // 
             // uiTeacherLabel
             // 
             this.uiTeacherLabel.AutoSize = true;
-            this.uiTeacherLabel.Location = new System.Drawing.Point(12, 113);
+            this.uiTeacherLabel.Location = new System.Drawing.Point(10, 158);
             this.uiTeacherLabel.Name = "uiTeacherLabel";
             this.uiTeacherLabel.Size = new System.Drawing.Size(45, 13);
             this.uiTeacherLabel.TabIndex = 10;
             this.uiTeacherLabel.Text = "Препод";
             // 
-            // uiSelectTeacherButton
-            // 
-            this.uiSelectTeacherButton.Location = new System.Drawing.Point(227, 108);
-            this.uiSelectTeacherButton.Name = "uiSelectTeacherButton";
-            this.uiSelectTeacherButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectTeacherButton.TabIndex = 7;
-            this.uiSelectTeacherButton.Text = "♥";
-            this.uiSelectTeacherButton.UseVisualStyleBackColor = true;
-            this.uiSelectTeacherButton.Click += new System.EventHandler(this.uiSelectTeacherButton_Click);
-            // 
-            // uiClassRoomTextBox
-            // 
-            this.uiClassRoomTextBox.Location = new System.Drawing.Point(86, 136);
-            this.uiClassRoomTextBox.Name = "uiClassRoomTextBox";
-            this.uiClassRoomTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiClassRoomTextBox.TabIndex = 8;
-            // 
             // uiClassRoomLabel
             // 
             this.uiClassRoomLabel.AutoSize = true;
-            this.uiClassRoomLabel.Location = new System.Drawing.Point(12, 139);
+            this.uiClassRoomLabel.Location = new System.Drawing.Point(10, 184);
             this.uiClassRoomLabel.Name = "uiClassRoomLabel";
             this.uiClassRoomLabel.Size = new System.Drawing.Size(49, 13);
             this.uiClassRoomLabel.TabIndex = 10;
             this.uiClassRoomLabel.Text = "Кабинет";
             // 
-            // uiSelectClassRoomButton
-            // 
-            this.uiSelectClassRoomButton.Location = new System.Drawing.Point(227, 134);
-            this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
-            this.uiSelectClassRoomButton.Size = new System.Drawing.Size(45, 23);
-            this.uiSelectClassRoomButton.TabIndex = 9;
-            this.uiSelectClassRoomButton.Text = "♥";
-            this.uiSelectClassRoomButton.UseVisualStyleBackColor = true;
-            this.uiSelectClassRoomButton.Click += new System.EventHandler(this.uiSelectClassRoomButton_Click);
-            // 
-            // uiGroupTextBox
-            // 
-            this.uiGroupTextBox.Location = new System.Drawing.Point(86, 162);
-            this.uiGroupTextBox.Name = "uiGroupTextBox";
-            this.uiGroupTextBox.Size = new System.Drawing.Size(135, 20);
-            this.uiGroupTextBox.TabIndex = 10;
-            // 
             // uiGroupLabel
             // 
             this.uiGroupLabel.AutoSize = true;
-            this.uiGroupLabel.Location = new System.Drawing.Point(12, 165);
+            this.uiGroupLabel.Location = new System.Drawing.Point(10, 210);
             this.uiGroupLabel.Name = "uiGroupLabel";
             this.uiGroupLabel.Size = new System.Drawing.Size(42, 13);
             this.uiGroupLabel.TabIndex = 10;
             this.uiGroupLabel.Text = "Группа";
             // 
+            // uiClassTimeСomboBox
+            // 
+            this.uiClassTimeСomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uiClassTimeСomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.uiClassTimeСomboBox.FormattingEnabled = true;
+            this.uiClassTimeСomboBox.Location = new System.Drawing.Point(86, 29);
+            this.uiClassTimeСomboBox.Name = "uiClassTimeСomboBox";
+            this.uiClassTimeСomboBox.Size = new System.Drawing.Size(135, 37);
+            this.uiClassTimeСomboBox.TabIndex = 15;
+            // 
+            // uiEducationalDisciplineСomboBox
+            // 
+            this.uiEducationalDisciplineСomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uiEducationalDisciplineСomboBox.FormattingEnabled = true;
+            this.uiEducationalDisciplineСomboBox.ItemHeight = 13;
+            this.uiEducationalDisciplineСomboBox.Location = new System.Drawing.Point(86, 103);
+            this.uiEducationalDisciplineСomboBox.Name = "uiEducationalDisciplineСomboBox";
+            this.uiEducationalDisciplineСomboBox.Size = new System.Drawing.Size(135, 21);
+            this.uiEducationalDisciplineСomboBox.TabIndex = 16;
+            // 
+            // uiTeacherComboBox
+            // 
+            this.uiTeacherComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uiTeacherComboBox.FormattingEnabled = true;
+            this.uiTeacherComboBox.Location = new System.Drawing.Point(84, 155);
+            this.uiTeacherComboBox.Name = "uiTeacherComboBox";
+            this.uiTeacherComboBox.Size = new System.Drawing.Size(135, 21);
+            this.uiTeacherComboBox.TabIndex = 17;
+            // 
+            // uiClassRoomComboBox
+            // 
+            this.uiClassRoomComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uiClassRoomComboBox.FormattingEnabled = true;
+            this.uiClassRoomComboBox.Location = new System.Drawing.Point(84, 181);
+            this.uiClassRoomComboBox.Name = "uiClassRoomComboBox";
+            this.uiClassRoomComboBox.Size = new System.Drawing.Size(135, 21);
+            this.uiClassRoomComboBox.TabIndex = 18;
+            // 
+            // uiGroupComboBox
+            // 
+            this.uiGroupComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uiGroupComboBox.FormattingEnabled = true;
+            this.uiGroupComboBox.Location = new System.Drawing.Point(84, 205);
+            this.uiGroupComboBox.Name = "uiGroupComboBox";
+            this.uiGroupComboBox.Size = new System.Drawing.Size(135, 21);
+            this.uiGroupComboBox.TabIndex = 19;
+            // 
             // uiSelectGroupButton
             // 
-            this.uiSelectGroupButton.Location = new System.Drawing.Point(227, 160);
+            this.uiSelectGroupButton.Image = global::SchoolManagement.Properties.Resources.Users_Group32;
+            this.uiSelectGroupButton.Location = new System.Drawing.Point(266, 204);
             this.uiSelectGroupButton.Name = "uiSelectGroupButton";
-            this.uiSelectGroupButton.Size = new System.Drawing.Size(45, 23);
+            this.uiSelectGroupButton.Size = new System.Drawing.Size(40, 40);
             this.uiSelectGroupButton.TabIndex = 11;
-            this.uiSelectGroupButton.Text = "♥";
             this.uiSelectGroupButton.UseVisualStyleBackColor = true;
             this.uiSelectGroupButton.Click += new System.EventHandler(this.uiSelectGroupButton_Click);
+            // 
+            // uiSelectClassRoomButton
+            // 
+            this.uiSelectClassRoomButton.Image = global::SchoolManagement.Properties.Resources.Home32;
+            this.uiSelectClassRoomButton.Location = new System.Drawing.Point(266, 152);
+            this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
+            this.uiSelectClassRoomButton.Size = new System.Drawing.Size(40, 40);
+            this.uiSelectClassRoomButton.TabIndex = 9;
+            this.uiSelectClassRoomButton.UseVisualStyleBackColor = true;
+            this.uiSelectClassRoomButton.Click += new System.EventHandler(this.uiSelectClassRoomButton_Click);
+            // 
+            // uiSelectTeacherButton
+            // 
+            this.uiSelectTeacherButton.Image = global::SchoolManagement.Properties.Resources.Digg32;
+            this.uiSelectTeacherButton.Location = new System.Drawing.Point(276, 92);
+            this.uiSelectTeacherButton.Name = "uiSelectTeacherButton";
+            this.uiSelectTeacherButton.Size = new System.Drawing.Size(40, 40);
+            this.uiSelectTeacherButton.TabIndex = 7;
+            this.uiSelectTeacherButton.UseVisualStyleBackColor = true;
+            this.uiSelectTeacherButton.Click += new System.EventHandler(this.uiSelectTeacherButton_Click);
+            // 
+            // uiEducationalDisciplineButton
+            // 
+            this.uiEducationalDisciplineButton.Image = global::SchoolManagement.Properties.Resources.Contact32;
+            this.uiEducationalDisciplineButton.Location = new System.Drawing.Point(230, 75);
+            this.uiEducationalDisciplineButton.Name = "uiEducationalDisciplineButton";
+            this.uiEducationalDisciplineButton.Size = new System.Drawing.Size(40, 40);
+            this.uiEducationalDisciplineButton.TabIndex = 4;
+            this.uiEducationalDisciplineButton.UseVisualStyleBackColor = true;
+            this.uiEducationalDisciplineButton.Click += new System.EventHandler(this.uiSelectEducationalDisciplineButton_Click);
+            // 
+            // uiSelectClassTimeButton
+            // 
+            this.uiSelectClassTimeButton.Image = global::SchoolManagement.Properties.Resources.Tag32;
+            this.uiSelectClassTimeButton.Location = new System.Drawing.Point(232, 30);
+            this.uiSelectClassTimeButton.Name = "uiSelectClassTimeButton";
+            this.uiSelectClassTimeButton.Size = new System.Drawing.Size(40, 40);
+            this.uiSelectClassTimeButton.TabIndex = 2;
+            this.uiSelectClassTimeButton.UseVisualStyleBackColor = true;
+            this.uiSelectClassTimeButton.Click += new System.EventHandler(this.uiSelectClassTimeButton_Click);
             // 
             // ClassTimeTableAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 217);
+            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.uiGroupComboBox);
+            this.Controls.Add(this.uiClassRoomComboBox);
+            this.Controls.Add(this.uiTeacherComboBox);
+            this.Controls.Add(this.uiEducationalDisciplineСomboBox);
+            this.Controls.Add(this.uiClassTimeСomboBox);
             this.Controls.Add(this.uiDateDateTimePicker);
             this.Controls.Add(this.uiSelectGroupButton);
             this.Controls.Add(this.uiSelectClassRoomButton);
@@ -237,16 +254,11 @@
             this.Controls.Add(this.uiEducationalDisciplineButton);
             this.Controls.Add(this.uiSelectClassTimeButton);
             this.Controls.Add(this.uiClassTimeLabel);
-            this.Controls.Add(this.uiClassTimeTextBox);
             this.Controls.Add(this.uiDateLabel);
             this.Controls.Add(this.uiGroupLabel);
             this.Controls.Add(this.uiClassRoomLabel);
             this.Controls.Add(this.uiTeacherLabel);
             this.Controls.Add(this.uiEducationalDisciplineLabel);
-            this.Controls.Add(this.uiGroupTextBox);
-            this.Controls.Add(this.uiClassRoomTextBox);
-            this.Controls.Add(this.uiTeacherTextBox);
-            this.Controls.Add(this.uiEducationalDisciplineTextBox);
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNameTextBox);
@@ -264,22 +276,22 @@
         private System.Windows.Forms.Label uiNameLabel;
         private System.Windows.Forms.Button uiCommitButton;
         private System.Windows.Forms.Label uiEducationalDisciplineLabel;
-        private System.Windows.Forms.TextBox uiEducationalDisciplineTextBox;
         private System.Windows.Forms.Label uiDateLabel;
         private System.Windows.Forms.Label uiClassTimeLabel;
-        private System.Windows.Forms.TextBox uiClassTimeTextBox;
         private System.Windows.Forms.Button uiSelectClassTimeButton;
         private System.Windows.Forms.Button uiEducationalDisciplineButton;
         private System.Windows.Forms.DateTimePicker uiDateDateTimePicker;
-        private System.Windows.Forms.TextBox uiTeacherTextBox;
         private System.Windows.Forms.Label uiTeacherLabel;
         private System.Windows.Forms.Button uiSelectTeacherButton;
-        private System.Windows.Forms.TextBox uiClassRoomTextBox;
         private System.Windows.Forms.Label uiClassRoomLabel;
         private System.Windows.Forms.Button uiSelectClassRoomButton;
-        private System.Windows.Forms.TextBox uiGroupTextBox;
         private System.Windows.Forms.Label uiGroupLabel;
         private System.Windows.Forms.Button uiSelectGroupButton;
+        private System.Windows.Forms.ComboBox uiClassTimeСomboBox;
+        private System.Windows.Forms.ComboBox uiEducationalDisciplineСomboBox;
+        private System.Windows.Forms.ComboBox uiTeacherComboBox;
+        private System.Windows.Forms.ComboBox uiClassRoomComboBox;
+        private System.Windows.Forms.ComboBox uiGroupComboBox;
 
     }
 }

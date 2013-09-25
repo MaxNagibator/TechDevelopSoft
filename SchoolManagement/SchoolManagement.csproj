@@ -292,6 +292,30 @@
   <ItemGroup>
     <None Include="Resources\Digg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calender32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Digg32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tag32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users_Group32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
