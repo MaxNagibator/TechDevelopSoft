@@ -8,13 +8,20 @@ namespace SchoolManagement.GUI
 {
     public partial class ClassRoomsForm : Form
     {
+        public bool IsSelectedMode;
         public ClassRoom SelectedClassRoom { get; set; }
         private List<ClassRoom> _classRooms;
 
         public ClassRoomsForm()
         {
             InitializeComponent();
+            CheckSelectedButton();
             RefreshInfo();
+        }
+
+        private void CheckSelectedButton()
+        {
+            uiSelectClassRoomButton.Visible = IsSelectedMode;
         }
 
         private void RefreshInfo()

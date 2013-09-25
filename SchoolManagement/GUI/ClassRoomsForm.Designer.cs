@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassRoomsForm));
             this.uiAddButton = new System.Windows.Forms.Button();
             this.uiMainDataGridView = new System.Windows.Forms.DataGridView();
             this.uiDeleteButton = new System.Windows.Forms.Button();
@@ -50,19 +51,20 @@
             this.uiMainDataGridView.AllowUserToAddRows = false;
             this.uiMainDataGridView.AllowUserToDeleteRows = false;
             this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiMainDataGridView.Location = new System.Drawing.Point(12, 41);
+            this.uiMainDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.uiMainDataGridView.Location = new System.Drawing.Point(0, 41);
             this.uiMainDataGridView.MultiSelect = false;
             this.uiMainDataGridView.Name = "uiMainDataGridView";
             this.uiMainDataGridView.ReadOnly = true;
             this.uiMainDataGridView.RowHeadersVisible = false;
             this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiMainDataGridView.Size = new System.Drawing.Size(626, 209);
+            this.uiMainDataGridView.Size = new System.Drawing.Size(666, 239);
             this.uiMainDataGridView.TabIndex = 1;
             this.uiMainDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiMainDataGridView_CellDoubleClick);
             // 
             // uiDeleteButton
             // 
-            this.uiDeleteButton.Location = new System.Drawing.Point(563, 12);
+            this.uiDeleteButton.Location = new System.Drawing.Point(174, 12);
             this.uiDeleteButton.Name = "uiDeleteButton";
             this.uiDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.uiDeleteButton.TabIndex = 3;
@@ -74,7 +76,7 @@
             // 
             this.uiSelectClassRoomButton.Location = new System.Drawing.Point(93, 12);
             this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
-            this.uiSelectClassRoomButton.Size = new System.Drawing.Size(111, 23);
+            this.uiSelectClassRoomButton.Size = new System.Drawing.Size(75, 23);
             this.uiSelectClassRoomButton.TabIndex = 4;
             this.uiSelectClassRoomButton.Text = "Выбрать";
             this.uiSelectClassRoomButton.UseVisualStyleBackColor = true;
@@ -84,11 +86,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 262);
+            this.ClientSize = new System.Drawing.Size(666, 280);
             this.Controls.Add(this.uiSelectClassRoomButton);
             this.Controls.Add(this.uiDeleteButton);
             this.Controls.Add(this.uiMainDataGridView);
             this.Controls.Add(this.uiAddButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassRoomsForm";
             this.Text = "Кабинетики";
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();

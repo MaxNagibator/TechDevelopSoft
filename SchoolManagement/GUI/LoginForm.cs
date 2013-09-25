@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SchoolManagement.GUI
@@ -23,7 +24,10 @@ namespace SchoolManagement.GUI
                 {
                     Globals.IsRootMode = true;
                     Hide();
+                    f.StartPosition = FormStartPosition.Manual;
+                    f.Location = new Point(Location.X, Location.Y);
                     f.ShowDialog();
+                    Location = new Point(f.Location.X, f.Location.Y);
                     uiPasswordTextBox.Text = "";
                     Show();
                 }
@@ -39,8 +43,11 @@ namespace SchoolManagement.GUI
             using(var f = new ClassTimeTablesForm())
             {
                 Globals.IsRootMode = false;
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 Hide();
                 f.ShowDialog();
+                Location = new Point(f.Location.X, f.Location.Y);
                 Show();
             }
         }
