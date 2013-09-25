@@ -72,6 +72,8 @@ namespace SchoolManagement.GUI
             uiMainDataGridView.DataSource = elementsByDateAndGroup;
             var dataGridViewColumn2 = uiMainDataGridView.Columns["ClassTime"];
             if (dataGridViewColumn2 != null) dataGridViewColumn2.DisplayIndex = 0;
+
+            Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainPanel);
             uiMainDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
@@ -117,6 +119,13 @@ namespace SchoolManagement.GUI
                 var a = uiMainDataGridView.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true).Location;
                 uiMenuContextMenuStrip.Show(uiMainDataGridView, a.X + e.X, a.Y + e.Y);
             }
+        }
+
+        private void uiMenuContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
+            uiDeleteToolStripMenuItem.Enabled = classTimeTableDayElem.Text != "-";
+            uiAddToolStripMenuItem.Text = classTimeTableDayElem.Text == "-" ? "добавить" : "редактировать";
         }
     }
 }

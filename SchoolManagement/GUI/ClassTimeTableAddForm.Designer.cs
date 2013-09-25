@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassTimeTableAddForm));
             this.uiNameTextBox = new System.Windows.Forms.TextBox();
             this.uiNameLabel = new System.Windows.Forms.Label();
             this.uiCommitButton = new System.Windows.Forms.Button();
@@ -249,6 +250,7 @@
             this.Controls.Add(this.uiCommitButton);
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNameTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassTimeTableAddForm";
             this.Text = "добавление времени урока";
             this.ResumeLayout(false);

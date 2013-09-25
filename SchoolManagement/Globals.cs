@@ -16,7 +16,7 @@ namespace SchoolManagement
         }
 
 
-        public static void SetColumnWidthAndFormHeight(Form form, DataGridView uiMainDataGridView, ToolStrip uiMainToolStrip)
+        public static void SetColumnWidthAndFormHeight(Form form, DataGridView uiMainDataGridView, Control uiMainToolStrip)
         {
             for (int i = 1; i < uiMainDataGridView.ColumnCount; i++)
             {
