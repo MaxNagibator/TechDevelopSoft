@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassTimeTablesForm));
             this.uiMainDataGridView = new System.Windows.Forms.DataGridView();
             this.uiMenuContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -47,13 +48,23 @@
             // 
             this.uiMainDataGridView.AllowUserToAddRows = false;
             this.uiMainDataGridView.AllowUserToDeleteRows = false;
+            this.uiMainDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uiMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiMainDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.uiMainDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiMainDataGridView.Location = new System.Drawing.Point(0, 42);
             this.uiMainDataGridView.MultiSelect = false;
             this.uiMainDataGridView.Name = "uiMainDataGridView";
             this.uiMainDataGridView.ReadOnly = true;
             this.uiMainDataGridView.RowHeadersVisible = false;
+            this.uiMainDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.uiMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.uiMainDataGridView.Size = new System.Drawing.Size(983, 220);
             this.uiMainDataGridView.TabIndex = 1;

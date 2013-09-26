@@ -5,10 +5,10 @@ namespace SchoolManagement.School
     public class ClassRoom : Entity
     {
         public int Id { get; set; }
-        [DisplayName("Название")]
-        public string Name { get; set; }
         [DisplayName("Номер")]
         public string Number { get; set; }
+        [DisplayName("Название")]
+        public string Name { get; set; }
 
         public ClassRoom(string name, string number)
         {

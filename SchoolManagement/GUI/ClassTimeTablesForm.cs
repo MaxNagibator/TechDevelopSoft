@@ -41,6 +41,9 @@ namespace SchoolManagement.GUI
                                                                Day7 = day7[i],
                                                            }).ToList();
             RefreshClassTimeTableElemInfo(elements);
+
+            Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainPanel);
+            //uiMainDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private List<ClassTimeTableDayElem> GetElementsByDateAndGroup(DateTime date, IEnumerable<ClassTime> classTimes)
@@ -50,8 +53,8 @@ namespace SchoolManagement.GUI
             var classTimeTablesForDateAndGroup = classTimeTables.Where(c => c.Date.Date == date && c.Group.Id == group.Id);
             var elementsByDateAndGroup = (from c in classTimeTablesForDateAndGroup
                                           select new ClassTimeTableDayElem(
-                                              "d: " + c.EducationalDiscipline.Name + " k: " + c.ClassRoom.Number +
-                                              " p: " + c.Teacher.Name, c)).ToList();
+                                              c.EducationalDiscipline.Name + Environment.NewLine + c.ClassRoom.Number
+                                              + Environment.NewLine + c.Teacher.Name, c)).ToList();
             return GetVoidClassTimeTables(elementsByDateAndGroup, classTimes, date, group);
         }
 
@@ -72,9 +75,6 @@ namespace SchoolManagement.GUI
             uiMainDataGridView.DataSource = elementsByDateAndGroup;
             var dataGridViewColumn2 = uiMainDataGridView.Columns["ClassTime"];
             if (dataGridViewColumn2 != null) dataGridViewColumn2.DisplayIndex = 0;
-
-            Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainPanel);
-            uiMainDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private void uiDateViewDateTimePicker_ValueChanged(object sender, EventArgs e)

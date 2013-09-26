@@ -45,37 +45,80 @@ namespace SchoolManagement.GUI
 
         private void RefreshTeachers()
         {
-            uiTeacherComboBox.DataSource = DatabaseManager.GetTeachers(); 
-            uiTeacherComboBox.SelectedIndex = uiTeacherComboBox.FindStringExact(_classTimeTable.Teacher.ToString());
+            uiTeacherComboBox.DataSource = DatabaseManager.GetTeachers();
+            if (_classTimeTable.Teacher != null)
+            {
+                uiTeacherComboBox.SelectedIndex = uiTeacherComboBox.FindStringExact(_classTimeTable.Teacher.ToString());
+            }
+            else
+            {
+                uiTeacherComboBox.SelectedIndex = -1;
+            }
         }
 
         private void RefreshEducationalDisciplines()
         {
             uiEducationalDisciplineСomboBox.DataSource = DatabaseManager.GetEducationalDisciplines();
-            uiEducationalDisciplineСomboBox.SelectedIndex =
-                  uiEducationalDisciplineСomboBox.FindStringExact(_classTimeTable.EducationalDiscipline.ToString());
+            if (_classTimeTable.EducationalDiscipline != null)
+            {
+                uiEducationalDisciplineСomboBox.SelectedIndex =
+                      uiEducationalDisciplineСomboBox.FindStringExact(_classTimeTable.EducationalDiscipline.ToString());
+            }
+            else
+            {
+                uiEducationalDisciplineСomboBox.SelectedIndex = -1;
+            }
         }
 
         private void RefreshGroups()
         {
-            uiGroupComboBox.DataSource = DatabaseManager.GetGroups();
-            uiGroupComboBox.SelectedIndex = uiGroupComboBox.FindStringExact(_classTimeTable.Group.ToString());
+            uiGroupComboBox.DataSource = DatabaseManager.GetGroups(); 
+            if (_classTimeTable.Group != null)
+            {
+                uiGroupComboBox.SelectedIndex = uiGroupComboBox.FindStringExact(_classTimeTable.Group.ToString());
+            }
+            else
+            {
+                uiGroupComboBox.SelectedIndex = -1;
+            }
         }
 
         private void RefreshClassRooms()
         {
             uiClassRoomComboBox.DataSource = DatabaseManager.GetClassRooms();
-            uiClassRoomComboBox.SelectedIndex = uiClassRoomComboBox.FindStringExact(_classTimeTable.ClassRoom.ToString());
+            if (_classTimeTable.ClassRoom != null)
+            {
+                uiClassRoomComboBox.SelectedIndex =
+                    uiClassRoomComboBox.FindStringExact(_classTimeTable.ClassRoom.ToString());
+            }
+            else
+            {
+                uiClassRoomComboBox.SelectedIndex = -1;
+            }
         }
 
         private void RefreshClassTimes()
         {
             uiClassTimeСomboBox.DataSource = DatabaseManager.GetClassTimes();
-            uiClassTimeСomboBox.SelectedIndex = uiClassTimeСomboBox.FindStringExact(_classTimeTable.ClassTime.ToString());
+            if (_classTimeTable.ClassTime != null)
+            {
+                uiClassTimeСomboBox.SelectedIndex =
+                    uiClassTimeСomboBox.FindStringExact(_classTimeTable.ClassTime.ToString());
+            }
+            else
+            {
+                uiClassTimeСomboBox.SelectedIndex = -1;
+            }
         }
 
         private void uiCommintButton_Click(object sender, EventArgs e)
         {
+            _classTimeTable.Date = uiDateDateTimePicker.Value;
+            _classTimeTable.ClassTime = (ClassTime)uiClassTimeСomboBox.SelectedItem;
+            _classTimeTable.ClassRoom = (ClassRoom)uiClassRoomComboBox.SelectedItem;
+            _classTimeTable.EducationalDiscipline = (EducationalDiscipline)uiEducationalDisciplineСomboBox.SelectedItem;
+            _classTimeTable.Group = (Group)uiGroupComboBox.SelectedItem;
+            _classTimeTable.Teacher = (Teacher)uiTeacherComboBox.SelectedItem;
             var classTimeTable = _classTimeTable;
             classTimeTable.AddToDatabase();
             DialogResult = DialogResult.OK;
@@ -99,13 +142,15 @@ namespace SchoolManagement.GUI
         private void SetClassTime(ClassTime selectedClassTime)
         {
             _classTimeTable.ClassTime = selectedClassTime;
-            RefreshDataComboBoxs();
+            RefreshClassTimes();
         }
 
         private void uiSelectEducationalDisciplineButton_Click(object sender, EventArgs e)
         {
             using (var f = new EducationalDisciplinesForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.IsSelectedMode = true;
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -117,13 +162,15 @@ namespace SchoolManagement.GUI
         private void SetEducationalDiscipline(EducationalDiscipline selectedEducationalDiscipline)
         {
             _classTimeTable.EducationalDiscipline = selectedEducationalDiscipline;
-           // uiEducationalDisciplineTextBox.Text = _classTimeTable.EducationalDiscipline.ToString();
+           RefreshEducationalDisciplines();
         }
 
         private void uiSelectTeacherButton_Click(object sender, EventArgs e)
         {
             using (var f = new TeachersForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.IsSelectedMode = true;
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -135,13 +182,15 @@ namespace SchoolManagement.GUI
         private void SetTeacher(Teacher selectedTeacher)
         {
             _classTimeTable.Teacher = selectedTeacher;
-            //uiTeacherTextBox.Text = _classTimeTable.Teacher.ToString();
+            RefreshTeachers();
         }
 
         private void uiSelectClassRoomButton_Click(object sender, EventArgs e)
         {
             using (var f = new ClassRoomsForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.IsSelectedMode = true;
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -153,13 +202,15 @@ namespace SchoolManagement.GUI
         private void SetClassRoom(ClassRoom selectedClassRoom)
         {
             _classTimeTable.ClassRoom = selectedClassRoom;
-            //uiClassRoomTextBox.Text = _classTimeTable.ClassRoom.ToString();
+            RefreshClassRooms();
         }
 
         private void uiSelectGroupButton_Click(object sender, EventArgs e)
         {
             using (var f = new GroupsForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.IsSelectedMode = true;
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -171,18 +222,7 @@ namespace SchoolManagement.GUI
         private void SetGroup(Group selectedGroup)
         {
             _classTimeTable.Group = selectedGroup;
-            //uiGroupTextBox.Text = _classTimeTable.Group.ToString();
-        }
-
-        private void uiDateDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            _classTimeTable.Date = uiDateDateTimePicker.Value;
-        }
-
-        private void SetDate(DateTime date)
-        {
-            _classTimeTable.Date = date;
-            uiDateDateTimePicker.Value = _classTimeTable.Date;
+            RefreshGroups();
         }
     }
 }

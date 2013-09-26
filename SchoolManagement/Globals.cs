@@ -18,15 +18,21 @@ namespace SchoolManagement
 
         public static void SetColumnWidthAndFormHeight(Form form, DataGridView uiMainDataGridView, Control uiMainToolStrip)
         {
-            for (int i = 1; i < uiMainDataGridView.ColumnCount; i++)
+            uiMainDataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            uiMainDataGridView.BackgroundColor = Color.White;
+            for (int i = 0; i < uiMainDataGridView.ColumnCount; i++)
             {
                 uiMainDataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             Rectangle screenRectangle = form.RectangleToScreen(form.ClientRectangle);
-            int titleHeight = screenRectangle.Top - form.Top + 10;
+            var bonus = 0;
+            if (form.Text == "Расписание уроков")
+            {
+                bonus = 100;
+            }
+            int titleHeight = screenRectangle.Top - form.Top + bonus;
             var height = (uiMainToolStrip.Height + uiMainDataGridView.Rows.GetRowsHeight(DataGridViewElementStates.None) +
                           uiMainDataGridView.ColumnHeadersHeight + titleHeight);
-            //form.MaximumSize = new Size(99999,height);
             form.Height = height > 1024 ? 1024 : height;
         }
     }

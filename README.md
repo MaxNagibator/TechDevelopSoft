@@ -1,4 +1,4 @@
 TechDevelopSoft
 ===============
 
-kursach
+kursach: Scholl rasp
