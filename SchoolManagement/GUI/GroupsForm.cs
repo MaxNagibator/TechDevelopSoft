@@ -22,6 +22,7 @@ namespace SchoolManagement.GUI
         private void GroupsForm_Load(object sender, EventArgs e)
         {
             CheckSelectedButton();
+            RefreshInfo();
         }
 
         private void CheckSelectedButton()

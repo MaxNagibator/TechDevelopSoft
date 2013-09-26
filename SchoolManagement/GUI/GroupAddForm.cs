@@ -14,6 +14,8 @@ namespace SchoolManagement.GUI
             _id = id;
             if (id != -1)
             {
+                Text = "Редактирование класса";
+                uiCommitButton.Text = "Изменить";
                 var info = DatabaseManager.GetGroups();
                 uiNameTextBox.Text = info.First(i => i.Id == id).Name;
                 uiCommentTextBox.Text = info.First(i => i.Id == id).Comment;

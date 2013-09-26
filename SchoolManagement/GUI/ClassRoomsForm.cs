@@ -27,6 +27,7 @@ namespace SchoolManagement.GUI
         private void ClassRoomsForm_Load(object sender, EventArgs e)
         {
             CheckSelectedButton();
+            RefreshInfo();
         }
 
         private void RefreshInfo()

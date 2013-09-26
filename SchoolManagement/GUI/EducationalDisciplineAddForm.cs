@@ -14,6 +14,8 @@ namespace SchoolManagement.GUI
             _id = id;
             if (id != -1)
             {
+                Text = "Редактирование дисциплины";
+                uiCommitButton.Text = "Изменить";
                 var info = DatabaseManager.GetEducationalDisciplines();
                 uiNameTextBox.Text = info.First(i => i.Id == id).Name;
                 uiDescriptionTextBox.Text = info.First(i => i.Id == id).Description;

@@ -23,6 +23,7 @@ namespace SchoolManagement.GUI
         private void TeachersForm_Load(object sender, EventArgs e)
         {
             CheckSelectedButton();
+            RefreshInfo();
         }
 
         private void CheckSelectedButton()

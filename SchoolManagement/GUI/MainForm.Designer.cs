@@ -107,9 +107,10 @@
             this.uiClassTimeToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.uiClassTimeToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiClassTimeToolStripButton.Name = "uiClassTimeToolStripButton";
-            this.uiClassTimeToolStripButton.Size = new System.Drawing.Size(88, 83);
-            this.uiClassTimeToolStripButton.Text = "Время уроков";
+            this.uiClassTimeToolStripButton.Size = new System.Drawing.Size(87, 83);
+            this.uiClassTimeToolStripButton.Text = "время уроков";
             this.uiClassTimeToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.uiClassTimeToolStripButton.ToolTipText = "время уроков";
             this.uiClassTimeToolStripButton.Click += new System.EventHandler(this.uiClassTimeToolStripButton_Click);
             // 
             // uiClassTimeTableToolStripButton
@@ -119,8 +120,9 @@
             this.uiClassTimeTableToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiClassTimeTableToolStripButton.Name = "uiClassTimeTableToolStripButton";
             this.uiClassTimeTableToolStripButton.Size = new System.Drawing.Size(118, 83);
-            this.uiClassTimeTableToolStripButton.Text = "Расписание уроков";
+            this.uiClassTimeTableToolStripButton.Text = "расписание уроков";
             this.uiClassTimeTableToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.uiClassTimeTableToolStripButton.ToolTipText = "расписание уроков";
             this.uiClassTimeTableToolStripButton.Click += new System.EventHandler(this.uiClassTimeTableToolStripButton_Click);
             // 
             // MainForm

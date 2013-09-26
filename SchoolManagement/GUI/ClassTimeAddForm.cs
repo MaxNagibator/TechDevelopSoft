@@ -14,6 +14,8 @@ namespace SchoolManagement.GUI
             _id = id;
             if (id != -1)
             {
+                Text = "Редактирование времени урока";
+                uiCommitButton.Text = "Изменить";
                 var info = DatabaseManager.GetClassTimes();
                 uiStartTimeTextBox.Text= info.First(i => i.Id == id).StartTime;
                 uiEndTimeTextBox.Text = info.First(i => i.Id == id).EndTime;

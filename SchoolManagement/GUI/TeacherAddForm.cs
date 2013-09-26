@@ -14,6 +14,8 @@ namespace SchoolManagement.GUI
             _id = id;
             if (id != -1)
             {
+                Text = "Редактирование учителя";
+                uiCommitButton.Text = "Изменить";
                 var info = DatabaseManager.GetTeachers();
                 uiNameTextBox.Text = info.First(i => i.Id == id).Name;
                 uiBirthDayDateTimePicker.Value = info.First(i => i.Id == id).BirthDay;

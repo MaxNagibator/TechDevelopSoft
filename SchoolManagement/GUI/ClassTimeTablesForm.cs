@@ -11,7 +11,9 @@ namespace SchoolManagement.GUI
         public ClassTimeTablesForm()
         {
             InitializeComponent();
-            uiGroupComboBox.DataSource = DatabaseManager.GetGroups();
+            var gr = DatabaseManager.GetGroups();
+            gr.Add(new Group("Все группы", "606217"));
+            uiGroupComboBox.DataSource = gr;
             RefreshInfo();
         }
 
