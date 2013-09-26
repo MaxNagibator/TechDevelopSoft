@@ -9,7 +9,7 @@ namespace SchoolManagement.GUI
         public LoginForm()
         {
             InitializeComponent();
-            ForDevelop();
+            //ForDevelop();
         }
 
         private void ForDevelop()

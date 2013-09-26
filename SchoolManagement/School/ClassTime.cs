@@ -27,6 +27,10 @@ namespace SchoolManagement.School
 
         public override string ToString()
         {
+            if (Number == -606217)
+            {
+                return "Группа: " + StartTime;
+            }
             return Number + ": " + StartTime + "-" + EndTime;
         }
 

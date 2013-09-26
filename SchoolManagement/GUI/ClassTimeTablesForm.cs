@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
@@ -24,33 +25,58 @@ namespace SchoolManagement.GUI
             var dayOfWeek = (int) date.DayOfWeek;
             uiDatePeriodLabel.Text = date.Date.AddDays(1 - dayOfWeek).ToShortDateString() + " - " +
                                      date.Date.AddDays(7 - dayOfWeek).ToShortDateString();
-            var day1 = GetElementsByDateAndGroup(date.Date.AddDays(1 - dayOfWeek), classTimes);
-            var day2 = GetElementsByDateAndGroup(date.Date.AddDays(2 - dayOfWeek), classTimes);
-            var day3 = GetElementsByDateAndGroup(date.Date.AddDays(3 - dayOfWeek), classTimes);
-            var day4 = GetElementsByDateAndGroup(date.Date.AddDays(4 - dayOfWeek), classTimes);
-            var day5 = GetElementsByDateAndGroup(date.Date.AddDays(5 - dayOfWeek), classTimes);
-            var day6 = GetElementsByDateAndGroup(date.Date.AddDays(6 - dayOfWeek), classTimes);
-            var day7 = GetElementsByDateAndGroup(date.Date.AddDays(7 - dayOfWeek), classTimes);
-            var elements = classTimes.Select((c, i) => new ClassTimeTableWeekElem
-                                                           {
-                                                               ClassTime = c,
-                                                               Day1 = day1[i],
-                                                               Day2 = day2[i],
-                                                               Day3 = day3[i],
-                                                               Day4 = day4[i],
-                                                               Day5 = day5[i],
-                                                               Day6 = day6[i],
-                                                               Day7 = day7[i],
-                                                           }).ToList();
-            RefreshClassTimeTableElemInfo(elements);
+            var group = (Group)uiGroupComboBox.SelectedItem;
+            if (group.Comment == "606217")
+            {
+                var list = new List<ClassTimeTableWeekElem>();
+                foreach (Group g in uiGroupComboBox.Items)
+                {
+                    var elements = GeteWeekElemByDateAndGroup(date, dayOfWeek, classTimes, g, true);
+                    list.AddRange(elements);
+                }
+                RefreshClassTimeTableElemInfo(list);
+            }
+            else
+            {
+                var elements = GeteWeekElemByDateAndGroup(date,dayOfWeek, classTimes,group, false);
+                RefreshClassTimeTableElemInfo(elements);
+            }
 
             Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainPanel);
         }
 
-        private List<ClassTimeTableDayElem> GetElementsByDateAndGroup(DateTime date, IEnumerable<ClassTime> classTimes)
+        private List<ClassTimeTableWeekElem> GeteWeekElemByDateAndGroup(DateTime date, int dayOfWeek, List<ClassTime> baseClassTimes, Group @group, bool isNeedGroupNameRow)
+        {
+            var classTimes = baseClassTimes.ToList();
+            if(isNeedGroupNameRow)
+            {
+            classTimes.Insert(0, new ClassTime(-606217,group.Name,""));
+            }
+            var day1 = GetElementsByDateAndGroup(date.Date.AddDays(1 - dayOfWeek), classTimes, group);
+            var day2 = GetElementsByDateAndGroup(date.Date.AddDays(2 - dayOfWeek), classTimes, group);
+            var day3 = GetElementsByDateAndGroup(date.Date.AddDays(3 - dayOfWeek), classTimes, group);
+            var day4 = GetElementsByDateAndGroup(date.Date.AddDays(4 - dayOfWeek), classTimes, group);
+            var day5 = GetElementsByDateAndGroup(date.Date.AddDays(5 - dayOfWeek), classTimes, group);
+            var day6 = GetElementsByDateAndGroup(date.Date.AddDays(6 - dayOfWeek), classTimes, group);
+            var day7 = GetElementsByDateAndGroup(date.Date.AddDays(7 - dayOfWeek), classTimes, group);
+            var elements = classTimes.Select((c, i) => new ClassTimeTableWeekElem
+            {
+                ClassTime = c,
+                Day1 = day1[i],
+                Day2 = day2[i],
+                Day3 = day3[i],
+                Day4 = day4[i],
+                Day5 = day5[i],
+                Day6 = day6[i],
+                Day7 = day7[i],
+            }).ToList();
+            return elements;
+        }
+
+        private List<ClassTimeTableDayElem> GetElementsByDateAndGroup(DateTime date, IEnumerable<ClassTime> classTimes, Group group)
         {
             var classTimeTables = DatabaseManager.GetClassTimeTables();
-            var group = (Group) uiGroupComboBox.SelectedItem;
+
             var classTimeTablesForDateAndGroup =
                 classTimeTables.Where(c => c.Date.Date == date && c.Group.Id == group.Id);
             var elementsByDateAndGroup = (from c in classTimeTablesForDateAndGroup
@@ -69,7 +95,7 @@ namespace SchoolManagement.GUI
                                   (classTimeTableDayElems.Any(
                                       c => c.ClassTimeTable.ClassTime.Id == classTime.Id)
                                        ? classTimeTableDayElems.First(c => c.ClassTimeTable.ClassTime.Id == classTime.Id)
-                                       : new ClassTimeTableDayElem("-", new ClassTimeTable(group, date, classTime))
+                                       : new ClassTimeTableDayElem(" ", new ClassTimeTable(group, date, classTime))
                                   )).ToList();
         }
 
@@ -78,6 +104,18 @@ namespace SchoolManagement.GUI
             uiMainDataGridView.DataSource = elementsByDateAndGroup;
             var dataGridViewColumn2 = uiMainDataGridView.Columns["ClassTime"];
             if (dataGridViewColumn2 != null) dataGridViewColumn2.DisplayIndex = 0;
+            SetColorFormGroupName();
+        }
+
+        private void SetColorFormGroupName()
+        {
+            foreach (DataGridViewRow dataGridViewRow in uiMainDataGridView.Rows)
+            {
+                if (((ClassTimeTableDayElem)(dataGridViewRow.Cells[0].Value)).ClassTimeTable.ClassTime.Number == -606217)
+                {
+                    dataGridViewRow.DefaultCellStyle.BackColor = Color.Gray;
+                }
+            }
         }
 
         private void uiDateViewDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -133,8 +171,8 @@ namespace SchoolManagement.GUI
         private void uiMenuContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
-            uiDeleteToolStripMenuItem.Enabled = classTimeTableDayElem.Text != "-";
-            uiAddToolStripMenuItem.Text = classTimeTableDayElem.Text == "-" ? "добавить" : "редактировать";
+            uiDeleteToolStripMenuItem.Enabled = classTimeTableDayElem.Text != " ";
+            uiAddToolStripMenuItem.Text = classTimeTableDayElem.Text == " " ? "добавить" : "редактировать";
         }
 
         private void ClassTimeTablesForm_Load(object sender, EventArgs e)
@@ -171,7 +209,7 @@ namespace SchoolManagement.GUI
                     && uiMainDataGridView.Columns[uiMainDataGridView.SelectedCells[0].ColumnIndex].DisplayIndex > 0)
                 {
                     var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
-                    if(classTimeTableDayElem.Text != "-")
+                    if(classTimeTableDayElem.Text != " ")
                     {
                         Delete();
                     }
