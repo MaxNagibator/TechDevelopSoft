@@ -19,7 +19,6 @@ namespace SchoolManagement.GUI
         {
             InitializeComponent();
             _classTimeTable = classTimeTable;
-            LoadInfo();
         }
 
         private void ClassTimeTableAddForm_Load(object sender, EventArgs e)
@@ -35,12 +34,11 @@ namespace SchoolManagement.GUI
 
         private void LoadDataComboBoxs()
         {
-            uiClassTimeСomboBox.Items.AddRange(DatabaseManager.GetClassTimes().ToArray());
-            uiEducationalDisciplineСomboBox.Items.AddRange(DatabaseManager.GetEducationalDisciplines().ToArray());
-            uiClassRoomComboBox.Items.AddRange( DatabaseManager.GetClassRooms().ToArray());
-            uiGroupComboBox.Items.AddRange( DatabaseManager.GetGroups().ToArray());
-            uiTeacherComboBox.Items.AddRange(DatabaseManager.GetTeachers().ToArray());
-
+            uiClassTimeСomboBox.DataSource = DatabaseManager.GetClassTimes();
+            uiEducationalDisciplineСomboBox.DataSource = DatabaseManager.GetEducationalDisciplines();
+            uiClassRoomComboBox.DataSource = DatabaseManager.GetClassRooms();
+            uiGroupComboBox.DataSource = DatabaseManager.GetGroups();
+            uiTeacherComboBox.DataSource = DatabaseManager.GetTeachers();
             
             uiDateDateTimePicker.Value = _classTimeTable.Date;
             uiClassTimeСomboBox.SelectedIndex = uiClassTimeСomboBox.FindStringExact(_classTimeTable.ClassTime.ToString());
@@ -48,13 +46,6 @@ namespace SchoolManagement.GUI
             uiEducationalDisciplineСomboBox.SelectedIndex = uiEducationalDisciplineСomboBox.FindStringExact(_classTimeTable.EducationalDiscipline.ToString());
             uiTeacherComboBox.SelectedIndex = uiTeacherComboBox.FindStringExact(_classTimeTable.Teacher.ToString());
             uiClassRoomComboBox.SelectedIndex = uiClassRoomComboBox.FindStringExact(_classTimeTable.ClassRoom.ToString());
-        }
-
-        private void LoadInfo()
-        {
-            SetGroup(_classTimeTable.Group);
-            SetDate(_classTimeTable.Date);
-            SetClassTime(_classTimeTable.ClassTime);
         }
 
         private void uiCommintButton_Click(object sender, EventArgs e)
