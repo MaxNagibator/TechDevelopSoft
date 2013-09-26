@@ -38,17 +38,22 @@ namespace SchoolManagement.GUI
 
         private void Commit()
         {
-            int number = -217;
+            int number = -606217;
             try
             {
                 number = Convert.ToInt32(uiNumberTextBox.Text);
+                if (number == -606217)
+                {
+                    MessageBox.Show("Данный номер зарезервирован системой :(", "Извините");
+                    return;
+                }
             }
             catch
             {
                 MessageBox.Show("Заполните пожалуйста номер урока числовым значением!", "Так не камильфо");
             }
 
-            if (number != -217)
+            if (number != -606217)
             {
                 try
                 {

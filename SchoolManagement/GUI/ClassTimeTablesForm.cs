@@ -31,8 +31,11 @@ namespace SchoolManagement.GUI
                 var list = new List<ClassTimeTableWeekElem>();
                 foreach (Group g in uiGroupComboBox.Items)
                 {
-                    var elements = GeteWeekElemByDateAndGroup(date, dayOfWeek, classTimes, g, true);
-                    list.AddRange(elements);
+                    if (g.Name != "Все группы")
+                    {
+                        var elements = GeteWeekElemByDateAndGroup(date, dayOfWeek, classTimes, g, true);
+                        list.AddRange(elements);
+                    }
                 }
                 RefreshClassTimeTableElemInfo(list);
             }

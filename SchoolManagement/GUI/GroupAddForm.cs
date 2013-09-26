@@ -42,6 +42,11 @@ namespace SchoolManagement.GUI
                 MessageBox.Show("Заполните пожалуйста название класса!", "Так не камильфо");
                 return;
             }
+            if (uiNameTextBox.Text == "Все группы")
+            {                
+                MessageBox.Show("Данное название зарезервировано системой :(", "Извините");
+                return;
+            }
             var group = new Group(uiNameTextBox.Text, uiCommentTextBox.Text);
             if (_id == -1)
             {

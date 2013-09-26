@@ -118,7 +118,7 @@
             this.Controls.Add(this.uiNameLabel);
             this.Controls.Add(this.uiNameTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1024, 150);
+            this.MaximumSize = new System.Drawing.Size(99999, 150);
             this.MinimumSize = new System.Drawing.Size(300, 150);
             this.Name = "TeacherAddForm";
             this.Text = "добавление учителя";
