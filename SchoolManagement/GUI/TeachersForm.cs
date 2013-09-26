@@ -43,6 +43,7 @@ namespace SchoolManagement.GUI
         {
             if (!IsSelectedMode)
             {
+                Edit();
                 return;
             }
             if (uiMainDataGridView.SelectedRows.Count <= 0) return;
@@ -61,7 +62,13 @@ namespace SchoolManagement.GUI
 
         private void uiAddToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new TeacherAddForm())
+            ShowForm(false);
+        }
+
+        private void ShowForm(bool isEditMode)
+        {
+            int id = isEditMode ? (int)(uiMainDataGridView.SelectedRows[0].Cells["Id"].Value) : -1;
+            using (var f = new TeacherAddForm(id))
             {
                 f.StartPosition = FormStartPosition.Manual;
                 f.Location = new Point(Location.X, Location.Y);
@@ -106,6 +113,19 @@ namespace SchoolManagement.GUI
         private void uiDeleteToolStripButton_Click(object sender, EventArgs e)
         {
             Delete();
+        }
+
+        private void uiEditToolStripButton_Click(object sender, EventArgs e)
+        {
+            Edit();
+        }
+
+        private void Edit()
+        {
+            if (uiMainDataGridView.SelectedRows.Count > 0)
+            {
+                ShowForm(true);
+            }
         }
     }
 }

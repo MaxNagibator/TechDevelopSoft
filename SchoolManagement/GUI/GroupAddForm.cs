@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
 
@@ -6,9 +7,17 @@ namespace SchoolManagement.GUI
 {
     public partial class GroupAddForm : Form
     {
-        public GroupAddForm()
+        private int _id;
+        public GroupAddForm(int id)
         {
             InitializeComponent();
+            _id = id;
+            if (id != -1)
+            {
+                var info = DatabaseManager.GetGroups();
+                uiNameTextBox.Text = info.First(i => i.Id == id).Name;
+                uiCommentTextBox.Text = info.First(i => i.Id == id).Comment;
+            }
         }
 
         private void uiCommitButton_Click(object sender, EventArgs e)
@@ -32,7 +41,14 @@ namespace SchoolManagement.GUI
                 return;
             }
             var group = new Group(uiNameTextBox.Text, uiCommentTextBox.Text);
-            group.AddToDatabase();
+            if (_id == -1)
+            {
+                group.AddToDatabase();
+            }
+            else
+            {
+                group.UpdateInDatabase(_id);
+            }
             DialogResult = DialogResult.OK;
             Close();
         }

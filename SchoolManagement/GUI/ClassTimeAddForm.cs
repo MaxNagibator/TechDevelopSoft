@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
 
@@ -6,9 +7,18 @@ namespace SchoolManagement.GUI
 {
     public partial class ClassTimeAddForm : Form
     {
-        public ClassTimeAddForm()
+        private int _id;
+        public ClassTimeAddForm(int id)
         {
             InitializeComponent();
+            _id = id;
+            if (id != -1)
+            {
+                var info = DatabaseManager.GetClassTimes();
+                uiStartTimeTextBox.Text= info.First(i => i.Id == id).StartTime;
+                uiEndTimeTextBox.Text = info.First(i => i.Id == id).EndTime;
+                uiNumberTextBox.Text = info.First(i => i.Id == id).Number.ToString();
+            }
         }
 
         private void uiCommitButton_Click(object sender, EventArgs e)
@@ -40,8 +50,15 @@ namespace SchoolManagement.GUI
             {
                 try
                 {
-                    var group = new ClassTime(number, uiStartTimeTextBox.Text, uiEndTimeTextBox.Text);
-                    group.AddToDatabase();
+                    var classTime = new ClassTime(number, uiStartTimeTextBox.Text, uiEndTimeTextBox.Text); 
+                    if (_id == -1)
+                    {
+                        classTime.AddToDatabase();
+                    }
+                    else
+                    {
+                        classTime.UpdateInDatabase(_id);
+                    }
                     DialogResult = DialogResult.OK;
                     Close();
                 }

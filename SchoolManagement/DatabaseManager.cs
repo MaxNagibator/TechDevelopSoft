@@ -49,7 +49,7 @@ namespace SchoolManagement
                 sqlProvider.SetParameter("@Comment", comment);
                 sqlProvider.SetParameter("@Id", id);
                 sqlProvider.ExecuteQuery(@"
-                    UPDATE[ClassRoom] 
+                    UPDATE [Group] 
                     SET Name = @Name, Comment = @Comment
                     WHERE Id = @Id");
             }
@@ -162,7 +162,7 @@ namespace SchoolManagement
                 sqlProvider.SetParameter("@Number", number);
                 sqlProvider.SetParameter("@Id", id);
                 sqlProvider.ExecuteQuery(@"
-                    UPDATE[ClassRoom] 
+                    UPDATE [ClassTime] 
                     SET Name = @Name, StartTime = @StartTime, EndTIme = @EndTIme, Number = @Number
                     WHERE Id = @Id");
             }
@@ -282,7 +282,7 @@ namespace SchoolManagement
                 sqlProvider.SetParameter("@GroupId", groupId);
                 sqlProvider.SetParameter("@Id", id);
                 sqlProvider.ExecuteQuery(@"
-                    UPDATE[ClassRoom] 
+                    UPDATE [ClassTimeTable] 
                     SET Name = @Name
                         ,ClassTimeId = @ClassTimeId
                         ,EducationalDisciplineId = @EducationalDisciplineId
@@ -351,7 +351,7 @@ namespace SchoolManagement
                 sqlProvider.SetParameter("@Description", description);
                 sqlProvider.SetParameter("@Id", id);
                 sqlProvider.ExecuteQuery(@"
-                    UPDATE[ClassRoom] 
+                    UPDATE [EducationalDiscipline]
                     SET Name = @Name, Description = @Description
                     WHERE Id = @Id");
             }
@@ -407,7 +407,7 @@ namespace SchoolManagement
                 sqlProvider.SetParameter("@StartWorkDate", startWorkDate);
                 sqlProvider.SetParameter("@Id", id);
                 sqlProvider.ExecuteQuery(@"
-                    UPDATE[ClassRoom] 
+                    UPDATE [Teacher] 
                     SET Name = @Name, BirthDay = @BirthDay, StartWorkDate = @StartWorkDate
                     WHERE Id = @Id");
             }

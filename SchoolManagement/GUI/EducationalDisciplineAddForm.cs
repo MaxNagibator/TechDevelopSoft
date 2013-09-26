@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
 
@@ -6,11 +7,18 @@ namespace SchoolManagement.GUI
 {
     public partial class EducationalDisciplineAddForm : Form
     {
-        public EducationalDisciplineAddForm()
+        private int _id;
+        public EducationalDisciplineAddForm(int id)
         {
             InitializeComponent();
+            _id = id;
+            if (id != -1)
+            {
+                var info = DatabaseManager.GetEducationalDisciplines();
+                uiNameTextBox.Text = info.First(i => i.Id == id).Name;
+                uiDescriptionTextBox.Text = info.First(i => i.Id == id).Description;
+            }
         }
-
 
         private void uiCommitButton_Click(object sender, EventArgs e)
         {
@@ -34,7 +42,14 @@ namespace SchoolManagement.GUI
                 return;
             }
             var educationalDiscipline = new EducationalDiscipline(uiNameTextBox.Text, uiDescriptionTextBox.Text);
-            educationalDiscipline.AddToDatabase();
+            if (_id == -1)
+            {
+                educationalDiscipline.AddToDatabase();
+            }
+            else
+            {
+                educationalDiscipline.UpdateInDatabase(_id);
+            }
             DialogResult = DialogResult.OK;
             Close();
         }

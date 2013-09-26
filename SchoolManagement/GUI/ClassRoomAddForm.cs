@@ -11,9 +11,9 @@ namespace SchoolManagement.GUI
         public ClassRoomAddForm(int id)
         {
             InitializeComponent();
+            _id = id;
             if (id != -1)
             {
-                _id = id;
                 var info = DatabaseManager.GetClassRooms();
                 uiNameTextBox.Text = info.First(i => i.Id == id).Name;
                 uiNumberTextBox.Text = info.First(i => i.Id == id).Number;

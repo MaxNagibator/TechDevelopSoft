@@ -32,6 +32,7 @@
             this.uiMainDataGridView = new System.Windows.Forms.DataGridView();
             this.uiMainToolStrip = new System.Windows.Forms.ToolStrip();
             this.uiAddToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.uiEditToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiSelectToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.uiDeleteToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).BeginInit();
@@ -60,6 +61,7 @@
             this.uiMainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.uiMainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uiAddToolStripButton,
+            this.uiEditToolStripButton,
             this.uiSelectToolStripButton,
             this.uiDeleteToolStripButton});
             this.uiMainToolStrip.Location = new System.Drawing.Point(0, 0);
@@ -79,6 +81,18 @@
             this.uiAddToolStripButton.Text = "Добавить";
             this.uiAddToolStripButton.ToolTipText = "Добавить";
             this.uiAddToolStripButton.Click += new System.EventHandler(this.uiAddToolStripButton_Click);
+            // 
+            // uiEditToolStripButton
+            // 
+            this.uiEditToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uiEditToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("uiEditToolStripButton.Image")));
+            this.uiEditToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.uiEditToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiEditToolStripButton.Name = "uiEditToolStripButton";
+            this.uiEditToolStripButton.Size = new System.Drawing.Size(36, 36);
+            this.uiEditToolStripButton.Text = "Редактировать";
+            this.uiEditToolStripButton.ToolTipText = "Редактировать";
+            this.uiEditToolStripButton.Click += new System.EventHandler(this.uiEditToolStripButton_Click);
             // 
             // uiSelectToolStripButton
             // 
@@ -130,5 +144,6 @@
         private System.Windows.Forms.ToolStripButton uiAddToolStripButton;
         private System.Windows.Forms.ToolStripButton uiSelectToolStripButton;
         private System.Windows.Forms.ToolStripButton uiDeleteToolStripButton;
+        private System.Windows.Forms.ToolStripButton uiEditToolStripButton;
     }
 }
