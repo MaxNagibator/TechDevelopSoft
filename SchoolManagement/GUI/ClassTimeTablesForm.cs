@@ -43,14 +43,14 @@ namespace SchoolManagement.GUI
             RefreshClassTimeTableElemInfo(elements);
 
             Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainPanel);
-            //uiMainDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private List<ClassTimeTableDayElem> GetElementsByDateAndGroup(DateTime date, IEnumerable<ClassTime> classTimes)
         {
             var classTimeTables = DatabaseManager.GetClassTimeTables();
             var group = (Group) uiGroupComboBox.SelectedItem;
-            var classTimeTablesForDateAndGroup = classTimeTables.Where(c => c.Date.Date == date && c.Group.Id == group.Id);
+            var classTimeTablesForDateAndGroup =
+                classTimeTables.Where(c => c.Date.Date == date && c.Group.Id == group.Id);
             var elementsByDateAndGroup = (from c in classTimeTablesForDateAndGroup
                                           select new ClassTimeTableDayElem(
                                               c.EducationalDiscipline.Name + Environment.NewLine + c.ClassRoom.Number
@@ -59,7 +59,8 @@ namespace SchoolManagement.GUI
         }
 
         private List<ClassTimeTableDayElem> GetVoidClassTimeTables(List<ClassTimeTableDayElem> classTimeTableDayElems,
-                                                                   IEnumerable<ClassTime> classTimes, DateTime date, Group group)
+                                                                   IEnumerable<ClassTime> classTimes, DateTime date,
+                                                                   Group group)
         {
             return
                 classTimes.Select(classTime =>
@@ -89,7 +90,12 @@ namespace SchoolManagement.GUI
 
         private void uiDeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
+            Delete();
+        }
+
+        private void Delete()
+        {
+            var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
             var classTimeTable = classTimeTableDayElem.ClassTimeTable;
             var selectedId = classTimeTable.Id;
             DatabaseManager.DeleteClassTimeTableById(selectedId);
@@ -100,8 +106,6 @@ namespace SchoolManagement.GUI
         {
             var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
             var classTimeTable = classTimeTableDayElem.ClassTimeTable;
-
-
             using (var f = new ClassTimeTableAddForm(classTimeTable))
             {
                 f.IsEditMode = classTimeTableDayElem.Text != "-";
@@ -115,7 +119,8 @@ namespace SchoolManagement.GUI
         private void uiMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!Globals.IsRootMode) return;
-            if (e.Button == MouseButtons.Right && e.RowIndex > -1 && uiMainDataGridView.Columns[e.ColumnIndex].DisplayIndex > 0)
+            if (e.Button == MouseButtons.Right && e.RowIndex > -1 &&
+                uiMainDataGridView.Columns[e.ColumnIndex].DisplayIndex > 0)
             {
                 uiMainDataGridView[e.ColumnIndex, e.RowIndex].Selected = true;
                 var a = uiMainDataGridView.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true).Location;
@@ -125,9 +130,50 @@ namespace SchoolManagement.GUI
 
         private void uiMenuContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
+            var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
             uiDeleteToolStripMenuItem.Enabled = classTimeTableDayElem.Text != "-";
             uiAddToolStripMenuItem.Text = classTimeTableDayElem.Text == "-" ? "добавить" : "редактировать";
+        }
+
+        private void ClassTimeTablesForm_Load(object sender, EventArgs e)
+        {
+            Globals.SetColumnWidthAndFormHeight(this, uiMainDataGridView, uiMainPanel);
+        }
+
+        private void uiMainDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (!Globals.IsRootMode) return;
+            if (e.Button == MouseButtons.Left && e.RowIndex > -1
+                && uiMainDataGridView.Columns[e.ColumnIndex].DisplayIndex > 0)
+            {
+                var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
+                var classTimeTable = classTimeTableDayElem.ClassTimeTable;
+                using (var f = new ClassTimeTableAddForm(classTimeTable))
+                {
+                    f.IsEditMode = classTimeTableDayElem.Text != "-";
+                    if (f.ShowDialog() == DialogResult.OK)
+                    {
+                        RefreshInfo();
+                    }
+                }
+            }
+        }
+
+        private void uiMainDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (uiMainDataGridView.SelectedCells.Count == 1
+                    && uiMainDataGridView.SelectedCells[0].RowIndex > -1
+                    && uiMainDataGridView.Columns[uiMainDataGridView.SelectedCells[0].ColumnIndex].DisplayIndex > 0)
+                {
+                    var classTimeTableDayElem = (ClassTimeTableDayElem)uiMainDataGridView.SelectedCells[0].Value;
+                    if(classTimeTableDayElem.Text != "-")
+                    {
+                        Delete();
+                    }
+                }
+            }
         }
     }
 }

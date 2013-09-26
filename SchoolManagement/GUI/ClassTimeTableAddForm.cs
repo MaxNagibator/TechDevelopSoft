@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
 
@@ -30,6 +29,14 @@ namespace SchoolManagement.GUI
 
         private void SetInformation()
         {
+            if (IsEditMode)
+            {
+                uiDateDateTimePicker.Enabled = false;
+                uiSelectClassTimeButton.Enabled = false;
+                uiClassTimeСomboBox.Enabled = false;
+                uiSelectGroupButton.Enabled = false;
+                uiGroupComboBox.Enabled = false;
+            }
             Text = IsEditMode ? "Редактирование элемента расписания" : "Добавление элемента расписания";
         }
 
@@ -120,6 +127,8 @@ namespace SchoolManagement.GUI
             _classTimeTable.Group = (Group)uiGroupComboBox.SelectedItem;
             _classTimeTable.Teacher = (Teacher)uiTeacherComboBox.SelectedItem;
             var classTimeTable = _classTimeTable;
+
+            DatabaseManager.DeleteClassTimeTableById(classTimeTable.Id);
             classTimeTable.AddToDatabase();
             DialogResult = DialogResult.OK;
             Close();

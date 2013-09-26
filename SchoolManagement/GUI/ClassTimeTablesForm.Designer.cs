@@ -69,6 +69,8 @@
             this.uiMainDataGridView.Size = new System.Drawing.Size(983, 220);
             this.uiMainDataGridView.TabIndex = 1;
             this.uiMainDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uiMainDataGridView_CellMouseClick);
+            this.uiMainDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uiMainDataGridView_CellMouseDoubleClick);
+            this.uiMainDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uiMainDataGridView_KeyDown);
             // 
             // uiMenuContextMenuStrip
             // 
@@ -145,6 +147,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassTimeTablesForm";
             this.Text = "Расписание уроков";
+            this.Load += new System.EventHandler(this.ClassTimeTablesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.uiMenuContextMenuStrip.ResumeLayout(false);
             this.uiMainPanel.ResumeLayout(false);

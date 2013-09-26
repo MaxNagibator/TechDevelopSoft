@@ -25,11 +25,11 @@ namespace SchoolManagement
                 uiMainDataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             Rectangle screenRectangle = form.RectangleToScreen(form.ClientRectangle);
-            var bonus = 0;
-            if (form.Text == "Расписание уроков")
-            {
-                bonus = 100;
-            }
+            var bonus = 10;
+            //if (form.Text == "Расписание уроков")
+            //{
+            //    bonus = 100;
+            //}
             int titleHeight = screenRectangle.Top - form.Top + bonus;
             var height = (uiMainToolStrip.Height + uiMainDataGridView.Rows.GetRowsHeight(DataGridViewElementStates.None) +
                           uiMainDataGridView.ColumnHeadersHeight + titleHeight);
