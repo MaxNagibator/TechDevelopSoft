@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
@@ -24,7 +25,7 @@ namespace SchoolManagement.GUI
         private void ClassTimeTableAddForm_Load(object sender, EventArgs e)
         {
             SetInformation();
-            LoadDataComboBoxs();
+            RefreshDataComboBoxs();
         }
 
         private void SetInformation()
@@ -32,20 +33,45 @@ namespace SchoolManagement.GUI
             Text = IsEditMode ? "Редактирование элемента расписания" : "Добавление элемента расписания";
         }
 
-        private void LoadDataComboBoxs()
+        private void RefreshDataComboBoxs()
+        {
+            RefreshTeachers();
+            RefreshEducationalDisciplines();
+            RefreshGroups();
+            RefreshClassRooms();
+            RefreshClassTimes();
+            uiDateDateTimePicker.Value = _classTimeTable.Date;
+        }
+
+        private void RefreshTeachers()
+        {
+            uiTeacherComboBox.DataSource = DatabaseManager.GetTeachers(); 
+            uiTeacherComboBox.SelectedIndex = uiTeacherComboBox.FindStringExact(_classTimeTable.Teacher.ToString());
+        }
+
+        private void RefreshEducationalDisciplines()
+        {
+            uiEducationalDisciplineСomboBox.DataSource = DatabaseManager.GetEducationalDisciplines();
+            uiEducationalDisciplineСomboBox.SelectedIndex =
+                  uiEducationalDisciplineСomboBox.FindStringExact(_classTimeTable.EducationalDiscipline.ToString());
+        }
+
+        private void RefreshGroups()
+        {
+            uiGroupComboBox.DataSource = DatabaseManager.GetGroups();
+            uiGroupComboBox.SelectedIndex = uiGroupComboBox.FindStringExact(_classTimeTable.Group.ToString());
+        }
+
+        private void RefreshClassRooms()
+        {
+            uiClassRoomComboBox.DataSource = DatabaseManager.GetClassRooms();
+            uiClassRoomComboBox.SelectedIndex = uiClassRoomComboBox.FindStringExact(_classTimeTable.ClassRoom.ToString());
+        }
+
+        private void RefreshClassTimes()
         {
             uiClassTimeСomboBox.DataSource = DatabaseManager.GetClassTimes();
-            uiEducationalDisciplineСomboBox.DataSource = DatabaseManager.GetEducationalDisciplines();
-            uiClassRoomComboBox.DataSource = DatabaseManager.GetClassRooms();
-            uiGroupComboBox.DataSource = DatabaseManager.GetGroups();
-            uiTeacherComboBox.DataSource = DatabaseManager.GetTeachers();
-            
-            uiDateDateTimePicker.Value = _classTimeTable.Date;
             uiClassTimeСomboBox.SelectedIndex = uiClassTimeСomboBox.FindStringExact(_classTimeTable.ClassTime.ToString());
-            uiGroupComboBox.SelectedIndex = uiGroupComboBox.FindStringExact(_classTimeTable.Group.ToString());
-            uiEducationalDisciplineСomboBox.SelectedIndex = uiEducationalDisciplineСomboBox.FindStringExact(_classTimeTable.EducationalDiscipline.ToString());
-            uiTeacherComboBox.SelectedIndex = uiTeacherComboBox.FindStringExact(_classTimeTable.Teacher.ToString());
-            uiClassRoomComboBox.SelectedIndex = uiClassRoomComboBox.FindStringExact(_classTimeTable.ClassRoom.ToString());
         }
 
         private void uiCommintButton_Click(object sender, EventArgs e)
@@ -60,6 +86,8 @@ namespace SchoolManagement.GUI
         {
             using (var f = new ClassTimesForm())
             {
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(Location.X, Location.Y);
                 f.IsSelectedMode = true;
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -71,7 +99,7 @@ namespace SchoolManagement.GUI
         private void SetClassTime(ClassTime selectedClassTime)
         {
             _classTimeTable.ClassTime = selectedClassTime;
-          //  uiClassTimeTextBox.Text = _classTimeTable.ClassTime.ToString();
+            RefreshDataComboBoxs();
         }
 
         private void uiSelectEducationalDisciplineButton_Click(object sender, EventArgs e)
