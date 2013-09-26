@@ -16,13 +16,17 @@ namespace SchoolManagement.GUI
         public ClassRoomsForm()
         {
             InitializeComponent();
-            CheckSelectedButton();
             RefreshInfo();
         }
 
         private void CheckSelectedButton()
         {
             uiSelectToolStripButton.Visible = IsSelectedMode;
+        }
+
+        private void ClassRoomsForm_Load(object sender, EventArgs e)
+        {
+            CheckSelectedButton();
         }
 
         private void RefreshInfo()

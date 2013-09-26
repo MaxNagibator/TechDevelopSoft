@@ -17,8 +17,12 @@ namespace SchoolManagement.GUI
         public ClassTimesForm()
         {
             InitializeComponent();
-            CheckSelectedButton();
             RefreshInfo();
+        }
+
+        private void ClassTimesForm_Load(object sender, EventArgs e)
+        {
+            CheckSelectedButton();
         }
 
         private void CheckSelectedButton()

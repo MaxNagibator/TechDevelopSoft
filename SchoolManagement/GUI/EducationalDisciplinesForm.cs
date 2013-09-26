@@ -20,6 +20,11 @@ namespace SchoolManagement.GUI
             RefreshInfo();
         }
 
+        private void EducationalDisciplinesForm_Load(object sender, EventArgs e)
+        {
+            CheckSelectedButton();
+        }
+
         private void CheckSelectedButton()
         {
             uiSelectToolStripButton.Visible = IsSelectedMode;

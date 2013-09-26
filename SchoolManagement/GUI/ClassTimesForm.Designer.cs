@@ -114,6 +114,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassTimesForm";
             this.Text = "Время уроков";
+            this.Load += new System.EventHandler(this.ClassTimesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.uiMainToolStrip.ResumeLayout(false);
             this.uiMainToolStrip.PerformLayout();

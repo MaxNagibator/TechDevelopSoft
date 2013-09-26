@@ -101,8 +101,10 @@ namespace SchoolManagement.GUI
             var classTimeTableDayElem = (ClassTimeTableDayElem) uiMainDataGridView.SelectedCells[0].Value;
             var classTimeTable = classTimeTableDayElem.ClassTimeTable;
 
+
             using (var f = new ClassTimeTableAddForm(classTimeTable))
             {
+                f.IsEditMode = classTimeTableDayElem.Text != "-";
                 if (f.ShowDialog() == DialogResult.OK)
                 {
                     RefreshInfo();

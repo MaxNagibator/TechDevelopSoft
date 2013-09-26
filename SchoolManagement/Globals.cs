@@ -26,7 +26,8 @@ namespace SchoolManagement
             int titleHeight = screenRectangle.Top - form.Top + 10;
             var height = (uiMainToolStrip.Height + uiMainDataGridView.Rows.GetRowsHeight(DataGridViewElementStates.None) +
                           uiMainDataGridView.ColumnHeadersHeight + titleHeight);
-            form.Height = height > 600 ? 600 : height;
+            //form.MaximumSize = new Size(99999,height);
+            form.Height = height > 1024 ? 1024 : height;
         }
     }
 }

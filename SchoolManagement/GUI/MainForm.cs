@@ -18,62 +18,44 @@ namespace SchoolManagement.GUI
 
         private void uiClassRoomToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new ClassRoomsForm())
+            ShowForm(new ClassRoomsForm());
+        }
+
+        private void ShowForm(Form form)
+        {
+            using (var f = form)
             {
                 f.StartPosition = FormStartPosition.Manual;
-                f.Location = new Point(Location.X,Location.Y);
+                f.Location = new Point(Location.X, Location.Y);
+                Hide();
                 f.ShowDialog();
+                Show();
             }
         }
 
         private void uTeacherToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new TeachersForm())
-            {
-                f.StartPosition = FormStartPosition.Manual;
-                f.Location = new Point(Location.X, Location.Y);
-                f.ShowDialog();
-            }
+            ShowForm(new TeachersForm());
         }
 
         private void uiGroupToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new GroupsForm())
-            {
-                f.StartPosition = FormStartPosition.Manual;
-                f.Location = new Point(Location.X, Location.Y);
-                f.ShowDialog();
-            }
+            ShowForm(new GroupsForm());
         }
 
         private void uiEducationalDisciplineToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new EducationalDisciplinesForm())
-            {
-                f.StartPosition = FormStartPosition.Manual;
-                f.Location = new Point(Location.X, Location.Y);
-                f.ShowDialog();
-            }
+            ShowForm(new EducationalDisciplinesForm());
         }
 
         private void uiClassTimeToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new ClassTimesForm())
-            {
-                f.StartPosition = FormStartPosition.Manual;
-                f.Location = new Point(Location.X, Location.Y);
-                f.ShowDialog();
-            }
+            ShowForm(new ClassTimesForm());
         }
 
         private void uiClassTimeTableToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new ClassTimeTablesForm())
-            {
-                f.StartPosition = FormStartPosition.Manual;
-                f.Location = new Point(Location.X, Location.Y);
-                f.ShowDialog();
-            }
+            ShowForm(new ClassTimeTablesForm());
         }
     }
 }

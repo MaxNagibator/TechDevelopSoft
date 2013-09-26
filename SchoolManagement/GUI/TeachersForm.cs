@@ -17,8 +17,12 @@ namespace SchoolManagement.GUI
         public TeachersForm()
         {
             InitializeComponent();
-            CheckSelectedButton();
             RefreshInfo();
+        }
+
+        private void TeachersForm_Load(object sender, EventArgs e)
+        {
+            CheckSelectedButton();
         }
 
         private void CheckSelectedButton()

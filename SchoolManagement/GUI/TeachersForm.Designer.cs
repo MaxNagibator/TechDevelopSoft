@@ -114,6 +114,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TeachersForm";
             this.Text = "Учителя";
+            this.Load += new System.EventHandler(this.TeachersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiMainDataGridView)).EndInit();
             this.uiMainToolStrip.ResumeLayout(false);
             this.uiMainToolStrip.PerformLayout();

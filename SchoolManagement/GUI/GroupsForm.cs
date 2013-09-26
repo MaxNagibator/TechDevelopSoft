@@ -16,8 +16,12 @@ namespace SchoolManagement.GUI
         public GroupsForm()
         {
             InitializeComponent();
-            CheckSelectedButton();
             RefreshInfo();
+        }
+
+        private void GroupsForm_Load(object sender, EventArgs e)
+        {
+            CheckSelectedButton();
         }
 
         private void CheckSelectedButton()
