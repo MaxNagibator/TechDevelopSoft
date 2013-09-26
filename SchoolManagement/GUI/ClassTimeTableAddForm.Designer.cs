@@ -53,7 +53,7 @@
             // 
             this.uiCommitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiCommitButton.Location = new System.Drawing.Point(11, 262);
+            this.uiCommitButton.Location = new System.Drawing.Point(12, 235);
             this.uiCommitButton.Name = "uiCommitButton";
             this.uiCommitButton.Size = new System.Drawing.Size(315, 23);
             this.uiCommitButton.TabIndex = 12;
@@ -64,7 +64,7 @@
             // uiEducationalDisciplineLabel
             // 
             this.uiEducationalDisciplineLabel.AutoSize = true;
-            this.uiEducationalDisciplineLabel.Location = new System.Drawing.Point(8, 98);
+            this.uiEducationalDisciplineLabel.Location = new System.Drawing.Point(9, 71);
             this.uiEducationalDisciplineLabel.Name = "uiEducationalDisciplineLabel";
             this.uiEducationalDisciplineLabel.Size = new System.Drawing.Size(70, 13);
             this.uiEducationalDisciplineLabel.TabIndex = 10;
@@ -73,16 +73,17 @@
             // uiDateLabel
             // 
             this.uiDateLabel.AutoSize = true;
-            this.uiDateLabel.Location = new System.Drawing.Point(12, 18);
+            this.uiDateLabel.Location = new System.Drawing.Point(22, 240);
             this.uiDateLabel.Name = "uiDateLabel";
             this.uiDateLabel.Size = new System.Drawing.Size(33, 13);
             this.uiDateLabel.TabIndex = 12;
             this.uiDateLabel.Text = "Дата";
+            this.uiDateLabel.Visible = false;
             // 
             // uiClassTimeLabel
             // 
             this.uiClassTimeLabel.AutoSize = true;
-            this.uiClassTimeLabel.Location = new System.Drawing.Point(8, 52);
+            this.uiClassTimeLabel.Location = new System.Drawing.Point(9, 25);
             this.uiClassTimeLabel.Name = "uiClassTimeLabel";
             this.uiClassTimeLabel.Size = new System.Drawing.Size(72, 13);
             this.uiClassTimeLabel.TabIndex = 14;
@@ -92,15 +93,16 @@
             // 
             this.uiDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiDateDateTimePicker.Location = new System.Drawing.Point(86, 12);
+            this.uiDateDateTimePicker.Location = new System.Drawing.Point(86, 251);
             this.uiDateDateTimePicker.Name = "uiDateDateTimePicker";
             this.uiDateDateTimePicker.Size = new System.Drawing.Size(240, 20);
             this.uiDateDateTimePicker.TabIndex = 5;
+            this.uiDateDateTimePicker.Visible = false;
             // 
             // uiTeacherLabel
             // 
             this.uiTeacherLabel.AutoSize = true;
-            this.uiTeacherLabel.Location = new System.Drawing.Point(8, 144);
+            this.uiTeacherLabel.Location = new System.Drawing.Point(9, 117);
             this.uiTeacherLabel.Name = "uiTeacherLabel";
             this.uiTeacherLabel.Size = new System.Drawing.Size(45, 13);
             this.uiTeacherLabel.TabIndex = 10;
@@ -109,7 +111,7 @@
             // uiClassRoomLabel
             // 
             this.uiClassRoomLabel.AutoSize = true;
-            this.uiClassRoomLabel.Location = new System.Drawing.Point(12, 187);
+            this.uiClassRoomLabel.Location = new System.Drawing.Point(13, 160);
             this.uiClassRoomLabel.Name = "uiClassRoomLabel";
             this.uiClassRoomLabel.Size = new System.Drawing.Size(49, 13);
             this.uiClassRoomLabel.TabIndex = 10;
@@ -118,7 +120,7 @@
             // uiGroupLabel
             // 
             this.uiGroupLabel.AutoSize = true;
-            this.uiGroupLabel.Location = new System.Drawing.Point(12, 233);
+            this.uiGroupLabel.Location = new System.Drawing.Point(13, 206);
             this.uiGroupLabel.Name = "uiGroupLabel";
             this.uiGroupLabel.Size = new System.Drawing.Size(42, 13);
             this.uiGroupLabel.TabIndex = 10;
@@ -131,7 +133,7 @@
             this.uiClassTimeСomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uiClassTimeСomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.uiClassTimeСomboBox.FormattingEnabled = true;
-            this.uiClassTimeСomboBox.Location = new System.Drawing.Point(86, 49);
+            this.uiClassTimeСomboBox.Location = new System.Drawing.Point(87, 22);
             this.uiClassTimeСomboBox.Name = "uiClassTimeСomboBox";
             this.uiClassTimeСomboBox.Size = new System.Drawing.Size(194, 21);
             this.uiClassTimeСomboBox.TabIndex = 15;
@@ -144,7 +146,7 @@
             this.uiEducationalDisciplineСomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.uiEducationalDisciplineСomboBox.FormattingEnabled = true;
             this.uiEducationalDisciplineСomboBox.ItemHeight = 13;
-            this.uiEducationalDisciplineСomboBox.Location = new System.Drawing.Point(86, 95);
+            this.uiEducationalDisciplineСomboBox.Location = new System.Drawing.Point(87, 68);
             this.uiEducationalDisciplineСomboBox.Name = "uiEducationalDisciplineСomboBox";
             this.uiEducationalDisciplineСomboBox.Size = new System.Drawing.Size(194, 21);
             this.uiEducationalDisciplineСomboBox.TabIndex = 16;
@@ -156,7 +158,7 @@
             this.uiTeacherComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uiTeacherComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.uiTeacherComboBox.FormattingEnabled = true;
-            this.uiTeacherComboBox.Location = new System.Drawing.Point(86, 141);
+            this.uiTeacherComboBox.Location = new System.Drawing.Point(87, 114);
             this.uiTeacherComboBox.Name = "uiTeacherComboBox";
             this.uiTeacherComboBox.Size = new System.Drawing.Size(194, 21);
             this.uiTeacherComboBox.TabIndex = 17;
@@ -168,7 +170,7 @@
             this.uiClassRoomComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uiClassRoomComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.uiClassRoomComboBox.FormattingEnabled = true;
-            this.uiClassRoomComboBox.Location = new System.Drawing.Point(86, 184);
+            this.uiClassRoomComboBox.Location = new System.Drawing.Point(87, 157);
             this.uiClassRoomComboBox.Name = "uiClassRoomComboBox";
             this.uiClassRoomComboBox.Size = new System.Drawing.Size(194, 21);
             this.uiClassRoomComboBox.TabIndex = 18;
@@ -180,7 +182,7 @@
             this.uiGroupComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uiGroupComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.uiGroupComboBox.FormattingEnabled = true;
-            this.uiGroupComboBox.Location = new System.Drawing.Point(86, 230);
+            this.uiGroupComboBox.Location = new System.Drawing.Point(87, 203);
             this.uiGroupComboBox.Name = "uiGroupComboBox";
             this.uiGroupComboBox.Size = new System.Drawing.Size(194, 21);
             this.uiGroupComboBox.TabIndex = 19;
@@ -189,7 +191,7 @@
             // 
             this.uiSelectGroupButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiSelectGroupButton.Image = global::SchoolManagement.Properties.Resources.Users_Group32;
-            this.uiSelectGroupButton.Location = new System.Drawing.Point(286, 219);
+            this.uiSelectGroupButton.Location = new System.Drawing.Point(287, 192);
             this.uiSelectGroupButton.Name = "uiSelectGroupButton";
             this.uiSelectGroupButton.Size = new System.Drawing.Size(40, 40);
             this.uiSelectGroupButton.TabIndex = 11;
@@ -200,7 +202,7 @@
             // 
             this.uiSelectClassRoomButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiSelectClassRoomButton.Image = global::SchoolManagement.Properties.Resources.Home32;
-            this.uiSelectClassRoomButton.Location = new System.Drawing.Point(286, 173);
+            this.uiSelectClassRoomButton.Location = new System.Drawing.Point(287, 146);
             this.uiSelectClassRoomButton.Name = "uiSelectClassRoomButton";
             this.uiSelectClassRoomButton.Size = new System.Drawing.Size(40, 40);
             this.uiSelectClassRoomButton.TabIndex = 9;
@@ -211,7 +213,7 @@
             // 
             this.uiSelectTeacherButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiSelectTeacherButton.Image = global::SchoolManagement.Properties.Resources.Digg32;
-            this.uiSelectTeacherButton.Location = new System.Drawing.Point(286, 130);
+            this.uiSelectTeacherButton.Location = new System.Drawing.Point(287, 103);
             this.uiSelectTeacherButton.Name = "uiSelectTeacherButton";
             this.uiSelectTeacherButton.Size = new System.Drawing.Size(40, 40);
             this.uiSelectTeacherButton.TabIndex = 7;
@@ -222,7 +224,7 @@
             // 
             this.uiEducationalDisciplineButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiEducationalDisciplineButton.Image = global::SchoolManagement.Properties.Resources.Contact32;
-            this.uiEducationalDisciplineButton.Location = new System.Drawing.Point(286, 84);
+            this.uiEducationalDisciplineButton.Location = new System.Drawing.Point(287, 57);
             this.uiEducationalDisciplineButton.Name = "uiEducationalDisciplineButton";
             this.uiEducationalDisciplineButton.Size = new System.Drawing.Size(40, 40);
             this.uiEducationalDisciplineButton.TabIndex = 4;
@@ -233,7 +235,7 @@
             // 
             this.uiSelectClassTimeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiSelectClassTimeButton.Image = global::SchoolManagement.Properties.Resources.Tag32;
-            this.uiSelectClassTimeButton.Location = new System.Drawing.Point(286, 38);
+            this.uiSelectClassTimeButton.Location = new System.Drawing.Point(287, 11);
             this.uiSelectClassTimeButton.Name = "uiSelectClassTimeButton";
             this.uiSelectClassTimeButton.Size = new System.Drawing.Size(40, 40);
             this.uiSelectClassTimeButton.TabIndex = 2;
@@ -244,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 302);
+            this.ClientSize = new System.Drawing.Size(338, 282);
             this.Controls.Add(this.uiGroupComboBox);
             this.Controls.Add(this.uiClassRoomComboBox);
             this.Controls.Add(this.uiTeacherComboBox);
@@ -265,7 +267,7 @@
             this.Controls.Add(this.uiCommitButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(9999, 355);
-            this.MinimumSize = new System.Drawing.Size(300, 340);
+            this.MinimumSize = new System.Drawing.Size(300, 320);
             this.Name = "ClassTimeTableAddForm";
             this.Text = "Добавление элемента расписания";
             this.Load += new System.EventHandler(this.ClassTimeTableAddForm_Load);

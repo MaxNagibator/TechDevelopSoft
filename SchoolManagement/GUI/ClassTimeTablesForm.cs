@@ -108,7 +108,7 @@ namespace SchoolManagement.GUI
             var classTimeTable = classTimeTableDayElem.ClassTimeTable;
             using (var f = new ClassTimeTableAddForm(classTimeTable))
             {
-                f.IsEditMode = classTimeTableDayElem.Text != "-";
+                f.IsEditMode = true;
                 if (f.ShowDialog() == DialogResult.OK)
                 {
                     RefreshInfo();
@@ -150,7 +150,7 @@ namespace SchoolManagement.GUI
                 var classTimeTable = classTimeTableDayElem.ClassTimeTable;
                 using (var f = new ClassTimeTableAddForm(classTimeTable))
                 {
-                    f.IsEditMode = classTimeTableDayElem.Text != "-";
+                    f.IsEditMode = true;
                     if (f.ShowDialog() == DialogResult.OK)
                     {
                         RefreshInfo();
@@ -161,6 +161,7 @@ namespace SchoolManagement.GUI
 
         private void uiMainDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
+            if (!Globals.IsRootMode) return;
             if (e.KeyCode == Keys.Delete)
             {
                 if (uiMainDataGridView.SelectedCells.Count == 1

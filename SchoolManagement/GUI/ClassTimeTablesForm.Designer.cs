@@ -102,6 +102,8 @@
             this.uiDateViewDateTimePicker.Name = "uiDateViewDateTimePicker";
             this.uiDateViewDateTimePicker.Size = new System.Drawing.Size(150, 20);
             this.uiDateViewDateTimePicker.TabIndex = 5;
+            this.uiDateViewDateTimePicker.Value = new System.DateTime(2013, 1, 1, 22, 5, 0, 0);
+            this.uiDateViewDateTimePicker.Visible = false;
             this.uiDateViewDateTimePicker.ValueChanged += new System.EventHandler(this.uiDateViewDateTimePicker_ValueChanged);
             // 
             // uiGroupComboBox
@@ -125,6 +127,7 @@
             this.uiDatePeriodLabel.Size = new System.Drawing.Size(10, 13);
             this.uiDatePeriodLabel.TabIndex = 8;
             this.uiDatePeriodLabel.Text = "-";
+            this.uiDatePeriodLabel.Visible = false;
             // 
             // uiMainPanel
             // 
