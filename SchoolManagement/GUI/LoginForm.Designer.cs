@@ -104,6 +104,8 @@
             this.Controls.Add(this.uiLoginTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(210, 130);
+            this.MinimumSize = new System.Drawing.Size(210, 130);
             this.Name = "LoginForm";
             this.Tag = "606217";
             this.Text = "Авторизация";

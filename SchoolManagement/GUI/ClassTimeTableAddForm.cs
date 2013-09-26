@@ -120,6 +120,7 @@ namespace SchoolManagement.GUI
 
         private void uiCommintButton_Click(object sender, EventArgs e)
         {
+
             _classTimeTable.Date = uiDateDateTimePicker.Value;
             _classTimeTable.ClassTime = (ClassTime)uiClassTimeСomboBox.SelectedItem;
             _classTimeTable.ClassRoom = (ClassRoom)uiClassRoomComboBox.SelectedItem;
@@ -127,11 +128,48 @@ namespace SchoolManagement.GUI
             _classTimeTable.Group = (Group)uiGroupComboBox.SelectedItem;
             _classTimeTable.Teacher = (Teacher)uiTeacherComboBox.SelectedItem;
             var classTimeTable = _classTimeTable;
+            var message = CheckFillFields();
+            if (message == "")
+            {
+                DatabaseManager.DeleteClassTimeTableById(classTimeTable.Id);
+                classTimeTable.AddToDatabase();
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(message, "Будьте внимательнее");
+            }
+        }
 
-            DatabaseManager.DeleteClassTimeTableById(classTimeTable.Id);
-            classTimeTable.AddToDatabase();
-            DialogResult = DialogResult.OK;
-            Close();
+        private string CheckFillFields()
+        {
+            var message = "";
+            if (_classTimeTable.EducationalDiscipline == null)
+            {
+                message += "дисциплину";
+            }
+            if (_classTimeTable.Teacher == null)
+            {
+                if (message != "")
+                {
+                    message += ", ";
+                } 
+                message += "учителя";
+            } 
+            if (_classTimeTable.ClassRoom == null)
+            {
+                if (message != "")
+                {
+                    message += ", ";
+                } 
+                message += "кабинет";
+            }
+            if (message != "")
+            {
+                message = "Нужно выбрать " + message + "!";
+            }
+            return message;
         }
 
         private void uiSelectClassTimeButton_Click(object sender, EventArgs e)

@@ -104,14 +104,14 @@
             this.uiTeacherLabel.AutoSize = true;
             this.uiTeacherLabel.Location = new System.Drawing.Point(9, 117);
             this.uiTeacherLabel.Name = "uiTeacherLabel";
-            this.uiTeacherLabel.Size = new System.Drawing.Size(45, 13);
+            this.uiTeacherLabel.Size = new System.Drawing.Size(49, 13);
             this.uiTeacherLabel.TabIndex = 10;
-            this.uiTeacherLabel.Text = "Препод";
+            this.uiTeacherLabel.Text = "Учитель";
             // 
             // uiClassRoomLabel
             // 
             this.uiClassRoomLabel.AutoSize = true;
-            this.uiClassRoomLabel.Location = new System.Drawing.Point(13, 160);
+            this.uiClassRoomLabel.Location = new System.Drawing.Point(9, 160);
             this.uiClassRoomLabel.Name = "uiClassRoomLabel";
             this.uiClassRoomLabel.Size = new System.Drawing.Size(49, 13);
             this.uiClassRoomLabel.TabIndex = 10;
@@ -120,11 +120,11 @@
             // uiGroupLabel
             // 
             this.uiGroupLabel.AutoSize = true;
-            this.uiGroupLabel.Location = new System.Drawing.Point(13, 206);
+            this.uiGroupLabel.Location = new System.Drawing.Point(9, 206);
             this.uiGroupLabel.Name = "uiGroupLabel";
-            this.uiGroupLabel.Size = new System.Drawing.Size(42, 13);
+            this.uiGroupLabel.Size = new System.Drawing.Size(38, 13);
             this.uiGroupLabel.TabIndex = 10;
-            this.uiGroupLabel.Text = "Группа";
+            this.uiGroupLabel.Text = "Класс";
             // 
             // uiClassTimeСomboBox
             // 

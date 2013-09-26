@@ -51,86 +51,88 @@
             this.uiClassTimeTableToolStripButton});
             this.uiMainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.uiMainToolStrip.Name = "uiMainToolStrip";
-            this.uiMainToolStrip.Size = new System.Drawing.Size(429, 71);
+            this.uiMainToolStrip.Size = new System.Drawing.Size(544, 86);
             this.uiMainToolStrip.TabIndex = 0;
             this.uiMainToolStrip.Text = "Менюшка";
             // 
             // uiClassRoomToolStripButton
             // 
-            this.uiClassRoomToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.uiClassRoomToolStripButton.Image = global::SchoolManagement.Properties.Resources.Home;
             this.uiClassRoomToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiClassRoomToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiClassRoomToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiClassRoomToolStripButton.Name = "uiClassRoomToolStripButton";
-            this.uiClassRoomToolStripButton.Size = new System.Drawing.Size(68, 68);
+            this.uiClassRoomToolStripButton.Size = new System.Drawing.Size(68, 83);
             this.uiClassRoomToolStripButton.Text = "кабинеты";
+            this.uiClassRoomToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.uiClassRoomToolStripButton.ToolTipText = "кабинеты";
             this.uiClassRoomToolStripButton.Click += new System.EventHandler(this.uiClassRoomToolStripButton_Click);
             // 
             // uiGroupToolStripButton
             // 
-            this.uiGroupToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.uiGroupToolStripButton.Image = global::SchoolManagement.Properties.Resources.Users_Group;
             this.uiGroupToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiGroupToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiGroupToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiGroupToolStripButton.Name = "uiGroupToolStripButton";
-            this.uiGroupToolStripButton.Size = new System.Drawing.Size(68, 68);
+            this.uiGroupToolStripButton.Size = new System.Drawing.Size(68, 83);
             this.uiGroupToolStripButton.Text = "группы";
+            this.uiGroupToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.uiGroupToolStripButton.Click += new System.EventHandler(this.uiGroupToolStripButton_Click);
             // 
             // uiEducationalDisciplineToolStripButton
             // 
-            this.uiEducationalDisciplineToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.uiEducationalDisciplineToolStripButton.Image = global::SchoolManagement.Properties.Resources.Contact;
             this.uiEducationalDisciplineToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiEducationalDisciplineToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiEducationalDisciplineToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiEducationalDisciplineToolStripButton.Name = "uiEducationalDisciplineToolStripButton";
-            this.uiEducationalDisciplineToolStripButton.Size = new System.Drawing.Size(68, 68);
+            this.uiEducationalDisciplineToolStripButton.Size = new System.Drawing.Size(68, 83);
             this.uiEducationalDisciplineToolStripButton.Text = "предметы";
+            this.uiEducationalDisciplineToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.uiEducationalDisciplineToolStripButton.ToolTipText = "предметы";
             this.uiEducationalDisciplineToolStripButton.Click += new System.EventHandler(this.uiEducationalDisciplineToolStripButton_Click);
             // 
             // uiTeacherToolStripButton
             // 
-            this.uiTeacherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.uiTeacherToolStripButton.Image = global::SchoolManagement.Properties.Resources.Digg;
             this.uiTeacherToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiTeacherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiTeacherToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiTeacherToolStripButton.Name = "uiTeacherToolStripButton";
-            this.uiTeacherToolStripButton.Size = new System.Drawing.Size(68, 68);
+            this.uiTeacherToolStripButton.Size = new System.Drawing.Size(68, 83);
             this.uiTeacherToolStripButton.Text = "учителя";
+            this.uiTeacherToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.uiTeacherToolStripButton.Click += new System.EventHandler(this.uTeacherToolStripButton_Click);
             // 
             // uiClassTimeToolStripButton
             // 
-            this.uiClassTimeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.uiClassTimeToolStripButton.Image = global::SchoolManagement.Properties.Resources.Tag;
             this.uiClassTimeToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiClassTimeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiClassTimeToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiClassTimeToolStripButton.Name = "uiClassTimeToolStripButton";
-            this.uiClassTimeToolStripButton.Size = new System.Drawing.Size(68, 68);
+            this.uiClassTimeToolStripButton.Size = new System.Drawing.Size(88, 83);
             this.uiClassTimeToolStripButton.Text = "Время уроков";
+            this.uiClassTimeToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.uiClassTimeToolStripButton.Click += new System.EventHandler(this.uiClassTimeToolStripButton_Click);
             // 
             // uiClassTimeTableToolStripButton
             // 
-            this.uiClassTimeTableToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.uiClassTimeTableToolStripButton.Image = global::SchoolManagement.Properties.Resources.Calender;
             this.uiClassTimeTableToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.uiClassTimeTableToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.uiClassTimeTableToolStripButton.ImageTransparentColor = System.Drawing.Color.BlueViolet;
             this.uiClassTimeTableToolStripButton.Name = "uiClassTimeTableToolStripButton";
-            this.uiClassTimeTableToolStripButton.Size = new System.Drawing.Size(68, 68);
+            this.uiClassTimeTableToolStripButton.Size = new System.Drawing.Size(118, 83);
             this.uiClassTimeTableToolStripButton.Text = "Расписание уроков";
+            this.uiClassTimeTableToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.uiClassTimeTableToolStripButton.Click += new System.EventHandler(this.uiClassTimeTableToolStripButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 76);
+            this.ClientSize = new System.Drawing.Size(544, 91);
             this.Controls.Add(this.uiMainToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(560, 125);
+            this.MinimumSize = new System.Drawing.Size(560, 125);
             this.Name = "MainForm";
             this.Tag = "606217";
             this.Text = "Расписание";
