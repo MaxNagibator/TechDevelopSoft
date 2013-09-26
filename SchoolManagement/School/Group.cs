@@ -30,5 +30,10 @@ namespace SchoolManagement.School
         {
             return Name;
         }
+
+        public override void UpdateInDatabase(int id)
+        {
+            DatabaseManager.UpdateGroup(id, Name, Comment);
+        }
     }
 }

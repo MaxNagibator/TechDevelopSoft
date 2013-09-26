@@ -42,6 +42,7 @@ namespace SchoolManagement.GUI
         {
             if (!IsSelectedMode)
             {
+                Edit();
                 return;
             }
             if (uiMainDataGridView.SelectedRows.Count <= 0) return;
@@ -53,6 +54,14 @@ namespace SchoolManagement.GUI
             }
         }
 
+        private void Edit()
+        {
+            if (uiMainDataGridView.SelectedRows.Count > 0)
+            {
+                ShowForm(true);
+            }
+        }
+
         private void uiMainDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectClassRoom();
@@ -60,7 +69,13 @@ namespace SchoolManagement.GUI
 
         private void uiAddToolStripButton_Click(object sender, EventArgs e)
         {
-            using (var f = new ClassRoomAddForm())
+            ShowForm(false);
+        }
+
+        private void ShowForm(bool isEditMode)
+        {
+            int id = isEditMode ? (int) (uiMainDataGridView.SelectedRows[0].Cells["Id"].Value) : -1;
+            using (var f = new ClassRoomAddForm(id))
             {
                 f.StartPosition = FormStartPosition.Manual;
                 f.Location = new Point(Location.X, Location.Y);
@@ -105,6 +120,11 @@ namespace SchoolManagement.GUI
             {
                 Delete();
             }
+        }
+
+        private void uiEditToolStripButton_Click(object sender, EventArgs e)
+        {
+            Edit();
         }
     }
 }

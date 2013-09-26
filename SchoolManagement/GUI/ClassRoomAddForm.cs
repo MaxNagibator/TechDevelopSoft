@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using SchoolManagement.School;
 
@@ -6,9 +7,17 @@ namespace SchoolManagement.GUI
 {
     public partial class ClassRoomAddForm : Form
     {
-        public ClassRoomAddForm()
+        private int _id;
+        public ClassRoomAddForm(int id)
         {
             InitializeComponent();
+            if (id != -1)
+            {
+                _id = id;
+                var info = DatabaseManager.GetClassRooms();
+                uiNameTextBox.Text = info.First(i => i.Id == id).Name;
+                uiNumberTextBox.Text = info.First(i => i.Id == id).Number;
+            }
         }
 
         private void uiCommintButton_Click(object sender, EventArgs e)
@@ -24,7 +33,14 @@ namespace SchoolManagement.GUI
                 return;
             }
             var group = new ClassRoom(uiNameTextBox.Text, uiNumberTextBox.Text);
-            group.AddToDatabase();
+            if (_id == -1)
+            {
+                group.AddToDatabase();
+            }
+            else
+            {
+                group.UpdateInDatabase(_id);
+            }
             DialogResult = DialogResult.OK;
             Close();
         }

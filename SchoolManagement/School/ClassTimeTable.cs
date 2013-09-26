@@ -35,5 +35,10 @@ namespace SchoolManagement.School
         {
            DatabaseManager.AddClassTimeTable(Name, ClassTime.Id,EducationalDiscipline.Id,Date,Teacher.Id,ClassRoom.Id,Group.Id);
         }
+
+        public override void UpdateInDatabase(int id)
+        {
+            DatabaseManager.UpdateClassTimeTable(id, Name, ClassTime.Id, EducationalDiscipline.Id, Date, Teacher.Id, ClassRoom.Id, Group.Id);
+        }
     }
 }

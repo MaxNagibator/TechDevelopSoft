@@ -41,6 +41,20 @@ namespace SchoolManagement
             }
         }
 
+        public static void UpdateGroup(int id, string name, string comment)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@Name", name);
+                sqlProvider.SetParameter("@Comment", comment);
+                sqlProvider.SetParameter("@Id", id);
+                sqlProvider.ExecuteQuery(@"
+                    UPDATE[ClassRoom] 
+                    SET Name = @Name, Comment = @Comment
+                    WHERE Id = @Id");
+            }
+        }
+
         public static void DeleteGroupById(int id)
         {
             DeleteClassTimeTableByGroupId(id);
@@ -74,9 +88,24 @@ namespace SchoolManagement
             {
                 sqlProvider.SetParameter("@Name", name);
                 sqlProvider.SetParameter("@Number", number);
-                sqlProvider.ExecuteQuery(@"INSERT INTO [ClassRoom] 
+                sqlProvider.ExecuteQuery(@"
+                    INSERT INTO [ClassRoom] 
                     (Name, Number)
                     VALUES(@Name, @Number)");
+            }
+        }
+
+        public static void UpdateClassRoom(int id, string name, string number)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@Name", name);
+                sqlProvider.SetParameter("@Number", number);
+                sqlProvider.SetParameter("@Id", id);
+                sqlProvider.ExecuteQuery(@"
+                    UPDATE[ClassRoom] 
+                    SET Name = @Name, Number = @Number
+                    WHERE Id = @Id");
             }
         }
 
@@ -120,6 +149,22 @@ namespace SchoolManagement
                 sqlProvider.ExecuteQuery(@"INSERT INTO [ClassTime] 
                     (Name, Number, StartTime, EndTime)
                     VALUES(@Name, @Number, @StartTime, @EndTime)");
+            }
+        }
+
+        public static void UpdateClassTime(int id, string name, int number, string startTime, string endTime)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@Name", name);
+                sqlProvider.SetParameter("@StartTime", startTime);
+                sqlProvider.SetParameter("@EndTIme", endTime);
+                sqlProvider.SetParameter("@Number", number);
+                sqlProvider.SetParameter("@Id", id);
+                sqlProvider.ExecuteQuery(@"
+                    UPDATE[ClassRoom] 
+                    SET Name = @Name, StartTime = @StartTime, EndTIme = @EndTIme, Number = @Number
+                    WHERE Id = @Id");
             }
         }
 
@@ -224,6 +269,31 @@ namespace SchoolManagement
             }
         }
 
+        public static void UpdateClassTimeTable(int id, string name, int classTimeId, int educationalDisciplineId, DateTime date, int teacherId, int classRoomId, int groupId)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@Name", name);
+                sqlProvider.SetParameter("@ClassTimeId", classTimeId);
+                sqlProvider.SetParameter("@EducationalDisciplineId", educationalDisciplineId);
+                sqlProvider.SetParameter("@Date", date);
+                sqlProvider.SetParameter("@TeacherId", teacherId);
+                sqlProvider.SetParameter("@ClassRoomId", classRoomId);
+                sqlProvider.SetParameter("@GroupId", groupId);
+                sqlProvider.SetParameter("@Id", id);
+                sqlProvider.ExecuteQuery(@"
+                    UPDATE[ClassRoom] 
+                    SET Name = @Name
+                        ,ClassTimeId = @ClassTimeId
+                        ,EducationalDisciplineId = @EducationalDisciplineId
+                        ,Date = @Date
+                        ,TeacherId = @TeacherId
+                        ,ClassRoomId = @ClassRoomId
+                        ,GroupId = @GroupId
+                    WHERE Id = @Id");
+            }
+        }
+
         public static void DeleteClassTimeTableById(int id)
         {
             DeleteFromTableById(id, "ClassTimeTable");
@@ -273,6 +343,20 @@ namespace SchoolManagement
             }
         }
 
+        public static void UpdateEducationalDiscipline(int id, string name, string description)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@Name", name);
+                sqlProvider.SetParameter("@Description", description);
+                sqlProvider.SetParameter("@Id", id);
+                sqlProvider.ExecuteQuery(@"
+                    UPDATE[ClassRoom] 
+                    SET Name = @Name, Description = @Description
+                    WHERE Id = @Id");
+            }
+        }
+
         public static void DeleteEducationalDisciplineById(int id)
         {
             DeleteFromTableById(id, "EducationalDiscipline");
@@ -311,6 +395,21 @@ namespace SchoolManagement
                 sqlProvider.ExecuteQuery(@"INSERT INTO [Teacher] 
                     (Name, BirthDay, StartWorkDate) 
                     VALUES(@Name, @BirthDay, @StartWorkDate)");
+            }
+        }
+
+        public static void UpdateTeacher(int id, string name, DateTime birthDay, DateTime startWorkDate)
+        {
+            using (var sqlProvider = Globals.GetSqlProvider())
+            {
+                sqlProvider.SetParameter("@Name", name);
+                sqlProvider.SetParameter("@BirthDay", birthDay);
+                sqlProvider.SetParameter("@StartWorkDate", startWorkDate);
+                sqlProvider.SetParameter("@Id", id);
+                sqlProvider.ExecuteQuery(@"
+                    UPDATE[ClassRoom] 
+                    SET Name = @Name, BirthDay = @BirthDay, StartWorkDate = @StartWorkDate
+                    WHERE Id = @Id");
             }
         }
 

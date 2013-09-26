@@ -29,5 +29,10 @@ namespace SchoolManagement.School
         {
             return Number + ": " + StartTime + "-" + EndTime;
         }
+
+        public override void UpdateInDatabase(int id)
+        {
+            DatabaseManager.UpdateClassTime(id, "Рудимент типа", Number, StartTime, EndTime);
+        }
     }
 }

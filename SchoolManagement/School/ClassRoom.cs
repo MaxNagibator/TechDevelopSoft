@@ -25,5 +25,10 @@ namespace SchoolManagement.School
         {
             return Number;
         }
+
+        public override void UpdateInDatabase(int id)
+        {
+            DatabaseManager.UpdateClassRoom(id, Name, Number);
+        }
     }
 }

@@ -25,5 +25,10 @@ namespace SchoolManagement.School
         {
             return Name;
         }
+
+        public override void UpdateInDatabase(int id)
+        {
+            DatabaseManager.UpdateEducationalDiscipline(id, Name, Description);
+        }
     }
 }
